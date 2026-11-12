@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import moment, media_grid %}
+{% block title %}{{ d.title[lang] }} · {{ site.title[lang] }}{% endblock %}
+{% block head %}<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">{% endblock %}
+{% block main %}
+<section class="dayhero" style="--c:{{ d.color }}">
+  {% if d.cover_media %}<img class="dh-img" src="{{ root }}media/{{ d.cover_media.full }}" alt="">{% endif %}
+  <div class="dh-text">
+    <p class="kicker">{% if d.n %}{{ t.day }} {{ d.n }}{% else %}{{ t.day0 }}{% endif %} · {{ fmt_date(d.id, lang) }}</p>
+    <h1>{{ d.title[lang] }}</h1>
+    <p class="lede">{{ d.lede[lang] }}</p>
+    <dl class="daystats">
+      <div><dt>{{ t.spent }}</dt><dd>{% if d.cost %}≈ ${{ d.cost }}{% if d.cost_unknown %} + <span class="tbc">{{ t.to_check }}</span>{% endif %}{% elif d.cost_unknown %}<span class="tbc">{{ t.to_check }}</span>{% else %}—{% endif %}</dd></div>
+      <div><dt>{{ t.steps }}</dt><dd>{% if d.steps %}{{ '{:,}'.format(d.steps).replace(',', ' ') }}{% else %}<span class="tbc">{{ t.steps_soon }}</span>{% endif %}</dd></div>
+    </dl>
+  </div>
+</section>
+
+<div class="daywrap">
+  <aside class="dayside">
+    <div id="minimap" class="minimap"></div>
+    <ol class="toc">
+      {% for mo in d.moments %}<li><a href="#{{ mo.id }}">{{ mo.title[lang] }}</a></li>{% endfor %}
+    </ol>
+  </aside>
+  <div class="daymain">
+    {% for mo in d.moments %}{{ moment(mo, d, root, home, lang, t) }}{% endfor %}
+    {% if d.extra %}
+    <section class="extra">
+      <h2>{{ t.more_photos }}</h2>
+      {{ media_grid(d.extra, root, 12) }}
+    </section>
+    {% endif %}
+  </div>
+</div>
+
+<nav class="pager">
+  {% if prev %}<a href="{{ home }}day/{{ prev.id }}/">‹ {{ prev.title[lang] }}</a>{% else %}<span></span>{% endif %}
+  {% if next %}<a href="{{ home }}day/{{ next.id }}/">{{ next.title[lang] }} ›</a>{% endif %}
+</nav>
+{% endblock %}
+{% block scripts %}
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+miniMap({{ d.moments|selectattr('place')|map(attribute='place')|list|tojson }}, {{ d.moments|selectattr('place')|map(attribute='id')|list|tojson }}, "{{ d.color }}");
+</script>
+{% endblock %}

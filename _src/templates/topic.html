@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import moment %}
+{% block title %}{{ tp[lang] }} · {{ site.title[lang] }}{% endblock %}
+{% block main %}
+<section class="pagehead">
+  <p class="kicker">{{ t.topics }}</p>
+  <h1><span class="ti">{{ tp.icon }}</span> {{ tp[lang] }}</h1>
+  <div class="chips big">{% for o in topics %}<a class="chip{% if o.id == tp.id %} on{% endif %}" href="{{ home }}topic/{{ o.id }}/">{{ o.icon }} {{ o[lang] }}</a>{% endfor %}</div>
+</section>
+<div class="narrow">
+{% for d, mo in items %}{{ moment(mo, d, root, home, lang, t, show_day=true) }}{% endfor %}
+</div>
+{% endblock %}

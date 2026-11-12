@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ site.title[lang] }}{% endblock %}</title>
+<meta name="description" content="{{ site.tagline[lang] }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ root }}assets/style.css">
+{% block head %}{% endblock %}
+</head>
+<body class="{% block bodyclass %}{% endblock %}">
+<header class="top">
+  <a class="brand" href="{{ home }}">NY<span>’26</span></a>
+  <nav>
+    <a href="{{ home }}#days">{{ t.days }}</a>
+    <a href="{{ home }}#topics">{{ t.topics }}</a>
+    <a href="{{ home }}map/">{{ t.map }}</a>
+    <a href="{{ home }}repeat/">{{ t.repeat }}</a>
+    <a class="lang" href="{{ other_href }}" hreflang="{{ t.other_lang }}">{{ t.other }}</a>
+  </nav>
+</header>
+<main>
+{% block main %}{% endblock %}
+</main>
+<footer class="foot">
+  <span>{{ t.footer }}</span>
+  <span class="draft">{{ t.draft }}</span>
+</footer>
+<div class="lb" id="lb" hidden>
+  <button class="lb-x" aria-label="close">×</button>
+  <button class="lb-prev" aria-label="prev">‹</button>
+  <figure><div class="lb-media"></div><figcaption></figcaption></figure>
+  <button class="lb-next" aria-label="next">›</button>
+</div>
+<script src="{{ root }}assets/app.js"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

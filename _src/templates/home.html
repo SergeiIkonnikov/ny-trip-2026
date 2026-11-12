@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block bodyclass %}home{% endblock %}
+{% block main %}
+<section class="hero">
+  <div class="hero-text">
+    <p class="kicker">4–11 · XI · 2026</p>
+    <h1>{{ site.title[lang] }}</h1>
+    <p class="tagline">{{ site.tagline[lang] }}</p>
+    {{ site.intro[lang]|paras }}
+  </div>
+  <div class="mosaic">
+    {% for d in days if d.cover_media %}{% if loop.index <= 6 %}
+    <a href="{{ home }}day/{{ d.id }}/" style="--c:{{ d.color }}"><img src="{{ root }}media/{{ d.cover_media.thumb }}" alt=""><span>{{ d.n }}</span></a>
+    {% endif %}{% endfor %}
+  </div>
+</section>
+
+<section id="days" class="days">
+  <h2>{{ t.by_day }}</h2>
+  <ol class="daylist">
+  {% for d in days %}
+    <li class="daycard{% if d.highlight %} hl{% endif %}" style="--c:{{ d.color }}">
+      <a href="{{ home }}day/{{ d.id }}/">
+        <div class="dc-img">{% if d.cover_media %}<img loading="lazy" src="{{ root }}media/{{ d.cover_media.thumb }}" alt="">{% endif %}</div>
+        <div class="dc-text">
+          <p class="dc-meta"><b>{% if d.n %}{{ t.day }} {{ d.n }}{% else %}{{ t.day0 }}{% endif %}</b> · {{ fmt_date(d.id, lang) }}</p>
+          <h3>{{ d.title[lang] }}</h3>
+          <p>{{ d.lede[lang] }}</p>
+          <p class="dc-stats">{{ d.moments|length }} {{ t.moments_n }} · {{ d.media|length }} {{ t.photos_word }}{% if d.cost %} · ≈ ${{ d.cost }}{% if d.cost_unknown %}+{% endif %}{% endif %}</p>
+        </div>
+      </a>
+    </li>
+  {% endfor %}
+  </ol>
+</section>
+
+<section id="topics" class="topics">
+  <h2>{{ t.by_topic }}</h2>
+  <div class="topicgrid">
+  {% for tp in topics %}
+    <a class="topiccard" href="{{ home }}topic/{{ tp.id }}/"><span class="ti">{{ tp.icon }}</span><b>{{ tp[lang] }}</b></a>
+  {% endfor %}
+  </div>
+</section>
+
+<section class="twocol">
+  <a class="bigcta map-cta" href="{{ home }}map/"><span>⌖</span><b>{{ t.map }}</b><small>{{ t.map_lede }}</small></a>
+  <a class="bigcta" href="{{ home }}repeat/"><span>✓</span><b>{{ t.cheat_title }}</b><small>{{ t.cheat_lede }}</small></a>
+</section>
+{% endblock %}

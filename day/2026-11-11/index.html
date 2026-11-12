@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Домой · Нью-Йорк, ноябрь 2026</title>
+<meta name="description" content="Восемь дней втроём: Наташа, Макар и я. Записано для своих, но заходите все.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></head>
+<body class="">
+<header class="top">
+  <a class="brand" href="../../">NY<span>’26</span></a>
+  <nav>
+    <a href="../../#days">Дни</a>
+    <a href="../../#topics">Темы</a>
+    <a href="../../map/">Карта</a>
+    <a href="../../repeat/">Повторить поездку</a>
+    <a class="lang" href="../../en/day/2026-11-11/" hreflang="en">EN</a>
+  </nav>
+</header>
+<main>
+<section class="dayhero" style="--c:#7a7f87">
+<img class="dh-img" src="../../media/" alt="">  <div class="dh-text">
+    <p class="kicker">День 8 · 11 ноября, среда</p>
+    <h1>Домой</h1>
+    <p class="lede">Сломалось метро, бежали на автобус, а потом снова Доха.</p>
+    <dl class="daystats">
+      <div><dt>Потратили</dt><dd>—</dd></div>
+      <div><dt>Шаги</dt><dd><span class="tbc">скрин с часов скоро</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<div class="daywrap">
+  <aside class="dayside">
+    <div id="minimap" class="minimap"></div>
+    <ol class="toc">
+<li><a href="#subway-broke">Метро сломалось, бежим на автобус</a></li><li><a href="#flight-home">Обратно через Доху</a></li>    </ol>
+  </aside>
+  <div class="daymain">
+<article class="moment" id="subway-broke">
+  <div class="m-head">
+<span class="m-time"></span>    <h3>Метро сломалось, бежим на автобус</h3>
+    <span class="chips"><a class="chip" href="../../topic/metro/">Ⓜ Метро</a><a class="chip" href="../../topic/transport/">✈ Транспорт</a></span>
+
+  </div>
+  <div class="m-body">
+    <p>Уезжали рано утром, и как раз сломалось метро. Пришлось бежать на автобус. Зато с автобуса удалось снять окраины, а не только открыточный центр.</p>
+    <dl class="facts">
+<div><dt>⌖</dt><dd>New York</dd></div>    </dl>
+  </div>
+  <div class="grid " data-limit="9">
+  <a class="tile vid"
+     href="../../media/day7-last/20261111-120411_IMG_1154_t.jpg"
+     data-full="../../media/day7-last/20261111-120411_IMG_1154_t.jpg"
+     data-cap="07:04">
+    <img loading="lazy" src="../../media/day7-last/20261111-120411_IMG_1154_t.jpg" alt="">
+<span class="play">▶ 0:17</span>  </a>
+  <a class="tile vid"
+     href="../../media/day7-last/20261111-120702_IMG_1155_t.jpg"
+     data-full="../../media/day7-last/20261111-120702_IMG_1155_t.jpg"
+     data-cap="07:07">
+    <img loading="lazy" src="../../media/day7-last/20261111-120702_IMG_1155_t.jpg" alt="">
+<span class="play">▶ 0:16</span>  </a>
+</div>
+
+</article>
+<article class="moment" id="flight-home">
+  <div class="m-head">
+<span class="m-time">12:00</span>    <h3>Обратно через Доху</h3>
+    <span class="chips"><a class="chip" href="../../topic/transport/">✈ Транспорт</a></span>
+
+  </div>
+  <div class="m-body">
+    <p>Самолёт, снова Доха, и домой.</p>
+    <dl class="facts">
+<div><dt>⌖</dt><dd>JFK Airport</dd></div>    </dl>
+  </div>
+  
+</article>
+  </div>
+</div>
+
+<nav class="pager">
+<a href="../../day/2026-11-10/">‹ Последний день: мост, Кац и «Аладдин»</a></nav>
+</main>
+<footer class="foot">
+  <span>Сделано для своих. Ноябрь 2026.</span>
+  <span class="draft">Черновик</span>
+</footer>
+<div class="lb" id="lb" hidden>
+  <button class="lb-x" aria-label="close">×</button>
+  <button class="lb-prev" aria-label="prev">‹</button>
+  <figure><div class="lb-media"></div><figcaption></figcaption></figure>
+  <button class="lb-next" aria-label="next">›</button>
+</div>
+<script src="../../assets/app.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+miniMap([{"lat": 40.7597, "lon": -73.984, "name": "New York"}, {"lat": 40.6413, "lon": -73.7781, "name": "JFK Airport"}], ["subway-broke", "flight-home"], "#7a7f87");
+</script>
+</body>
+</html>

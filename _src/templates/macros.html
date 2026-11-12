@@ -1,0 +1,44 @@
+{% macro media_grid(items, root, limit=12, cls='') %}
+{% if items %}
+<div class="grid {{ cls }}" data-limit="{{ limit }}">
+  {% for m in items %}
+  <a class="tile{% if m.type == 'video' %} vid{% endif %}{% if loop.index > limit %} more{% endif %}{% if m.type == 'photo' and m.w > m.h * 1.25 %} wide{% endif %}"
+     href="{{ root }}media/{{ m.full or m.video or m.thumb }}"
+     data-full="{{ root }}media/{{ m.full or m.thumb }}"
+     {% if m.video %}data-video="{{ root }}media/{{ m.video }}"{% endif %}
+     data-cap="{{ m.local }}">
+    <img loading="lazy" src="{{ root }}media/{{ m.thumb }}" alt="">
+    {% if m.type == 'video' %}<span class="play">▶{% if m.dur %} {{ '%d:%02d' % (m.dur // 60, m.dur % 60) }}{% endif %}</span>{% endif %}
+  </a>
+  {% endfor %}
+</div>
+{% if items|length > limit %}<button class="showall">+{{ items|length - limit }}</button>{% endif %}
+{% endif %}
+{% endmacro %}
+
+{% macro topic_chips(ids, home, lang) %}
+<span class="chips">{% for tid in ids %}{% set tp = topic_by_id[tid] %}<a class="chip" href="{{ home }}topic/{{ tid }}/">{{ tp.icon }} {{ tp[lang] }}</a>{% endfor %}</span>
+{% endmacro %}
+
+{% macro moment(mo, d, root, home, lang, t, show_day=false) %}
+<article class="moment" id="{{ mo.id }}">
+  <div class="m-head">
+    {% if show_day %}<a class="m-day" href="{{ home }}day/{{ d.id }}/#{{ mo.id }}" style="--c:{{ d.color }}">{{ t.day }} {{ d.n }} · {{ short_date(d.id, lang) }}</a>
+    {% elif mo.from %}<span class="m-time">{{ mo.from if mo.from != '00:00' else '' }}</span>{% endif %}
+    <h3>{{ mo.title[lang] }}</h3>
+    {{ topic_chips(mo.topics or [], home, lang) }}
+  </div>
+  <div class="m-body">
+    {{ mo.text[lang]|paras }}
+    {% if mo.image %}<a class="card-img" href="{{ root }}media/{{ mo.image }}" data-full="{{ root }}media/{{ mo.image }}"><img loading="lazy" src="{{ root }}media/{{ mo.image }}" alt=""></a>{% endif %}
+    <dl class="facts">
+      {% if mo.place %}<div><dt>⌖</dt><dd>{{ mo.place.name }}</dd></div>{% endif %}
+      {% if mo.price %}<div><dt>$</dt><dd>{{ price_text(mo.price, lang)|safe }}</dd></div>{% endif %}
+      {% if mo.link %}<div><dt>↗</dt><dd><a href="{{ mo.link }}" rel="noopener" target="_blank">{{ mo.link.split('/')[2].replace('www.','') }}</a></dd></div>{% endif %}
+    </dl>
+    {% if mo.tip %}<p class="tip"><b>{{ t.tip }}:</b> {{ mo.tip[lang] }}</p>{% endif %}
+  </div>
+  {% if mo.hidden_media %}<p class="hiddenmsg">{{ t.hidden }}</p>{% endif %}
+  {{ media_grid(mo.media, root, 9 if not show_day else 6) }}
+</article>
+{% endmacro %}
