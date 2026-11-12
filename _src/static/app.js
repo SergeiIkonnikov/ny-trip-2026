@@ -40,12 +40,12 @@ var TILES = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 var ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
 
 function pinIcon(color, label, cls) {
-  return L.divIcon({ className: '', iconSize: [26, 26], iconAnchor: [13, 13],
-    html: '<div class="pin ' + (cls || '') + '" style="--c:' + color + '">' + label + '</div>' });
+  return L.divIcon({ className: '', iconSize: [24, 24], iconAnchor: [12, 12],
+    html: '<div class="pin ' + (cls || '') + '" style="--c:' + color + (color === '#ffcc00' ? ';color:#0f0f10' : '') + '">' + label + '</div>' });
 }
 
 function miniMap(places, ids, color) {
-  var el = document.getElementById('minimap'); if (!el || !window.L || !places.length) { if (el) el.style.display = 'none'; return; }
+  var el = document.getElementById('minimap'); if (!el || !window.L || !places.length) { if (el) el.closest('.daymap').style.display = 'none'; return; }
   var map = L.map(el, { scrollWheelZoom: false, zoomControl: false });
   L.tileLayer(TILES, { maxZoom: 19, attribution: ATTR }).addTo(map);
   var pts = [];
@@ -54,7 +54,7 @@ function miniMap(places, ids, color) {
     L.marker([p.lat, p.lon], { icon: pinIcon(color, k + 1) }).addTo(map).bindTooltip(p.name)
       .on('click', function () { location.hash = ids[k]; });
   });
-  if (pts.length > 1) L.polyline(pts, { color: color, weight: 2, opacity: .6, dashArray: '4 6' }).addTo(map);
+  if (pts.length > 1) L.polyline(pts, { color: color === '#ffcc00' ? '#0f0f10' : color, weight: 2.5, opacity: .8, dashArray: '6 6' }).addTo(map);
   map.fitBounds(pts, { padding: [24, 24], maxZoom: 14 });
 }
 
@@ -62,10 +62,10 @@ function bigMap(points, hotel) {
   var map = L.map('bigmap', { zoomControl: true });
   L.tileLayer(TILES, { maxZoom: 19, attribution: ATTR }).addTo(map);
   var layer = L.layerGroup().addTo(map);
-  if (hotel) L.marker([hotel.lat, hotel.lon], { icon: pinIcon('#1d1b18', '★', 'hotelpin'), zIndexOffset: 1000 })
+  if (hotel) L.marker([hotel.lat, hotel.lon], { icon: pinIcon('#0f0f10', '★', 'hotelpin'), zIndexOffset: 1000 })
     .addTo(map).bindPopup('<div class="pop"><b>' + hotel.name + '</b><small>' + hotel.address + '</small></div>');
   var days = {}, topic = null;
-  document.querySelectorAll('#fdays .chip').forEach(function (c) { days[c.dataset.day] = true; });
+  document.querySelectorAll('#fdays .tag').forEach(function (c) { days[c.dataset.day] = true; });
   function draw() {
     layer.clearLayers();
     points.forEach(function (p) {
@@ -82,13 +82,13 @@ function bigMap(points, hotel) {
     else map.fitBounds(R[r]);
   }
   document.querySelectorAll('.regions button').forEach(function (b) { b.onclick = function () { region(b.dataset.r); }; });
-  document.querySelectorAll('#fdays .chip').forEach(function (c) {
+  document.querySelectorAll('#fdays .tag').forEach(function (c) {
     c.onclick = function () { days[c.dataset.day] = !days[c.dataset.day]; c.classList.toggle('on', days[c.dataset.day]); draw(); };
   });
-  document.querySelectorAll('#ftopics .chip').forEach(function (c) {
+  document.querySelectorAll('#ftopics .tag').forEach(function (c) {
     c.onclick = function () {
       topic = topic === c.dataset.topic ? null : c.dataset.topic;
-      document.querySelectorAll('#ftopics .chip').forEach(function (o) { o.classList.toggle('on', o.dataset.topic === topic); });
+      document.querySelectorAll('#ftopics .tag').forEach(function (o) { o.classList.toggle('on', o.dataset.topic === topic); });
       draw();
     };
   });

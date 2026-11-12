@@ -2,100 +2,111 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Домой · Нью-Йорк, ноябрь 2026</title>
 <meta name="description" content="Восемь дней втроём: Наташа, Макар и я. Записано для своих, но заходите все.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/style.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></head>
 <body class="">
 <header class="top">
-  <a class="brand" href="../../">NY<span>’26</span></a>
-  <nav>
-    <a href="../../#days">Дни</a>
-    <a href="../../#topics">Темы</a>
-    <a href="../../map/">Карта</a>
-    <a href="../../repeat/">Повторить поездку</a>
-    <a class="lang" href="../../en/day/2026-11-11/" hreflang="en">EN</a>
-  </nav>
+  <div class="g">
+    <a class="brand" href="../../">Нью-Йорк 2026</a>
+    <nav>
+      <a href="../../#days">Дни</a>
+      <a class="opt" href="../../#topics">Темы</a>
+      <a href="../../map/">Карта</a>
+      <a class="opt" href="../../repeat/">Повторить</a>
+      <a class="lang" href="../../en/day/2026-11-11/" hreflang="en">EN</a>
+    </nav>
+  </div>
 </header>
 <main>
-<section class="dayhero" style="--c:#7a7f87">
-<img class="dh-img" src="../../media/day8-flight-home/20261111-185903_IMG_1156.jpg" alt="">  <div class="dh-text">
-    <p class="kicker">День 8 · 11 ноября, среда</p>
+<div style="--c:#ffcc00">
+<section class="dayhero g">
+  <div class="metarow meta">
+    <div><span class="daynum"><i class="sq"></i>День 8</span></div>
+    <div>11 ноября, среда<br>2026</div>
+    <div>Потратили<span class="stat">—</span></div>
+    <div>Шаги<span class="stat">—</span></div>
+  </div>
+  <div class="hero-body">
     <h1>Домой</h1>
+    <figure class="hero-media"><img src="../../media/day8-flight-home/20261111-185903_IMG_1156.jpg" alt=""></figure>
     <p class="lede">Город попрощался с нами по-своему: сломал метро.</p>
-    <dl class="daystats">
-      <div><dt>Потратили</dt><dd>—</dd></div>
-      <div><dt>Шаги</dt><dd><span class="tbc">скрин с часов скоро</span></dd></div>
-    </dl>
   </div>
 </section>
 
-<div class="daywrap">
-  <aside class="dayside">
+  <article class="moment spread" id="subway-broke">
+  <div class="g">
+    <div class="m-meta meta">
+      <div><b>Где</b>New York</div>
+      <span class="tags"><a class="tag" href="../../topic/metro/">метро</a><a class="tag" href="../../topic/transport/">транспорт</a></span>
+    </div>
+    <div class="m-main">
+      <h3>Метро сломалось, бежим на автобус</h3>
+      <p>Уезжали рано утром. В это утро сломалось метро. Начинали мы с того, что не могли в нём разобраться, а закончили тем, что оно не смогло разобраться с нами.</p><p>Бежали на автобус. Зато из окна удалось снять окраины, а не только открыточный центр. Это тоже Нью-Йорк, просто на него редко смотрят.</p>
+
+    </div>
+<figure class="m-lead"><a class="tile vid"
+   href="../../media/day7-last/20261111-120702_IMG_1155.mp4"
+   data-full="../../media/day7-last/20261111-120702_IMG_1155_t.jpg"
+data-video="../../media/day7-last/20261111-120702_IMG_1155.mp4"   data-cap="07:07">
+<video class="loop" src="../../media/edit/2026-11-11/loop-bus-window.mp4" poster="../../media/edit/2026-11-11/loop-bus-window.jpg" autoplay muted loop playsinline preload="metadata"></video>
+</a>
+<figcaption class="meta cap">07:07</figcaption></figure>  </div>
+</article>
+
+  <section class="daymap g" aria-label="Карта">
+    <div class="cap">
+      <h4>Карта дня</h4>
+      <ol class="meta"><li><a href="#subway-broke"><i>1</i><span><b>Метро сломалось, бежим на автобус</b>New York</span></a></li><li><a href="#flight-home"><i>2</i><span><b>Обратно через Доху</b>JFK Airport</span></a></li></ol>
+      <p class="meta" style="margin-top:1rem"><a href="../../map/">Открыть карту →</a></p>
+    </div>
     <div id="minimap" class="minimap"></div>
-    <ol class="toc">
-<li><a href="#subway-broke">Метро сломалось, бежим на автобус</a></li><li><a href="#flight-home">Обратно через Доху</a></li>    </ol>
-  </aside>
-  <div class="daymain">
-<article class="moment" id="subway-broke">
-  <div class="m-head">
-<span class="m-time"></span>    <h3>Метро сломалось, бежим на автобус</h3>
-    <span class="chips"><a class="chip" href="../../topic/metro/">Ⓜ Метро</a><a class="chip" href="../../topic/transport/">✈ Транспорт</a></span>
+  </section>
+  <article class="moment bleed" id="flight-home" style="padding-top:4.5rem">
+  <div class="bleed-wrap">
+    <a class="tile"
+   href="../../media/day8-flight-home/20261111-185903_IMG_1156.jpg"
+   data-full="../../media/day8-flight-home/20261111-185903_IMG_1156.jpg"
+   data-cap="13:59">
+<img loading="lazy" src="../../media/day8-flight-home/20261111-185903_IMG_1156.jpg" alt=""></a>
 
+    <div class="over"><div class="g">
+      <div class="btw"><span class="bt">12:00</span><h3>Обратно через Доху</h3></div>
+      <div class="box y">
+        <p>Самолёт, снова Доха, и домой.</p>
+
+        <div class="facts meta"><div><b>Где</b>JFK Airport</div></div>
+        <span class="tags"><a class="tag" href="../../topic/transport/">транспорт</a></span>
+      </div>
+    </div></div>
   </div>
-  <div class="m-body">
-    <p>Уезжали рано утром. В это утро сломалось метро. Начинали мы с того, что не могли в нём разобраться, а закончили тем, что оно не смогло разобраться с нами.</p><p>Бежали на автобус. Зато из окна удалось снять окраины, а не только открыточный центр. Это тоже Нью-Йорк, просто на него редко смотрят.</p>
-    <dl class="facts">
-<div><dt>⌖</dt><dd>New York</dd></div>    </dl>
-  </div>
-  <div class="grid " data-limit="9">
-  <a class="tile vid"
-     href="../../media/day7-last/20261111-120702_IMG_1155.mp4"
-     data-full="../../media/day7-last/20261111-120702_IMG_1155_t.jpg"
-data-video="../../media/day7-last/20261111-120702_IMG_1155.mp4"     data-cap="07:07">
-<video class="loop" style="width:100%;height:100%;object-fit:cover" src="../../media/edit/2026-11-11/loop-bus-window.mp4" poster="../../media/edit/2026-11-11/loop-bus-window.jpg" autoplay muted loop playsinline preload="none"></video>
-  </a>
+<div class="g"><div class="m-rest"><div class="grid " data-limit="8">
+<a class="tile"
+   href="../../media/day8-flight-home/20261111-225240_IMG_1159.jpg"
+   data-full="../../media/day8-flight-home/20261111-225240_IMG_1159.jpg"
+   data-cap="17:52">
+<img loading="lazy" src="../../media/day8-flight-home/20261111-225240_IMG_1159_t.jpg" alt=""></a>
 </div>
+</div></div></article>
 
-</article>
-<article class="moment" id="flight-home">
-  <div class="m-head">
-<span class="m-time">12:00</span>    <h3>Обратно через Доху</h3>
-    <span class="chips"><a class="chip" href="../../topic/transport/">✈ Транспорт</a></span>
 
-  </div>
-  <div class="m-body">
-    <p>Самолёт, снова Доха, и домой.</p>
-    <dl class="facts">
-<div><dt>⌖</dt><dd>JFK Airport</dd></div>    </dl>
-  </div>
-  <div class="grid " data-limit="9">
-  <a class="tile wide"
-     href="../../media/day8-flight-home/20261111-185903_IMG_1156.jpg"
-     data-full="../../media/day8-flight-home/20261111-185903_IMG_1156.jpg"
-     data-cap="13:59">
-<img loading="lazy" src="../../media/day8-flight-home/20261111-185903_IMG_1156_t.jpg" alt="">  </a>
-  <a class="tile"
-     href="../../media/day8-flight-home/20261111-225240_IMG_1159.jpg"
-     data-full="../../media/day8-flight-home/20261111-225240_IMG_1159.jpg"
-     data-cap="17:52">
-<img loading="lazy" src="../../media/day8-flight-home/20261111-225240_IMG_1159_t.jpg" alt="">  </a>
-</div>
-
-</article>
-  </div>
-</div>
 
 <nav class="pager">
-<a href="../../day/2026-11-10/">‹ Последний день: мост, Кац и «Аладдин»</a></nav>
+  <div class="g">
+<a class="prev" href="../../day/2026-11-10/"><small class="meta">← День 7</small>Последний день: мост, Кац и «Аладдин»</a>  </div>
+</nav>
+</div>
 </main>
 <footer class="foot">
-  <span>Сделано для своих. Ноябрь 2026.</span>
-  <span class="draft">Черновик</span>
+  <div class="g meta">
+    <span>Сделано для своих. Ноябрь 2026.</span>
+    <span class="draft">Черновик</span>
+  </div>
 </footer>
 <div class="lb" id="lb" hidden>
   <button class="lb-x" aria-label="close">×</button>
@@ -106,7 +117,7 @@ data-video="../../media/day7-last/20261111-120702_IMG_1155.mp4"     data-cap="07
 <script src="../../assets/app.js"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-miniMap([{"lat": 40.7597, "lon": -73.984, "name": "New York"}, {"lat": 40.6413, "lon": -73.7781, "name": "JFK Airport"}], ["subway-broke", "flight-home"], "#7a7f87");
+miniMap([{"lat": 40.7597, "lon": -73.984, "name": "New York"}, {"lat": 40.6413, "lon": -73.7781, "name": "JFK Airport"}], ["subway-broke", "flight-home"], "#ffcc00");
 </script>
 </body>
 </html>

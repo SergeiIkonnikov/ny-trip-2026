@@ -1,50 +1,47 @@
 {% extends 'base.html' %}
 {% block bodyclass %}home{% endblock %}
 {% block main %}
-<section class="hero">
-  <div class="hero-text">
-    <p class="kicker">4–11 · XI · 2026</p>
-    <h1>{{ site.title[lang] }}</h1>
-    <p class="tagline">{{ site.tagline[lang] }}</p>
-    {{ site.intro[lang]|paras }}
+<section class="homehero g">
+  <div class="metarow meta">
+    <div><b>{{ '3–11 ноября 2026' if lang == 'ru' else '3–11 November 2026' }}</b></div>
+    <div><b>{{ 'Наташа, Макар, Сергей' if lang == 'ru' else 'Natasha, Makar, Sergey' }}</b></div>
+    <div>{{ 'Кипр → Доха → Нью-Йорк' if lang == 'ru' else 'Cyprus → Doha → New York' }}</div>
+    <div>{{ days|length }} {{ 'дней' if lang == 'ru' else 'days' }}</div>
   </div>
-  <div class="mosaic">
-    {% for d in days if d.cover_media %}{% if loop.index <= 6 %}
-    <a href="{{ home }}day/{{ d.id }}/" style="--c:{{ d.color }}"><img src="{{ root }}media/{{ d.cover_media.thumb }}" alt=""><span>{{ d.n }}</span></a>
-    {% endif %}{% endfor %}
-  </div>
+  <h1>{% if lang == 'ru' %}Нью-Йорк, <span>ноябрь</span> 2026{% else %}New York, <span>November</span> 2026{% endif %}</h1>
+  <p class="tagline">{{ site.tagline[lang] }}</p>
+  <div class="intro">{{ site.intro[lang]|paras }}</div>
 </section>
 
-<section id="days" class="days">
-  <h2>{{ t.by_day }}</h2>
+<section id="days" class="sec g">
+  <div class="sec-h"><h2>{{ t.by_day }}</h2><a class="meta" href="{{ home }}map/">{{ t.open_map }} →</a></div>
   <ol class="daylist">
   {% for d in days %}
-    <li class="daycard{% if d.highlight %} hl{% endif %}" style="--c:{{ d.color }}">
+    <li class="dayrow" style="--c:{{ d.color }}">
       <a href="{{ home }}day/{{ d.id }}/">
-        <div class="dc-img">{% if d.cover_media %}<img loading="lazy" src="{{ root }}media/{{ d.cover_media.thumb }}" alt="">{% endif %}</div>
-        <div class="dc-text">
-          <p class="dc-meta"><b>{% if d.n %}{{ t.day }} {{ d.n }}{% else %}{{ t.day0 }}{% endif %}</b> · {{ fmt_date(d.id, lang) }}</p>
-          <h3>{{ d.title[lang] }}</h3>
-          <p>{{ d.lede[lang] }}</p>
-          <p class="dc-stats">{{ d.moments|length }} {{ t.moments_n }} · {{ d.media|length }} {{ t.photos_word }}{% if d.cost %} · ≈ ${{ d.cost }}{% if d.cost_unknown %}+{% endif %}{% endif %}</p>
-        </div>
+        <div class="dn"><b><i class="sq"></i>{% if d.n %}{{ d.n }}{% else %}0{% endif %}</b><span class="meta">{{ fmt_date(d.id, lang) }}{% if d.cost %}<br>${{ d.cost }}{% if d.cost_unknown %}+{% endif %}{% endif %}</span></div>
+        <h3>{{ d.title[lang] }}</h3>
+        <p class="dl">{{ d.lede[lang] }}</p>
+        <div class="dimg">{% if d.cover_media %}<img loading="lazy" src="{{ root }}media/{{ d.cover_media.thumb }}" alt="">{% endif %}</div>
       </a>
     </li>
   {% endfor %}
   </ol>
 </section>
 
-<section id="topics" class="topics">
-  <h2>{{ t.by_topic }}</h2>
+<section id="topics" class="sec g">
+  <div class="sec-h"><h2>{{ t.by_topic }}</h2></div>
   <div class="topicgrid">
   {% for tp in topics %}
-    <a class="topiccard" href="{{ home }}topic/{{ tp.id }}/"><span class="ti">{{ tp.icon }}</span><b>{{ tp[lang] }}</b></a>
+    <a class="topiccard" href="{{ home }}topic/{{ tp.id }}/"><b>{{ tp[lang] }}</b><span>#{{ tp[lang]|lower }}</span></a>
   {% endfor %}
   </div>
 </section>
 
-<section class="twocol">
-  <a class="bigcta map-cta" href="{{ home }}map/"><span>⌖</span><b>{{ t.map }}</b><small>{{ t.map_lede }}</small></a>
-  <a class="bigcta" href="{{ home }}repeat/"><span>✓</span><b>{{ t.cheat_title }}</b><small>{{ t.cheat_lede }}</small></a>
+<section class="ctas">
+  <div class="g">
+    <a class="cta blue" href="{{ home }}map/"><b>{{ t.map }}</b><small>{{ t.map_lede }}</small></a>
+    <a class="cta green" href="{{ home }}repeat/"><b>{{ t.cheat_title }}</b><small>{{ t.cheat_lede }}</small></a>
+  </div>
 </section>
 {% endblock %}

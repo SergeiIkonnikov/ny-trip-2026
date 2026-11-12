@@ -1,42 +1,44 @@
 {% extends 'base.html' %}
 {% block title %}{{ t.cheat_title }} · {{ site.title[lang] }}{% endblock %}
 {% block main %}
-<section class="pagehead">
-  <p class="kicker">{{ t.repeat }}</p>
+<section class="pagehead g">
+  <div class="kick meta"><b>{{ t.known if t.known is defined else t.total }}</b>≈ ${{ total }}{% if lang == 'ru' %}, без отеля и перелётов{% else %}, excluding hotel and flights{% endif %}</div>
   <h1>{{ t.cheat_title }}</h1>
   <p class="lede">{{ t.cheat_lede }}</p>
 </section>
-<div class="narrow cheat">
-  <section class="hotelcard">
+<section class="cheat g">
+  <div class="hotelrow">
     <h2>{{ t.hotel }}</h2>
-    <p><b>{{ hotel.name }}</b><br>{{ hotel.address }}</p>
-    <p>{{ price_text(hotel.price, lang)|safe }} · <a href="{{ hotel.link }}" target="_blank" rel="noopener">ihg.com ↗</a></p>
-  </section>
-
+    <div class="hb">
+      <p><b>{{ hotel.name }}</b><br>{{ hotel.address }}</p>
+      <p>{{ price_text(hotel.price, lang)|safe }} · <a href="{{ hotel.link }}" target="_blank" rel="noopener">ihg.com ↗</a></p>
+    </div>
+  </div>
   {% for d in days %}
-  <section class="cheatday" style="--c:{{ d.color }}">
-    <h2><a href="{{ home }}day/{{ d.id }}/">{% if d.n %}{{ t.day }} {{ d.n }}{% else %}{{ t.day0 }}{% endif %} · {{ short_date(d.id, lang) }}</a> <small>{{ d.title[lang] }}</small></h2>
-    <table>
-      <tbody>
+  <div class="cheatday" style="--c:{{ d.color }}">
+    <h2><a href="{{ home }}day/{{ d.id }}/"><i class="sq"></i>{% if d.n %}{{ t.day }} {{ d.n }}{% else %}{{ t.day0 }}{% endif %}</a><small>{{ short_date(d.id, lang) }} · {{ d.title[lang] }}</small></h2>
+    <div class="cb">
+      <table><tbody>
       {% for mo in d.moments if mo.place and ('details' not in (mo.topics or []) or mo.price) %}
         <tr>
           <td class="c-what"><a href="{{ home }}day/{{ d.id }}/#{{ mo.id }}">{{ mo.title[lang] }}</a><br><small>{{ mo.place.name }}</small></td>
           <td class="c-price">{{ price_text(mo.price, lang)|safe if mo.price else '' }}</td>
-          <td class="c-link">{% if mo.link %}<a href="{{ mo.link }}" target="_blank" rel="noopener">↗</a>{% endif %}</td>
+          <td class="c-link">{% if mo.link %}<a href="{{ mo.link }}" target="_blank" rel="noopener" aria-label="{{ t.link }}">↗</a>{% endif %}</td>
         </tr>
       {% endfor %}
-      </tbody>
-    </table>
-    {% if d.cost %}<p class="daytotal">{{ t.spent }}: ≈ ${{ d.cost }}{% if d.cost_unknown %} + <span class="tbc">{{ t.to_check }}</span>{% endif %}</p>{% endif %}
-  </section>
+      </tbody></table>
+      {% if d.cost %}<p class="daytotal">{{ t.spent }}: ≈ ${{ d.cost }}{% if d.cost_unknown %} + <span class="tbc">{{ t.to_check }}</span>{% endif %}</p>{% endif %}
+    </div>
+  </div>
   {% endfor %}
-
-  <section class="tips">
+  <div class="cheatday tips">
     <h2>{{ t.tips }}</h2>
-    <ul>{% for d, mo in tips %}<li>{{ mo.tip[lang] }} <a href="{{ home }}day/{{ d.id }}/#{{ mo.id }}">→</a></li>{% endfor %}
-      <li>{{ 'В ресторанах к цене в меню прибавляются налог (~9%) и чаевые (18–22%). Закладывайте сверху примерно треть.' if lang == 'ru' else 'Restaurants add sales tax (~9%) and a tip (18–22%) on top of menu prices. Budget about a third extra.' }}</li>
-      <li>{{ 'Метро дешевле такси в разы: поездка $3, а такси из Даунтауна в Мидтаун вечером ~$60. Оплачивается прикосновением банковской карты или телефона (OMNY).' if lang == 'ru' else 'The subway is far cheaper than taxis: $3 a ride vs ~$60 for a cab from Downtown to Midtown in the evening. Pay by tapping a bank card or phone (OMNY).' }}</li>
-    </ul>
-  </section>
-</div>
+    <div class="cb">
+      <ul>{% for d, mo in tips %}<li>{{ mo.tip[lang] }} <a href="{{ home }}day/{{ d.id }}/#{{ mo.id }}">→</a></li>{% endfor %}
+        <li>{{ 'В ресторанах к цене в меню прибавляются налог (~9%) и чаевые (18–22%). Закладывайте сверху примерно треть.' if lang == 'ru' else 'Restaurants add sales tax (~9%) and a tip (18–22%) on top of menu prices. Budget about a third extra.' }}</li>
+        <li>{{ 'Метро дешевле такси в разы: поездка $3, а такси из Даунтауна в Мидтаун вечером ~$60. Оплачивается прикосновением банковской карты или телефона (OMNY).' if lang == 'ru' else 'The subway is far cheaper than taxis: $3 a ride vs ~$60 for a cab from Downtown to Midtown in the evening. Pay by tapping a bank card or phone (OMNY).' }}</li>
+      </ul>
+    </div>
+  </div>
+</section>
 {% endblock %}

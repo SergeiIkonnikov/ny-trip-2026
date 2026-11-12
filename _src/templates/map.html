@@ -4,12 +4,14 @@
 {% block head %}<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">{% endblock %}
 {% block main %}
 <section class="mapbar">
-  <div class="regions">
-    <button data-r="nyc" class="on">{{ t.nyc }}</button><button data-r="dc">{{ t.dc }}</button><button data-r="niagara">{{ t.niagara }}</button><button data-r="all">{{ t.all_route }}</button>
-  </div>
-  <div class="filters">
-    <div class="chips" id="fdays">{% for d in days %}<button class="chip on" data-day="{{ d.id }}" style="--c:{{ d.color }}"><i></i>{{ d.n }}</button>{% endfor %}</div>
-    <div class="chips" id="ftopics">{% for tp in topics %}<button class="chip" data-topic="{{ tp.id }}">{{ tp.icon }} {{ tp[lang] }}</button>{% endfor %}</div>
+  <div class="g">
+    <div class="regions">
+      <button data-r="nyc" class="on">{{ t.nyc }}</button><button data-r="dc">{{ t.dc }}</button><button data-r="niagara">{{ t.niagara }}</button><button data-r="all">{{ t.all_route }}</button>
+    </div>
+    <div class="filters">
+      <div class="tags" id="fdays">{% for d in days %}<button class="tag on" data-day="{{ d.id }}" style="--c:{{ d.color }}"><i></i>{{ d.n }}</button>{% endfor %}</div>
+      <div class="tags" id="ftopics">{% for tp in topics %}<button class="tag" data-topic="{{ tp.id }}">{{ tp[lang]|lower }}</button>{% endfor %}</div>
+    </div>
   </div>
 </section>
 <div id="bigmap" class="bigmap"></div>

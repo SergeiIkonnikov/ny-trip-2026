@@ -3,45 +3,64 @@
 {% block title %}{{ d.title[lang] }} · {{ site.title[lang] }}{% endblock %}
 {% block head %}<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">{% endblock %}
 {% block main %}
-<section class="dayhero" style="--c:{{ d.color }}">
-  {% if d.cover_media %}<img class="dh-img" src="{{ root }}media/{{ d.cover_media.full }}" alt="">{% endif %}
-  <div class="dh-text">
-    <p class="kicker">{% if d.n %}{{ t.day }} {{ d.n }}{% else %}{{ t.day0 }}{% endif %} · {{ fmt_date(d.id, lang) }}</p>
+<div style="--c:{{ d.color }}">
+<section class="dayhero g">
+  <div class="metarow meta">
+    <div><span class="daynum"><i class="sq"></i>{% if d.n %}{{ t.day }} {{ d.n }}{% else %}{{ t.day0 }}{% endif %}</span></div>
+    <div>{{ fmt_date(d.id, lang) }}<br>2026</div>
+    <div>{{ t.spent }}<span class="stat">{% if d.cost %}${{ d.cost }}{% if d.cost_unknown %}+{% endif %}{% elif d.cost_unknown %}<span class="tbc">{{ t.to_check }}</span>{% else %}—{% endif %}</span></div>
+    <div>{{ t.steps }}<span class="stat">{% if d.steps %}{{ '{:,}'.format(d.steps).replace(',', ' ') }}{% else %}—{% endif %}</span></div>
+  </div>
+  <div class="hero-body">
     <h1>{{ d.title[lang] }}</h1>
+    {% if d.reel %}
+    <figure class="hero-media tall"><video src="{{ root }}media/{{ d.reel.file }}" poster="{{ root }}media/{{ d.reel.poster }}" autoplay muted loop playsinline></video>
+      <button class="reel-sound" type="button" onclick="var v=this.previousElementSibling;v.muted=!v.muted;this.textContent=v.muted?'{{ 'Со звуком' if lang == 'ru' else 'Sound on' }}':'{{ 'Без звука' if lang == 'ru' else 'Mute' }}'">{{ 'Со звуком' if lang == 'ru' else 'Sound on' }}</button></figure>
+    {% elif d.cover_media %}
+    <figure class="hero-media"><img src="{{ root }}media/{{ d.cover_media.full or d.cover_media.thumb }}" alt=""></figure>
+    {% endif %}
     <p class="lede">{{ d.lede[lang] }}</p>
-    <dl class="daystats">
-      <div><dt>{{ t.spent }}</dt><dd>{% if d.cost %}≈ ${{ d.cost }}{% if d.cost_unknown %} + <span class="tbc">{{ t.to_check }}</span>{% endif %}{% elif d.cost_unknown %}<span class="tbc">{{ t.to_check }}</span>{% else %}—{% endif %}</dd></div>
-      <div><dt>{{ t.steps }}</dt><dd>{% if d.steps %}{{ '{:,}'.format(d.steps).replace(',', ' ') }}{% else %}<span class="tbc">{{ t.steps_soon }}</span>{% endif %}</dd></div>
-    </dl>
   </div>
 </section>
 
-<div class="daywrap">
-  <aside class="dayside">
+{% set ns = namespace(k=0) %}
+{% set places = d.moments|selectattr('place')|list %}
+{% set map_after = (d.moments|length - 1) // 2 %}
+{% for mo in d.moments %}
+  {% if not mo.media %}{% set lay = 'field' %}
+  {% else %}
+    {% set lead = mo.media[0] %}
+    {% if ns.k % 3 == 1 and (lead.type == 'photo' or lead.loop) %}{% set lay = 'bleed' %}
+    {% elif ns.k % 3 == 2 %}{% set lay = 'flip' %}{% else %}{% set lay = 'spread' %}{% endif %}
+    {% set ns.k = ns.k + 1 %}
+  {% endif %}
+  {{ moment(mo, d, root, home, lang, t, lay) }}
+  {% if loop.index0 == map_after and places %}
+  <section class="daymap g" aria-label="{{ t.map }}">
+    <div class="cap">
+      <h4>{{ 'Карта дня' if lang == 'ru' else 'The day on a map' }}</h4>
+      <ol class="meta">{% for mo2 in places %}<li><a href="#{{ mo2.id }}"><i>{{ loop.index }}</i><span><b>{{ mo2.title[lang] }}</b>{{ mo2.place.name }}</span></a></li>{% endfor %}</ol>
+      <p class="meta" style="margin-top:1rem"><a href="{{ home }}map/">{{ t.open_map }} →</a></p>
+    </div>
     <div id="minimap" class="minimap"></div>
-    <ol class="toc">
-      {% for mo in d.moments %}<li><a href="#{{ mo.id }}">{{ mo.title[lang] }}</a></li>{% endfor %}
-    </ol>
-  </aside>
-  <div class="daymain">
-    {% if d.reel %}
-    <div class="reel" style="position:relative;max-width:360px;margin:0 0 2rem"><video style="width:100%;border-radius:10px;display:block" src="{{ root }}media/{{ d.reel.file }}" poster="{{ root }}media/{{ d.reel.poster }}" autoplay muted loop playsinline></video>
-      <button class="reel-sound" type="button" style="position:absolute;right:10px;bottom:10px;border:0;border-radius:99px;padding:.4rem .6rem;background:rgba(0,0,0,.6);color:#fff;cursor:pointer" onclick="var v=this.previousElementSibling;v.muted=!v.muted;this.textContent=v.muted?'🔇':'🔊'">🔇</button></div>
-    {% endif %}
-    {% for mo in d.moments %}{{ moment(mo, d, root, home, lang, t) }}{% endfor %}
-    {% if d.extra %}
-    <section class="extra">
-      <h2>{{ t.more_photos }}</h2>
-      {{ media_grid(d.extra, root, 12) }}
-    </section>
-    {% endif %}
-  </div>
-</div>
+  </section>
+  {% endif %}
+{% endfor %}
+
+{% if d.extra %}
+<section class="extra g">
+  <h2>{{ t.more_photos }}</h2>
+  <div class="grid-wrap" style="grid-column:1/13">{{ media_grid(d.extra, root, 12) }}</div>
+</section>
+{% endif %}
 
 <nav class="pager">
-  {% if prev %}<a href="{{ home }}day/{{ prev.id }}/">‹ {{ prev.title[lang] }}</a>{% else %}<span></span>{% endif %}
-  {% if next %}<a href="{{ home }}day/{{ next.id }}/">{{ next.title[lang] }} ›</a>{% endif %}
+  <div class="g">
+    {% if prev %}<a class="prev" href="{{ home }}day/{{ prev.id }}/"><small class="meta">← {% if prev.n %}{{ t.day }} {{ prev.n }}{% else %}{{ t.day0 }}{% endif %}</small>{{ prev.title[lang] }}</a>{% else %}<span class="prev"></span>{% endif %}
+    {% if next %}<a class="next" href="{{ home }}day/{{ next.id }}/"><small class="meta">{{ t.day }} {{ next.n }} →</small>{{ next.title[lang] }}</a>{% endif %}
+  </div>
 </nav>
+</div>
 {% endblock %}
 {% block scripts %}
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

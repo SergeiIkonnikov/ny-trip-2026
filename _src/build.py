@@ -19,7 +19,7 @@ CONSENT = {'masha': False, 'stranger': True}
 
 FOLDER_TZ = {'day0-cyprus': 2, 'doha': 3}
 DAY0_FOLDERS = {'day0-cyprus', 'doha'}
-DAY_COLORS = ['#8a8f98', '#e0a100', '#d1495b', '#2e86ab', '#6a4c93', '#1b998b', '#c75000', '#3d5a80', '#7a7f87']
+DAY_COLORS = ['#ffcc00', '#e3262b', '#1f4fd8', '#0a8a4f']  # yellow, red, blue, green (style.css tokens)
 
 days = C['days']
 day_by_id = {d['id']: d for d in days}
