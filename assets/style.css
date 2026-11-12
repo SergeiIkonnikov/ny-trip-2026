@@ -395,3 +395,12 @@ button.tag{cursor:pointer}
 /* tips inside colour fields: tint of the field, dark text */
 .field .tip,.bleed .box.y .tip{background:rgba(0,0,0,.08);color:var(--on-yellow)}
 .bleed .box:not(.y) .tip{background:rgba(255,255,255,.14);color:#fff}
+/* historical photos (Wikimedia Commons) in topic notes */
+.nph .hist{margin:1.2rem 0 0}
+.nph .hist:first-child{margin-top:0}
+.nph .hist .tile{aspect-ratio:auto;background:none}
+.nph .hist .tile img{height:auto;filter:saturate(.85)}
+.hist figcaption{font:400 .8rem/1.4 var(--text);color:var(--ink2);margin-top:.5rem}
+.hist .credit{display:block;font-size:.72rem;color:var(--ink2);opacity:.85;margin-top:.3rem}
+.hist .credit a{color:inherit}
+@media(max-width:860px){.nph .hist{max-width:78%}}
