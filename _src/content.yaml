@@ -55,7 +55,8 @@ days:
     ru: Прилетели рано утром. Заселение в четыре. Значит, сразу гулять.
     en: We landed early in the morning. Check-in at four. So, straight out.
 - id: "2026-11-05"
-  cover: "20261105-195341"
+  cover: "20261105-194939"
+    cover_pos: "50% 35%"
   steps: 13240  # placeholder until watch screenshots
   n: 2
   tz: -5

@@ -19,7 +19,7 @@
     <figure class="hero-media tall"><video src="{{ root }}media/{{ d.reel.file }}" poster="{{ root }}media/{{ d.reel.poster }}" autoplay muted loop playsinline></video>
       <button class="reel-sound" type="button" onclick="var v=this.previousElementSibling;v.muted=!v.muted;this.textContent=v.muted?'{{ 'Со звуком' if lang == 'ru' else 'Sound on' }}':'{{ 'Без звука' if lang == 'ru' else 'Mute' }}'">{{ 'Со звуком' if lang == 'ru' else 'Sound on' }}</button></figure>
     {% elif d.cover_media %}
-    <figure class="hero-media"><img src="{{ root }}media/{{ d.cover_media.full or d.cover_media.thumb }}" alt=""></figure>
+    <figure class="hero-media"><img src="{{ root }}media/{{ d.cover_media.full or d.cover_media.thumb }}" alt=""{% if d.cover_pos %} style="object-position:{{ d.cover_pos }}"{% endif %}></figure>
     {% endif %}
     <p class="lede">{{ d.lede[lang] }}</p>
   </div>
