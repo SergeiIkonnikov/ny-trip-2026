@@ -313,7 +313,7 @@ for lang in ('ru', 'en'):
         write(f"topic/{tp['id']}/index.html", 'topic.html', lang, tp=tp, items=items,
               notes=[nt for nt in notes if tp['id'] in (nt.get('topics') or [])],
               extra_media=sorted([m for m in topic_media.get(tp['id'], [])
-                                  if not ({m.get('full'), m.get('thumb'), m.get('loop')} & {nt.get('photo') for nt in notes if tp['id'] in (nt.get('topics') or [])})],
+                                  if not (({m.get('full'), m.get('thumb'), m.get('loop')} - {None}) & {nt.get('photo') for nt in notes if tp['id'] in (nt.get('topics') or [])})],
                                  key=lambda m: m['t']))
     write('map/index.html', 'map.html', lang, hotel=C['hotel'], points=moment_json(lang, '../' * (1 if lang == 'ru' else 2)))
     write('repeat/index.html', 'repeat.html', lang, hotel=C['hotel'],
