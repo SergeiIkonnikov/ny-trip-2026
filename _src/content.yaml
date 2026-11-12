@@ -6,8 +6,8 @@
 site:
   title: {ru: "Нью-Йорк, ноябрь 2026", en: "New York, November 2026"}
   tagline:
-    ru: "Восемь дней втроём: Наташа, Макар и я. Записано для своих, но заходите все."
-    en: "Eight days, the three of us: Natasha, Makar and me. Written for family, but everyone is welcome."
+    ru: 'Восемь дней втроём: Наташа, Макар и я. Записано для семьи и друзей.'
+    en: 'Eight days, the three of us: Natasha, Makar and me. Written for family and friends.'
   intro:
     ru: |
       В начале ноября мы втроём полетели в Нью-Йорк. Повод был серьёзный: Макар играл на конкурсе в Карнеги-холле. Мы и думали, что вся поездка будет вокруг одного концерта.
