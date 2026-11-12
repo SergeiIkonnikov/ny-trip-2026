@@ -50,6 +50,7 @@ for m in sorted(manifest, key=lambda x: x['t']):
 # On by default (Sergey approved 2026-11-12); CURATED=0 disables.
 CURATED = os.environ.get('CURATED', '1') == '1'
 details_media = []
+topic_media = {}  # topic id -> media shown on that topic page (side observations)
 if CURATED and os.path.exists(os.path.join(MEDIA, 'curation.json')):
     cur = json.load(open(os.path.join(MEDIA, 'curation.json'), encoding='utf-8'))['days']
     for d in days:
@@ -62,11 +63,16 @@ if CURATED and os.path.exists(os.path.join(MEDIA, 'curation.json')):
             status = c.get('status', 'keep')
             if status == 'cut' or (status == 'masha' and not CONSENT['masha']):
                 continue
-            if status == 'details':
-                details_media.append(m)
-                continue
-            if status == 'loop' and c.get('loop'):
+            if c.get('loop') and status in ('loop', 'topic', 'details'):
                 m['loop'], m['loop_poster'] = c['loop'], c.get('poster')
+            tids = list(c.get('topics') or [])
+            if status == 'details' and 'details' not in tids:
+                tids.append('details')
+            for tid in tids:
+                topic_media.setdefault(tid, []).append(m)
+            if status in ('details', 'topic'):
+                details_media.append(m)  # kept for media refs
+                continue
             m['order'] = c.get('order') if c.get('order') is not None else 10_000
             keep.append(m)
         d['media'] = keep
@@ -237,7 +243,7 @@ for d in days:
                 refs.add(m[k])
     if d.get('reel'):
         refs.update(x for x in (d['reel'].get('file'), d['reel'].get('poster')) if x)
-for m in details_media:
+for m in details_media + [x for v in topic_media.values() for x in v]:
     for k in ('full', 'thumb', 'video', 'loop', 'loop_poster'):
         if m.get(k):
             refs.add(m[k])
@@ -272,7 +278,7 @@ for lang in ('ru', 'en'):
         tp['count'] = len(items)
         write(f"topic/{tp['id']}/index.html", 'topic.html', lang, tp=tp, items=items,
               notes=[nt for nt in notes if tp['id'] in (nt.get('topics') or [])],
-              extra_media=details_media if tp['id'] == 'details' else [])
+              extra_media=sorted(topic_media.get(tp['id'], []), key=lambda m: m['t']))
     write('map/index.html', 'map.html', lang, hotel=C['hotel'], points=moment_json(lang, '../' * (1 if lang == 'ru' else 2)))
     write('repeat/index.html', 'repeat.html', lang, hotel=C['hotel'],
           tips=[(d, mo) for d in days for mo in d['moments'] if mo.get('tip')],
