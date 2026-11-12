@@ -103,10 +103,16 @@ function bigMap(points, hotel) {
   var imgs = Array.prototype.slice.call(box.querySelectorAll('img')); if (imgs.length < 2) return;
   var i = 0;
   function load(k) { var im = imgs[k]; if (im && im.dataset.src && !im.src) im.src = im.dataset.src; }
+  // Slow zoom that keeps going while the frame fades out; it is reset only once the frame is hidden.
+  function zoom(im) {
+    im.style.transition = 'none'; im.style.transform = 'scale(1)'; void im.offsetWidth;
+    im.style.transition = ''; im.style.transform = 'scale(1.08)';
+  }
+  zoom(imgs[0]);
   window.addEventListener('load', function () { load(1); });
   setInterval(function () {
     var n = (i + 1) % imgs.length; load(n); load((n + 1) % imgs.length);
     if (!imgs[n].complete || !imgs[n].naturalWidth) return; // wait until it's ready
-    imgs[i].classList.remove('on'); imgs[n].classList.add('on'); i = n;
+    imgs[i].classList.remove('on'); zoom(imgs[n]); imgs[n].classList.add('on'); i = n;
   }, 5000);
 })();
