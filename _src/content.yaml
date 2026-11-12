@@ -47,6 +47,7 @@ days:
     en: The trip began in Cyprus, on an ordinary morning. New York was almost two days and one layover away.
 - id: "2026-11-04"
   steps: 12778
+  spent: 197  # card spending that day, notes/spending.md
   n: 1
   tz: -5
   folders: [day1-arrival]
@@ -58,6 +59,7 @@ days:
   cover: "20261105-194939"
   cover_pos: "50% 35%"
   steps: 13480
+  spent: 126  # card spending that day, notes/spending.md
   n: 2
   tz: -5
   folders: [day2-nov5, day3-nov6]
@@ -67,6 +69,7 @@ days:
     en: One day in the capital, one good guide, and one woman who was in all of our photos.
 - id: "2026-11-06"
   steps: 12003
+  spent: 275  # card spending that day, notes/spending.md
   n: 3
   tz: -5
   folders: [day3-nov6, day3-rehearsal]
@@ -76,6 +79,7 @@ days:
     en: Piano in the morning, the city from above in the afternoon, a museum in the evening. And the cap.
 - id: "2026-11-07"
   steps: 14183
+  spent: 117  # card spending that day, notes/spending.md
   n: 4
   tz: -5
   folders: [day4-niagara]
@@ -85,6 +89,7 @@ days:
     en: Twelve hours on a bus for a few hours by the water. Worth it.
 - id: "2026-11-08"
   steps: 14966
+  spent: 469  # card spending that day, notes/spending.md
   cover: "20261108-162716"
   n: 5
   tz: -5
@@ -96,6 +101,7 @@ days:
     en: The day the whole thing was planned around.
 - id: "2026-11-09"
   steps: 12721
+  spent: 219  # card spending that day, notes/spending.md
   n: 6
   tz: -5
   folders: [day6-nov9]
@@ -105,6 +111,7 @@ days:
     en: A quiet day. After yesterday, we needed one.
 - id: "2026-11-10"
   steps: 21118
+  spent: 105  # card spending that day, notes/spending.md
   n: 7
   tz: -5
   folders: [day7-last]

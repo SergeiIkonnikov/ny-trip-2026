@@ -148,6 +148,8 @@ def day_cost(d):
 
 for d in days:
     d['cost'], d['cost_unknown'] = day_cost(d)
+    if d.get('spent') is not None:  # real card spending for the day (Sergey, 2026-11-12) wins over moment prices
+        d['cost'], d['cost_unknown'] = d['spent'], False
 
 # ---------- i18n ----------
 T = {
