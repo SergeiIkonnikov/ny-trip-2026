@@ -234,22 +234,22 @@ main{min-height:70vh}
 .daylist{grid-column:1/13;list-style:none;margin:0;padding:0}
 .dayrow a{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col);text-decoration:none;padding-block:1.6rem;align-items:start}
 .dayrow:last-child a{}
-.dayrow .dn{grid-column:1/3;display:flex;flex-direction:column;gap:.5rem}
-.dayrow .dn b{font:800 2.6rem/.9 var(--display);letter-spacing:-.04em;display:flex;align-items:center;gap:.6rem}
-.dayrow .dn b .bul{font-size:1.3em;margin:0}
-.dayrow h3{grid-column:3/8;font-size:clamp(1.6rem,2.8vw,2.6rem);margin-bottom:.5rem}
-.dayrow .dl{grid-column:3/8;grid-row:2;color:var(--ink2);margin:0}
+.dayrow .bul{grid-column:1/2;font-size:2.9rem;margin:0;justify-self:start}
+.dayrow .dt{grid-column:2/8}
+.dayrow h3{font-size:clamp(1.6rem,2.8vw,2.6rem);margin:.15em 0 .5rem}
+.dayrow .dd{margin:0 0 .9rem}
+.dayrow .dl{color:var(--ink2);margin:0}
 .dayrow .dimg{grid-column:9/13;grid-row:1/3;aspect-ratio:16/10;overflow:hidden;background:var(--soft)}
 .dayrow .dimg img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
 .dayrow a:hover h3{color:var(--red)}
 .dayrow a:hover .dimg img{transform:scale(1.04)}
 @media(max-width:760px){
-  .dayrow .dn{grid-column:1/13;flex-direction:row;align-items:baseline;gap:1rem;margin-bottom:1rem}
-  .dayrow h3,.dayrow .dl{grid-column:1/13;grid-row:auto}
-  .dayrow .dimg{grid-column:1/13;grid-row:auto;margin-top:.8rem}
-  .dayrow .dn b{font-size:1.6rem}
-  .dayrow .dn b .bul{font-size:1.4em}
-  .daynum .bul{font-size:2.2em}
+  .dayrow a{grid-template-columns:auto minmax(0,1fr);column-gap:.9rem}
+  .dayrow .bul{grid-column:1;font-size:1.9rem}
+  .dayrow .dt{grid-column:2}
+  .dayrow h3{margin-top:.1em}
+  .dayrow .dimg{grid-column:1/3;grid-row:auto;margin-top:1rem}
+  .daynum .bul{font-size:1.9em}
 }
 .topicgrid{grid-column:1/13;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--col)}
 .topiccard{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;background:var(--soft);text-decoration:none}
@@ -387,6 +387,6 @@ button.tag{cursor:pointer}
   .fm-stag{grid-template-columns:repeat(2,minmax(0,1fr))}
   .fm-stag .fg[class]{margin-top:0}.fm-stag .fg:nth-child(2n){margin-top:2.5rem}
 }
-.daynum .bul{font-size:2.6em;margin:0}
-.tmoment .tm-day .bul{font-size:1.8em;margin:0}
-.cheatday h2 .bul{font-size:.9em;vertical-align:.15em;margin:0 0 0 .1em}
+.daynum .bul{font-size:2.2em;margin:0}
+.tmoment .tm-day .bul{font-size:1.55em;margin:0}
+.cheatday h2 .bul{font-size:.77em;vertical-align:.15em;margin:0 0 0 .1em}

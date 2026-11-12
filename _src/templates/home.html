@@ -22,9 +22,12 @@
   {% for d in days %}
     <li class="dayrow" style="--c:{{ d.color }}">
       <a href="{{ home }}day/{{ d.id }}/">
-        <div class="dn"><b><i class="bul{% if d.color == '#ffcc00' %} y{% endif %}">{{ d.n or 0 }}</i></b><span class="meta">{{ fmt_date(d.id, lang) }}{% if d.cost %}<br>${{ d.cost }}{% if d.cost_unknown %}+{% endif %}{% endif %}</span></div>
-        <h3>{{ d.title[lang] }}</h3>
-        <p class="dl">{{ d.lede[lang] }}</p>
+        <i class="bul{% if d.color == '#ffcc00' %} y{% endif %}">{{ d.n or 0 }}</i>
+        <div class="dt">
+          <h3>{{ d.title[lang] }}</h3>
+          <p class="dd meta">{{ fmt_date(d.id, lang) }}{% if d.cost %} · ${{ d.cost }}{% if d.cost_unknown %}+{% endif %}{% endif %}</p>
+          <p class="dl">{{ d.lede[lang] }}</p>
+        </div>
         <div class="dimg">{% if d.cover_media %}<img loading="lazy" src="{{ root }}media/{{ d.cover_media.thumb }}" alt="">{% endif %}</div>
       </a>
     </li>
