@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ root }}assets/style.css">
+<link rel="stylesheet" href="{{ root }}assets/style.css?v={{ asset_v or "20261112-1530" }}">
 {% block head %}{% endblock %}
 </head>
 <body class="{% block bodyclass %}{% endblock %}">
@@ -39,7 +39,7 @@
   <figure><div class="lb-media"></div><figcaption></figcaption></figure>
   <button class="lb-next" aria-label="next">›</button>
 </div>
-<script src="{{ root }}assets/app.js"></script>
+<script src="{{ root }}assets/app.js?v={{ asset_v or "20261112-1530" }}"></script>
 {% block scripts %}{% endblock %}
 </body>
 </html>

@@ -192,7 +192,9 @@ def price_text(p, lang):
 
 env = Environment(loader=FileSystemLoader(os.path.join(HERE, 'templates')), autoescape=True,
                   trim_blocks=True, lstrip_blocks=True)
-env.globals.update(fmt_date=fmt_date, short_date=short_date, price_text=price_text,
+import hashlib
+ASSET_V = hashlib.sha1(b''.join(open(os.path.join(HERE, 'static', f), 'rb').read() for f in sorted(os.listdir(os.path.join(HERE, 'static'))))).hexdigest()[:10]
+env.globals.update(asset_v=ASSET_V, fmt_date=fmt_date, short_date=short_date, price_text=price_text,
                    topic_by_id=topic_by_id, day_by_id=day_by_id)
 
 def paras(s):
