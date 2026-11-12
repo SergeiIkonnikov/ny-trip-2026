@@ -313,7 +313,8 @@ for tp in topics:
 for r in refs:
     src = os.path.join(MEDIA, r) if r.startswith('edited/') else os.path.join(MEDIA, 'web', r)
     dst = os.path.join(OUT, 'media', r)
-    if os.path.exists(src) and (not os.path.exists(dst) or os.path.getsize(dst) != os.path.getsize(src)):
+    if os.path.exists(src) and (not os.path.exists(dst) or os.path.getsize(dst) != os.path.getsize(src)
+                                     or int(os.path.getmtime(dst)) != int(os.path.getmtime(src))):
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         shutil.copy2(src, dst)
 
