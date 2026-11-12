@@ -15,7 +15,7 @@ C = yaml.safe_load(open(os.path.join(HERE, 'content.yaml'), encoding='utf-8'))
 manifest = json.load(open(os.path.join(MEDIA, 'web', 'manifest.json'), encoding='utf-8'))
 
 # Privacy switches: flip to True once consent is confirmed.
-CONSENT = {'masha': False, 'stranger': True}
+CONSENT = {'masha': True, 'stranger': True}  # Masha's parents agreed 2026-11-12
 
 FOLDER_TZ = {'day0-cyprus': 2, 'doha': 3}
 DAY0_FOLDERS = {'day0-cyprus', 'doha'}
