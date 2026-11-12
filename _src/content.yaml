@@ -547,7 +547,7 @@ moments:
 - id: rink
   day: "2026-11-09"
   from: "00:00"
-  to: "13:00"
+  to: "14:00"
   topics: [people]
   place: {name: "The Rink at Rockefeller Center", lat: 40.7587, lon: -73.9787}
   title:
@@ -558,23 +558,10 @@ moments:
     en: Natasha and Makar went skating at Rockefeller Center with our friends and Masha. Masha is a pianist too, also a prize-winner, and also played Carnegie Hall. On the ice none of that mattered.
   price: {usd: null, per: person}
   privacy: masha
-- id: grand-central
-  day: "2026-11-09"
-  from: "13:00"
-  to: "16:00"
-  topics: [transport, metro]
-  place: {name: "Grand Central Terminal", lat: 40.7527, lon: -73.9772}
-  title:
-    ru: Grand Central
-    en: Grand Central
-  text:
-    ru: После катка все пошли на Grand Central. Это вокзал, куда приходят не только за поездами. Мы, например, пришли просто посмотреть.
-    en: After the rink everyone went to Grand Central. It's a station people visit for more than trains. We, for one, just came to look.
-  price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
 - id: central-park
   day: "2026-11-09"
-  from: "16:00"
-  to: "23:59"
+  from: "14:00"
+  to: "17:40"
   topics: [views]
   place: {name: "Central Park", lat: 40.7681, lon: -73.9719}
   title:
@@ -586,6 +573,19 @@ moments:
   check: true
 
   # ---------- Day 7 ----------
+- id: grand-central
+  day: "2026-11-09"
+  from: "17:40"
+  to: "23:59"
+  topics: [transport, metro]
+  place: {name: "Grand Central Terminal", lat: 40.7527, lon: -73.9772}
+  title:
+    ru: Grand Central
+    en: Grand Central
+  text:
+    ru: После катка все пошли на Grand Central. Это вокзал, куда приходят не только за поездами. Мы, например, пришли просто посмотреть.
+    en: After the rink everyone went to Grand Central. It's a station people visit for more than trains. We, for one, just came to look.
+  price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
 - id: memorial-911
   day: "2026-11-10"
   from: "00:00"
