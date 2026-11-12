@@ -33,7 +33,7 @@ hotel:
   lat: 40.7597
   lon: -73.9840
   link: "https://www.ihg.com/voco/hotels/us/en/new-york/nycvo/hoteldetail"
-  price: {usd: null, per: night}
+  price: {usd: 350, per: night, note: {ru: "$2 449.58 за 7 ночей на троих, бронировали через Booking.com", en: "$2,449.58 for 7 nights for three, booked on Booking.com"}}
 
 days:
 - id: "2026-11-03"
@@ -69,7 +69,7 @@ days:
     en: One day in the capital, one good guide, and one woman who was in all of our photos.
 - id: "2026-11-06"
   steps: 12003
-  spent: 275  # card spending that day, notes/spending.md
+  spent: 365  # MoMA shop 274.80 + membership 90 (Natasha's card); card spending that day, notes/spending.md
   n: 3
   tz: -5
   folders: [day3-nov6, day3-rehearsal]
