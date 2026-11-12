@@ -1,11 +1,8 @@
 {% extends 'base.html' %}
 {% block bodyclass %}home{% endblock %}
 {% block main %}
-{% set cov = site.cover or '20261110-233553' %}
-{% set ns = namespace(c=none) %}
-{% for d in days %}{% for m in d.media %}{% if not ns.c and m.src.startswith(cov) %}{% set ns.c = m %}{% endif %}{% endfor %}{% endfor %}
 <section class="homecover">
-  {% if ns.c %}<img src="{{ root }}media/{{ ns.c.full or ns.c.thumb }}" alt="{{ 'Таймс-сквер ночью' if lang == 'ru' else 'Times Square at night' }}">{% endif %}
+  <img src="{{ root }}assets/cover.jpg?v={{ asset_v }}" alt="{{ 'Крайслер-билдинг с Эмпайр-стейт-билдинг' if lang == 'ru' else 'The Chrysler Building seen from the Empire State Building' }}">
   <div class="hc-text"><div class="g">
     <p class="hc-meta">{{ '3–11 ноября 2026 · Наташа, Макар, Сергей' if lang == 'ru' else '3–11 November 2026 · Natasha, Makar, Sergey' }}</p>
     <h1>{% if lang == 'ru' %}Нью-Йорк, ноябрь 2026{% else %}New York, November 2026{% endif %}</h1>
