@@ -3,7 +3,7 @@
 usage: python3 build.py [OUT_DIR]   (default: /mnt/project-files/ny-trip/site)
 Reads content.yaml + ../media/web/manifest.json, writes RU at OUT/ and EN at OUT/en/.
 """
-import os, sys, json, shutil, datetime as dt, html
+import os, sys, json, shutil, datetime as dt, html, re
 import yaml
 from jinja2 import Environment, FileSystemLoader
 
@@ -99,6 +99,11 @@ for i, mo in enumerate(moments):
                     mo['media'].append(m)
                 m['used'] = True
                 m['blocked'] = bool(blocked)
+        # a cropped variant (…-vN) replaces its original: hide the original from this day
+        bases = {re.sub(r'-v\d+(\.\w+)$', r'\1', m['src']) for m in mo['media'] if re.search(r'-v\d+\.\w+$', m['src'])}
+        for m in d['all_media']:
+            if m['src'] in bases:
+                m['used'] = True
 for d in days:
     for m in d['media']:
         if m['used']:
