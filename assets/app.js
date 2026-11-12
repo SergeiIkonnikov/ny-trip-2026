@@ -96,3 +96,17 @@ function bigMap(points, hotel) {
   });
   draw(); region('nyc');
 }
+
+// Home cover slideshow: first frame is in the HTML, the rest load after the page and crossfade.
+(function () {
+  var box = document.querySelector('.homecover'); if (!box) return;
+  var imgs = Array.prototype.slice.call(box.querySelectorAll('img')); if (imgs.length < 2) return;
+  var i = 0;
+  function load(k) { var im = imgs[k]; if (im && im.dataset.src && !im.src) im.src = im.dataset.src; }
+  window.addEventListener('load', function () { load(1); });
+  setInterval(function () {
+    var n = (i + 1) % imgs.length; load(n); load((n + 1) % imgs.length);
+    if (!imgs[n].complete || !imgs[n].naturalWidth) return; // wait until it's ready
+    imgs[i].classList.remove('on'); imgs[n].classList.add('on'); i = n;
+  }, 5000);
+})();
