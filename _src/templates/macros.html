@@ -7,7 +7,7 @@
      data-full="{{ root }}media/{{ m.full or m.thumb }}"
      {% if m.video %}data-video="{{ root }}media/{{ m.video }}"{% endif %}
      data-cap="{{ m.local }}">
-    {% if m.loop %}<video class="loop" src="{{ root }}media/{{ m.loop }}" poster="{{ root }}media/{{ m.loop_poster or m.thumb }}" autoplay muted loop playsinline preload="none"></video>
+    {% if m.loop %}<video class="loop" style="width:100%;height:100%;object-fit:cover" src="{{ root }}media/{{ m.loop }}" poster="{{ root }}media/{{ m.loop_poster or m.thumb }}" autoplay muted loop playsinline preload="none"></video>
     {% else %}<img loading="lazy" src="{{ root }}media/{{ m.thumb }}" alt="">{% endif %}
     {% if m.type == 'video' and not m.loop %}<span class="play">▶{% if m.dur %} {{ '%d:%02d' % (m.dur // 60, m.dur % 60) }}{% endif %}</span>{% endif %}
   </a>

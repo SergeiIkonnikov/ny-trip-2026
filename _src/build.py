@@ -255,6 +255,13 @@ for r in refs:
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         shutil.copy2(src, dst)
 
+# prune media no longer referenced (cut / hidden files must not stay public)
+for dp, _, fs in os.walk(os.path.join(OUT, 'media')):
+    for f in fs:
+        rel = os.path.relpath(os.path.join(dp, f), os.path.join(OUT, 'media'))
+        if rel not in refs:
+            os.remove(os.path.join(dp, f))
+
 for lang in ('ru', 'en'):
     write('index.html', 'home.html', lang)
     for i, d in enumerate(days):
