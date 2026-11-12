@@ -106,7 +106,7 @@ function bigMap(points, hotel) {
   // Slow zoom that keeps going while the frame fades out; it is reset only once the frame is hidden.
   function zoom(im) {
     im.style.transition = 'none'; im.style.transform = 'scale(1)'; void im.offsetWidth;
-    im.style.transition = ''; im.style.transform = 'scale(1.08)';
+    im.style.transition = ''; im.style.transform = 'scale(1.05)';
   }
   zoom(imgs[0]);
   window.addEventListener('load', function () { load(1); });
