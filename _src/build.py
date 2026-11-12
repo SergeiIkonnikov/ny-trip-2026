@@ -91,7 +91,8 @@ for i, mo in enumerate(moments):
     blocked = mo.get('privacy') and not CONSENT.get(mo['privacy'], False)
     mo['hidden_media'] = bool(blocked)
     if mo.get('photos'):
-        for m in d['all_media']:
+        # search this day first, then any day (e.g. the cap photo lives on Nov 10)
+        for m in d['all_media'] + [x for dd in days if dd is not d for x in dd['all_media']]:
             if any(m['src'].startswith(p) for p in mo['photos']):
                 if not blocked:
                     mo['media'].append(m)

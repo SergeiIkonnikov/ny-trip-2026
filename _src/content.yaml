@@ -158,6 +158,8 @@ moments:
   tip:
     ru: Восемь часов в Хамаде — это не страшно. Ищите зелёную зону с деревьями.
     en: Eight hours at Hamad is nothing to fear. Look for the indoor garden with the trees.
+  layout: field
+  photos: ["20261103-181842", "20261103-144443"]
 - id: jfk
   day: "2026-11-04"
   from: "07:00"
@@ -326,9 +328,9 @@ moments:
     en: |
       All day the same woman kept walking into our shots. At the cemetery, in a red top. At the White House. On the pavement.
       We don't know her. By the evening she was almost part of the group. If you recognise yourself, thank you: the day would have been duller without you.
-  layout: field
-  photos: ["20261105-194251", "20261105-203452"]
   privacy: stranger
+  layout: field
+  photos: ["20261105-194251", "20261105-203452", "20261105-162141"]
 - id: weehawken
   day: "2026-11-05"
   from: "20:00"
@@ -435,6 +437,8 @@ moments:
   text:
     ru: В магазине музея купили до фига сувениров. Я купил кепку и проходил в ней до конца поездки. Дальше её можно искать на каждой фотографии.
     en: At the museum shop we bought a ton of souvenirs. I bought a cap and wore it for the rest of the trip. From here on, look for it in every photo.
+  layout: field
+  photos: ["20261110-203059"]
 - id: niagara-bus
   day: "2026-11-07"
   from: "00:00"
@@ -672,6 +676,8 @@ moments:
     en: |
       We left early in the morning. That morning the subway broke down. We started the trip unable to figure it out, and ended it with the subway unable to figure us out.
       We ran for a bus. On the plus side, from its window we filmed the outskirts, not just the postcard centre. That's New York too; people just rarely look at it.
+  layout: field
+  photos: ["20261111-120702"]
 - id: flight-home
   day: "2026-11-11"
   from: "12:00"
