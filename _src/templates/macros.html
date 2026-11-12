@@ -54,6 +54,7 @@
     <div class="fbody">
       <h3>{{ mo.title[lang] }}</h3>
       {{ body(mo, root, lang, t) }}
+      {% if mo.media %}<div class="fphotos">{% for m in mo.media[:4] %}<figure class="fg">{{ tile(m, root, '', full=true) }}{% if m.local %}<figcaption>{{ m.local }}</figcaption>{% endif %}</figure>{% endfor %}</div>{% endif %}
       {% if mo.image %}<a class="tile" style="max-width:360px;margin:1rem 0" href="{{ root }}media/{{ mo.image }}" data-full="{{ root }}media/{{ mo.image }}"><img loading="lazy" src="{{ root }}media/{{ mo.image }}" alt=""></a>{% endif %}
       <div class="facts meta">{{ facts(mo, lang) }}</div>
       {{ tags(mo.topics, home, lang) }}

@@ -51,6 +51,8 @@ for m in sorted(manifest, key=lambda x: x['t']):
 CURATED = os.environ.get('CURATED', '1') == '1'
 details_media = []
 topic_media = {}  # topic id -> media shown on that topic page (side observations)
+for d in days:
+    d['all_media'] = list(d['media'])  # before curation: explicit moment `photos` may pick any of these
 if CURATED and os.path.exists(os.path.join(MEDIA, 'curation.json')):
     cur = json.load(open(os.path.join(MEDIA, 'curation.json'), encoding='utf-8'))['days']
     for d in days:
@@ -89,7 +91,7 @@ for i, mo in enumerate(moments):
     blocked = mo.get('privacy') and not CONSENT.get(mo['privacy'], False)
     mo['hidden_media'] = bool(blocked)
     if mo.get('photos'):
-        for m in d['media']:
+        for m in d['all_media']:
             if any(m['src'].startswith(p) for p in mo['photos']):
                 if not blocked:
                     mo['media'].append(m)
@@ -245,7 +247,7 @@ for d in days:
                 refs.add(m[k])
     if d.get('reel'):
         refs.update(x for x in (d['reel'].get('file'), d['reel'].get('poster')) if x)
-for m in details_media + [x for v in topic_media.values() for x in v]:
+for m in details_media + [x for v in topic_media.values() for x in v] + [x for mo in moments for x in mo['media']]:
     for k in ('full', 'thumb', 'video', 'loop', 'loop_poster'):
         if m.get(k):
             refs.add(m[k])

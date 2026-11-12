@@ -159,6 +159,10 @@ main{min-height:70vh}
 .field .lbl{grid-column:1/4;font:800 clamp(1.5rem,2.8vw,2.4rem)/1 var(--display);letter-spacing:-.03em}
 .field .lbl small{display:block;font:600 .85rem/1.3 var(--text);letter-spacing:0;margin-top:.6rem}
 .field .fbody{grid-column:4/11}
+.fphotos{display:flex;flex-wrap:wrap;gap:var(--col);margin:1.6rem 0 1.2rem;align-items:flex-start}
+.fphotos .fg .tile img,.fphotos .fg .tile video{height:min(300px,42vw);width:auto;max-width:100%;max-height:none}
+.field .fg figcaption{color:var(--on-yellow);opacity:.7}
+@media(max-width:700px){.fphotos{gap:12px}.fphotos .fg{flex:0 0 calc(50% - 6px)}.fphotos .fg .tile img,.fphotos .fg .tile video{width:100%;height:auto}}
 .field h3{font-size:clamp(2rem,3.6vw,3.2rem);margin-bottom:.9rem}
 .field p{font-size:1.1rem;max-width:34em}
 

@@ -29,14 +29,14 @@
 {% set places = d.moments|selectattr('place')|list %}
 {% set map_after = (d.moments|length - 1) // 2 %}
 {% for mo in d.moments %}
-  {% if not mo.media %}{% set lay = 'field' %}
+  {% if not mo.media or mo.layout == 'field' %}{% set lay = 'field' %}
   {% else %}
     {% set lead = mo.media[0] %}
     {% if ns.k % 2 == 1 and (lead.type == 'photo' or lead.loop) %}{% set lay = 'bleed' %}
     {% elif ns.k % 4 == 2 %}{% set lay = 'flip' %}{% else %}{% set lay = 'spread' %}{% endif %}
     {% set ns.k = ns.k + 1 %}
   {% endif %}
-  {% if figmode and mo.media %}{{ figmoment(mo, d, root, home, lang, t, loop.index, ns.k, ns.k % 2 == 0 and (mo.media[0].type == 'photo' or mo.media[0].loop), fc) }}
+  {% if figmode and lay != 'field' %}{{ figmoment(mo, d, root, home, lang, t, loop.index, ns.k, ns.k % 2 == 0 and (mo.media[0].type == 'photo' or mo.media[0].loop), fc) }}
   {% else %}{{ moment(mo, d, root, home, lang, t, lay) }}{% endif %}
   {% if loop.index0 == map_after and places %}
   <section class="daymap g" aria-label="{{ t.map }}">
