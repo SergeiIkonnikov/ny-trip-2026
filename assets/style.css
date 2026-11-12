@@ -390,3 +390,6 @@ button.tag{cursor:pointer}
 .daynum .bul{font-size:2.2em;margin:0}
 .tmoment .tm-day .bul{font-size:1.55em;margin:0}
 .cheatday h2 .bul{font-size:.77em;vertical-align:.15em;margin:0 0 0 .1em}
+/* tips inside colour fields: tint of the field, dark text */
+.field .tip,.bleed .box.y .tip{background:rgba(0,0,0,.08);color:var(--on-yellow)}
+.bleed .box:not(.y) .tip{background:rgba(255,255,255,.14);color:#fff}
