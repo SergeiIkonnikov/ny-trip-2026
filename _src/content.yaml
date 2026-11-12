@@ -559,7 +559,7 @@ moments:
     ru: Ужинали в Ellen's Stardust Diner на Бродвее. Официанты там — будущие бродвейские актёры, и они поют прямо между столиками. Кто-то несёт тарелки, кто-то берёт высокую ноту. Мы отмечали первое место, и казалось, что поют немного и для нас.
     en: We had dinner at Ellen's Stardust Diner on Broadway. The waiters are future Broadway performers, and they sing right between the tables. One carries plates, another hits a high note. We were celebrating first place, and it felt like they were singing a little bit for us.
   link: "https://www.ellensstardustdiner.com/"
-  price: {usd: null, per: family}
+  price: {usd: 121, per: family, note: {ru: "ужин на троих, $120.68 с налогом и чаевыми", en: "dinner for three, $120.68 with tax and tip"}}
 
   # ---------- Day 6 ----------
 - id: rink
@@ -643,7 +643,7 @@ moments:
     ru: Обедали у Каца. На входе выдают билетик и предупреждают, что терять его нельзя. Предупреждают так серьёзно, что держишь его крепче, чем документы в Дохе. Сэндвич с пастрами размером с небольшую книгу.
     en: Lunch at Katz's. At the door they hand you a ticket and warn you not to lose it. They say it so seriously that you hold it tighter than we held our documents in Doha. The pastrami sandwich is the size of a small book.
   link: "https://katzsdelicatessen.com/"
-  price: {usd: null, per: family}
+  price: {usd: 105, per: family, note: {ru: "на троих, $105.36", en: "for three, $105.36"}}
 - id: soho-ghostbusters
   day: "2026-11-10"
   from: "15:00"
