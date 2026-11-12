@@ -37,7 +37,7 @@ hotel:
 
 days:
 - id: "2026-11-03"
-  steps: 10412  # placeholder until watch screenshots
+  steps: 17008
   n: 0
   tz: 2
   folders: [day0-cyprus, doha]
@@ -46,7 +46,7 @@ days:
     ru: Поездка началась на Кипре, в обычное утро. До Нью-Йорка было почти двое суток и одна пересадка.
     en: The trip began in Cyprus, on an ordinary morning. New York was almost two days and one layover away.
 - id: "2026-11-04"
-  steps: 16578  # placeholder until watch screenshots
+  steps: 12778
   n: 1
   tz: -5
   folders: [day1-arrival]
@@ -57,7 +57,7 @@ days:
 - id: "2026-11-05"
   cover: "20261105-194939"
   cover_pos: "50% 35%"
-  steps: 13240  # placeholder until watch screenshots
+  steps: 13480
   n: 2
   tz: -5
   folders: [day2-nov5, day3-nov6]
@@ -66,7 +66,7 @@ days:
     ru: Один день в столице, один хороший гид и одна женщина, которая была на всех наших фотографиях.
     en: One day in the capital, one good guide, and one woman who was in all of our photos.
 - id: "2026-11-06"
-  steps: 15187  # placeholder until watch screenshots
+  steps: 12003
   n: 3
   tz: -5
   folders: [day3-nov6, day3-rehearsal]
@@ -75,7 +75,7 @@ days:
     ru: Утром пианино, днём город сверху, вечером музей. И кепка.
     en: Piano in the morning, the city from above in the afternoon, a museum in the evening. And the cap.
 - id: "2026-11-07"
-  steps: 10936  # placeholder until watch screenshots
+  steps: 14183
   n: 4
   tz: -5
   folders: [day4-niagara]
@@ -84,7 +84,7 @@ days:
     ru: Двенадцать часов в автобусе ради нескольких часов у воды. Оно того стоило.
     en: Twelve hours on a bus for a few hours by the water. Worth it.
 - id: "2026-11-08"
-  steps: 12405  # placeholder until watch screenshots
+  steps: 14966
   cover: "20261108-162716"
   n: 5
   tz: -5
@@ -95,7 +95,7 @@ days:
     ru: День, ради которого всё затевалось.
     en: The day the whole thing was planned around.
 - id: "2026-11-09"
-  steps: 14762  # placeholder until watch screenshots
+  steps: 12721
   n: 6
   tz: -5
   folders: [day6-nov9]
@@ -104,7 +104,7 @@ days:
     ru: Спокойный день. После вчерашнего он был нужен.
     en: A quiet day. After yesterday, we needed one.
 - id: "2026-11-10"
-  steps: 15893  # placeholder until watch screenshots
+  steps: 21118
   n: 7
   tz: -5
   folders: [day7-last]
@@ -113,7 +113,7 @@ days:
     ru: Последний день. Пытались успеть всё, что ещё не успели.
     en: The last day. We tried to fit in everything we hadn't got to yet.
 - id: "2026-11-11"
-  steps: 11208  # placeholder until watch screenshots
+  steps: 6788
   n: 8
   tz: -5
   folders: [day8-flight-home]
