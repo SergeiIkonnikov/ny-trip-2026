@@ -1325,3 +1325,41 @@ notes:
   text:
     ru: До Дня благодарения ещё две недели, до Рождества полтора месяца, а на тротуаре уже стоят ящики с ёлками. Нью-Йорк начинает праздновать заранее.
     en: Thanksgiving is still two weeks away, Christmas six weeks, and there are already crates of Christmas trees on the pavement. New York starts celebrating early.
+- id: note-ambulances
+  topics:
+  - transport
+  day: '2026-11-09'
+  photo: day6-nov9/20261109-223057_IMG_0932_t.jpg
+  title:
+    ru: Только для скорых
+    en: Ambulance only
+  text:
+    ru: |
+      Вечером на Верхнем Ист-Сайде мы прошли мимо целой очереди машин скорой помощи. Стоят одна за другой у входа с табличкой «Ambulance Only», «только для скорых». Это больница Ленокс-Хилл.
+      Её открыли в 1857 году немецкие иммигранты, и называлась она тогда Немецкой амбулаторией, а потом Немецкой больницей. В июле 1918 года, в разгар Первой мировой, когда Германия стала врагом, больницу срочно переименовали по названию района. Так она и осталась Ленокс-Хилл. Сейчас ею владеет крупная медицинская сеть Northwell Health, чьё имя написано на машинах.
+    en: |
+      One evening on the Upper East Side we walked past a whole queue of ambulances. Lined up one behind the other at an entrance with an "Ambulance Only" sign. This is Lenox Hill Hospital.
+      German immigrants opened it in 1857, and it was called the German Dispensary, later the German Hospital. In July 1918, in the middle of the First World War, with Germany now the enemy, the hospital was hastily renamed after the neighbourhood. Lenox Hill it stayed. Today it belongs to the big Northwell Health network, whose name is on the ambulances.
+  sources:
+  - https://en.wikipedia.org/wiki/Lenox_Hill_Hospital
+- id: note-fedex-steam
+  topics:
+  - transport
+  - details
+  day: '2026-11-06'
+  photo: day3-nov6/20261106-195002_IMG_0336.jpg
+  title:
+    ru: Грузовик FedEx и пар из-под земли
+    en: A FedEx truck and steam from underground
+  text:
+    ru: |
+      Обычная картинка Мидтауна: грузовик FedEx, а за ним из-под асфальта валит пар. В этом кадре сразу две нью-йоркские истории.
+      Первая — пар. Это не авария. Под Манхэттеном с 1882 года проложена паровая сеть: по трубам под улицами пар идёт в здания и греет их. Сегодня её обслуживает энергокомпания Con Edison, к сети подключено больше 1700 зданий, и это крупнейшая городская паровая система в мире, больше следующих девяти вместе взятых. Пар над улицей — это утечки или конденсат, его отводят наверх через оранжево-белые трубы высотой три метра.
+      Вторая — логотип. Посмотрите на промежуток между буквами E и x: там белая стрелка, указывающая вперёд. Её нарисовал дизайнер Линдон Лидер в 1994 году. Кто её однажды увидел, больше не может не видеть.
+    en: |
+      An ordinary Midtown picture: a FedEx truck, and behind it steam pouring up from under the asphalt. There are two New York stories in this one shot.
+      The first is the steam. It isn't an accident. Since 1882 a steam network has run under Manhattan, carrying steam through pipes under the streets into buildings to heat them. Today it's run by the utility Con Edison, more than 1,700 buildings are connected, and it is the largest commercial steam system in the world, bigger than the next nine combined. The steam above the street comes from leaks or condensation and is vented upwards through ten-foot orange-and-white stacks.
+      The second is the logo. Look at the gap between the E and the x: there's a white arrow pointing forward. The designer Lindon Leader drew it in 1994. Once you've seen it, you can't unsee it.
+  sources:
+  - https://en.wikipedia.org/wiki/New_York_City_steam_system
+  - https://en.wikipedia.org/wiki/FedEx
