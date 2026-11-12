@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% from 'macros.html' import tmoment, media_grid, tile %}
 {% block title %}{{ tp[lang] }} · {{ site.title[lang] }}{% endblock %}
+{% macro hist_fig(h) %}<figure class="hist"><a class="tile" href="{{ root }}media/{{ h.file }}" data-full="{{ root }}media/{{ h.file }}" data-cap="{{ h.caption[lang] }}"><img loading="lazy" src="{{ root }}media/{{ h.file }}" alt="{{ h.caption[lang] }}"></a><figcaption>{{ h.caption[lang] }}<small class="credit">{{ 'Фото' if lang == 'ru' else 'Photo' }}: {{ h.author }} · {{ h.license }} · <a href="{{ h.source }}" target="_blank" rel="noopener">Wikimedia Commons</a></small></figcaption></figure>{% endmacro %}
 {% block main %}
 <section class="pagehead g">
   {% macro pl(n, f1, f2, f5, en) %}{{ n }} {% if lang == 'ru' %}{{ f1 if n % 10 == 1 and n % 100 != 11 else (f2 if n % 10 in [2, 3, 4] and n % 100 not in [12, 13, 14] else f5) }}{% else %}{{ en }}{{ 's' if n != 1 }}{% endif %}{% endmacro %}
@@ -11,14 +12,15 @@
 {% if notes %}
 <section class="notes g">
 {% for nt in notes %}
-  <article class="note-row{% if not nt.photo %} nophoto{% endif %}" id="note-{{ nt.id }}">
+  <article class="note-row{% if not nt.photo and not nt.hist %} nophoto{% endif %}" id="note-{{ nt.id }}">
     <h2>{{ nt.title[lang] }}</h2>
     <div class="nt">
       {{ nt.text[lang]|paras }}
       {% if nt.day %}{% set nd = day_by_id[nt.day] %}<p class="note-ref"><a href="{{ home }}day/{{ nd.id }}/{% if nt.moment %}#{{ nt.moment }}{% endif %}">→ {% if nd.n %}{{ t.day }} {{ nd.n }}{% else %}{{ t.day0 }}{% endif %} · {{ short_date(nd.id, lang) }}</a></p>{% endif %}
       {% if nt.sources %}<p class="note-src">{% for u in nt.sources %}<a href="{{ u }}" target="_blank" rel="noopener">{{ u.split('/')[2].replace('www.','') }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>{% endif %}
     </div>
-    {% if nt.photo %}<div class="nph"><a class="tile" href="{{ root }}media/{{ nt.photo }}" data-full="{{ root }}media/{{ nt.photo }}">{% if nt.loop %}<video class="loop" src="{{ root }}media/{{ nt.loop }}" poster="{{ root }}media/{{ nt.loop_poster or nt.photo }}" autoplay muted loop playsinline preload="metadata"></video>{% else %}<img loading="lazy" src="{{ root }}media/{{ nt.photo }}" alt="">{% endif %}</a></div>{% endif %}
+    {% if nt.photo %}<div class="nph"><a class="tile" href="{{ root }}media/{{ nt.photo }}" data-full="{{ root }}media/{{ nt.photo }}">{% if nt.loop %}<video class="loop" src="{{ root }}media/{{ nt.loop }}" poster="{{ root }}media/{{ nt.loop_poster or nt.photo }}" autoplay muted loop playsinline preload="metadata"></video>{% else %}<img loading="lazy" src="{{ root }}media/{{ nt.photo }}" alt="">{% endif %}</a>{% if nt.hist %}{{ hist_fig(nt.hist) }}{% endif %}</div>
+    {% elif nt.hist %}<div class="nph">{{ hist_fig(nt.hist) }}</div>{% endif %}
   </article>
 {% endfor %}
 </section>

@@ -258,6 +258,13 @@ for mo in moments:
     if mo.get('image'):
         refs.add(mo['image'])
 notes = C.get('notes') or []
+_hist_p = os.path.join(MEDIA, 'web', 'hist', 'hist.json')
+HIST = json.load(open(_hist_p, encoding='utf-8')) if os.path.exists(_hist_p) else {}
+for nt in notes:  # historical photos (Wikimedia Commons) keyed by note id
+    h = HIST.get(nt['id']) or HIST.get('note-' + nt['id'])
+    if h:
+        nt['hist'] = h
+        refs.add(h['file'])
 for nt in notes:
     if nt.get('photo'):
         refs.add(nt['photo'])
