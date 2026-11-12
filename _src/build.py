@@ -117,7 +117,7 @@ for d in days:
     d['extra'] = [m for m in d['media'] if not m['used']]
     photos = [m for m in d['media'] if m['type'] == 'photo' and m['w'] >= m['h'] and not m.get('blocked')]
     cov = d.get('cover')
-    d['cover_media'] = next((m for m in photos if cov and m['src'].startswith(cov)), None) or \
+    d['cover_media'] = next((m for m in d['all_media'] if cov and m['type'] == 'photo' and m['src'].startswith(cov)), None) or \
         (photos[len(photos) // 3] if photos else (d['media'][0] if d['media'] else None))
 
 MULT = {'family': 1, 'person': 3, 'adult': 2, 'child': 1, 'night': 1}
