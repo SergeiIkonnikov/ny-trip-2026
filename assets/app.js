@@ -36,8 +36,8 @@
   lb.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1); x0 = null; });
 })();
 
-var TILES = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
-var ATTR = '&copy; OpenStreetMap &copy; CARTO';
+var TILES = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+var ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
 
 function pinIcon(color, label, cls) {
   return L.divIcon({ className: '', iconSize: [26, 26], iconAnchor: [13, 13],
@@ -46,8 +46,8 @@ function pinIcon(color, label, cls) {
 
 function miniMap(places, ids, color) {
   var el = document.getElementById('minimap'); if (!el || !window.L || !places.length) { if (el) el.style.display = 'none'; return; }
-  var map = L.map(el, { scrollWheelZoom: false, attributionControl: false, zoomControl: false });
-  L.tileLayer(TILES, { maxZoom: 18 }).addTo(map);
+  var map = L.map(el, { scrollWheelZoom: false, zoomControl: false });
+  L.tileLayer(TILES, { maxZoom: 19 }).addTo(map);
   var pts = [];
   places.forEach(function (p, k) {
     if (!p.lat) return; pts.push([p.lat, p.lon]);
