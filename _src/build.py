@@ -268,6 +268,11 @@ for d in days:
         for k in ('full', 'thumb'):
             if m.get(k):
                 by_path[m[k]] = m
+for nt in notes:  # a note whose photo is a loop item's thumb/full plays the loop
+    lm = by_path.get(nt.get('photo'))
+    if lm and lm.get('loop'):
+        nt['loop'], nt['loop_poster'] = lm['loop'], lm.get('loop_poster') or lm.get('thumb')
+        refs.update(x for x in (nt['loop'], nt['loop_poster']) if x)
 taken = set()
 for tp in topics:
     cands = []
