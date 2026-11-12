@@ -46,6 +46,33 @@ for m in sorted(manifest, key=lambda x: x['t']):
     m['used'] = False
     day_by_id[did]['media'].append(m)
 
+# ---------- curation (media/curation.json from the curation thread) ----------
+# Off by default until Sergey approves; enable with CURATED=1.
+CURATED = os.environ.get('CURATED') == '1'
+details_media = []
+if CURATED and os.path.exists(os.path.join(MEDIA, 'curation.json')):
+    cur = json.load(open(os.path.join(MEDIA, 'curation.json'), encoding='utf-8'))['days']
+    for d in days:
+        cd = cur.get(d['id'], {})
+        st = {p['src']: p for p in cd.get('photos', [])}
+        st.update({v['src']: v for v in cd.get('videos', [])})
+        keep = []
+        for m in d['media']:
+            c = st.get(m['src'], {})
+            status = c.get('status', 'keep')
+            if status == 'cut' or (status == 'masha' and not CONSENT['masha']):
+                continue
+            if status == 'details':
+                details_media.append(m)
+                continue
+            if status == 'loop' and c.get('loop'):
+                m['loop'], m['loop_poster'] = c['loop'], c.get('poster')
+            m['order'] = c.get('order') if c.get('order') is not None else 10_000
+            keep.append(m)
+        d['media'] = keep
+        if cd.get('reel'):
+            d['reel'] = cd['reel']
+
 # ---------- moments ----------
 moments = C['moments']
 for i, mo in enumerate(moments):
@@ -73,6 +100,9 @@ for d in days:
                 if not mo['hidden_media']:
                     mo['media'].append(m)
                 break
+    if CURATED:
+        for mo in d['moments']:
+            mo['media'].sort(key=lambda m: (m.get('order', 10_000), m['t']))
     d['extra'] = [m for m in d['media'] if not m['used']]
     photos = [m for m in d['media'] if m['type'] == 'photo' and m['w'] >= m['h'] and not m.get('blocked')]
     cov = d.get('cover')
@@ -202,9 +232,15 @@ os.makedirs(os.path.join(OUT, 'media'), exist_ok=True)
 refs = set()
 for d in days:
     for m in d['media']:
-        for k in ('full', 'thumb', 'video'):
+        for k in ('full', 'thumb', 'video', 'loop', 'loop_poster'):
             if m.get(k):
                 refs.add(m[k])
+    if d.get('reel'):
+        refs.update(x for x in (d['reel'].get('file'), d['reel'].get('poster')) if x)
+for m in details_media:
+    for k in ('full', 'thumb', 'video', 'loop', 'loop_poster'):
+        if m.get(k):
+            refs.add(m[k])
 for mo in moments:
     if mo.get('image'):
         refs.add(mo['image'])
@@ -228,7 +264,8 @@ for lang in ('ru', 'en'):
         items = [(d, mo) for d in days for mo in d['moments'] if tp['id'] in mo.get('topics', [])]
         tp['count'] = len(items)
         write(f"topic/{tp['id']}/index.html", 'topic.html', lang, tp=tp, items=items,
-              notes=[nt for nt in notes if tp['id'] in (nt.get('topics') or [])])
+              notes=[nt for nt in notes if tp['id'] in (nt.get('topics') or [])],
+              extra_media=details_media if tp['id'] == 'details' else [])
     write('map/index.html', 'map.html', lang, hotel=C['hotel'], points=moment_json(lang, '../' * (1 if lang == 'ru' else 2)))
     write('repeat/index.html', 'repeat.html', lang, hotel=C['hotel'],
           tips=[(d, mo) for d in days for mo in d['moments'] if mo.get('tip')],

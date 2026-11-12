@@ -24,6 +24,10 @@
     </ol>
   </aside>
   <div class="daymain">
+    {% if d.reel %}
+    <div class="reel"><video src="{{ root }}media/{{ d.reel.file }}" poster="{{ root }}media/{{ d.reel.poster }}" autoplay muted loop playsinline></video>
+      <button class="reel-sound" type="button" onclick="var v=this.previousElementSibling;v.muted=!v.muted;this.textContent=v.muted?'🔇':'🔊'">🔇</button></div>
+    {% endif %}
     {% for mo in d.moments %}{{ moment(mo, d, root, home, lang, t) }}{% endfor %}
     {% if d.extra %}
     <section class="extra">

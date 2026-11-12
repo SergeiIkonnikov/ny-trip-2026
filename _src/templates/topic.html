@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% from 'macros.html' import moment %}
+{% from 'macros.html' import moment, media_grid %}
 {% block title %}{{ tp[lang] }} · {{ site.title[lang] }}{% endblock %}
 {% block main %}
 <section class="pagehead">
@@ -23,6 +23,7 @@
 {% endfor %}
 </section>
 {% endif %}
+{% if extra_media %}<section class="extra">{{ media_grid(extra_media, root, 24) }}</section>{% endif %}
 {% for d, mo in items %}{{ moment(mo, d, root, home, lang, t, show_day=true) }}{% endfor %}
 </div>
 {% endblock %}
