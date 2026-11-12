@@ -12,6 +12,7 @@
     <div class="hb">
       <p><b>{{ hotel.name }}</b><br>{{ hotel.address }}</p>
       <p>{{ price_text(hotel.price, lang)|safe }} · <a href="{{ hotel.link }}" target="_blank" rel="noopener">ihg.com ↗</a></p>
+      {% if flight %}<p>{{ flight.price.note[lang] }}</p>{% endif %}
     </div>
   </div>
   {% for d in days %}

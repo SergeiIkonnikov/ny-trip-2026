@@ -27,6 +27,8 @@ topics:
 - {id: views, ru: "Виды", en: "Views", icon: "▲"}
 - {id: details, ru: "Детали", en: "Little things", icon: "✦"}
 
+flight:
+  price: {usd: 3252, per: family, note: {ru: "Кипр — Доха — Нью-Йорк и обратно, Qatar Airways: ≈$3 252 (€2 930) на троих", en: "Cyprus — Doha — New York and back, Qatar Airways: ≈$3,252 (€2,930) for three"}}
 hotel:
   name: "voco Times Square Broadway by IHG"
   address: "170 W 48th St (7th Ave & 48th St), New York, NY 10036"
@@ -59,7 +61,7 @@ days:
   cover: "20261105-194939"
   cover_pos: "50% 35%"
   steps: 13480
-  spent: 227  # card spending (Sergey + Natasha), notes/spending.md
+  spent: 517  # incl. DC tour share 290; card spending (Sergey + Natasha), notes/spending.md
   n: 2
   tz: -5
   folders: [day2-nov5, day3-nov6]
@@ -79,7 +81,7 @@ days:
     en: Piano in the morning, the city from above in the afternoon, a museum in the evening. And the cap.
 - id: "2026-11-07"
   steps: 14183
-  spent: 298  # card spending (Sergey + Natasha), notes/spending.md
+  spent: 728  # incl. Niagara tour share 431; card spending (Sergey + Natasha), notes/spending.md
   n: 4
   tz: -5
   folders: [day4-niagara]
@@ -263,7 +265,7 @@ moments:
   text:
     ru: 'На второй день мы уехали из Нью-Йорка. Экскурсия в Вашингтон на автобусе, бронировали через GetYourGuide. Гида звали Дэвид. Английский у него был не самый лучший, а экскурсия была отличная. Так бывает: человек знает, о чём говорит, и этого хватает.'
     en: "On day two we left New York. A bus tour to Washington, booked through GetYourGuide. Our guide was David. His English wasn't the best, and the tour was excellent. It happens: a man knows what he's talking about, and that's enough."
-  price: {usd: null, per: person}
+  price: {usd: 97, per: person, note: {ru: "≈$97 (€87) на человека, тур через GetYourGuide; нам троим ≈$290", en: "≈$97 (€87) per person, tour booked on GetYourGuide; ≈$290 for the three of us"}}
   link: "https://www.getyourguide.com/"
   check: true
 - id: arlington
@@ -472,7 +474,7 @@ moments:
   text:
     ru: Ниагара от Нью-Йорка далеко. Шесть часов на автобусе туда и шесть обратно. Выехали затемно.
     en: Niagara is a long way from New York. Six hours on a bus there and six back. We left in the dark.
-  price: {usd: null, per: person}
+  price: {usd: 144, per: person, note: {ru: "≈$144 (€129) на человека, тур через GetYourGuide; нам троим ≈$431", en: "≈$144 (€129) per person, tour booked on GetYourGuide; ≈$431 for the three of us"}}
   check: true
 - id: maid-of-mist
   day: "2026-11-07"
