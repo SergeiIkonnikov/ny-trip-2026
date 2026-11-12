@@ -11,9 +11,9 @@
     <div><span class="daynum">{% if d.n %}{{ t.day }}{% else %}{{ t.day0 }}{% endif %}<i class="bul{% if d.color == '#ffcc00' %} y{% endif %}">{{ d.n or 0 }}</i></span></div>
     <div>{{ fmt_date(d.id, lang) }}<br>2026</div>
     <div>{{ t.spent }}<span class="stat">{% if d.cost %}${{ d.cost }}{% if d.cost_unknown %}+{% endif %}{% elif d.cost_unknown %}<span class="tbc">{{ t.to_check }}</span>{% else %}—{% endif %}</span></div>
-    <div>{{ t.steps }}{% if d.steps %}{% set f = [d.steps / 20000, 1]|min %}
+    <div>{{ t.steps }}{% if d.steps %}{% set f = d.steps / 10000 %}{% set laps = f|int %}{% set rem = f - laps %}
       <span class="watch" role="img" aria-label="{{ d.steps }} {{ 'шагов' if lang == 'ru' else 'steps' }}">
-        <svg viewBox="0 0 100 100" aria-hidden="true"><circle class="trk" cx="50" cy="50" r="42"/><circle class="prg" cx="50" cy="50" r="42" stroke-dasharray="{{ '%.1f' % (f * 263.9) }} 263.9"/></svg>
+        <svg viewBox="0 0 100 100" aria-hidden="true"><circle class="trk" cx="50" cy="50" r="42"/>{% if laps %}<circle class="prg" cx="50" cy="50" r="42"/>{% endif %}{% if rem > 0.005 %}<circle class="prg{% if laps %} lap{% endif %}" cx="50" cy="50" r="42" stroke-dasharray="{{ '%.1f' % (rem * 263.9) }} 263.9"/>{% endif %}</svg>
         <span class="wv"><b>{{ '{:,}'.format(d.steps).replace(',', ' ') }}</b><small>≈{{ ('%.1f' % (d.steps * 0.00075)).replace('.', ',' if lang == 'ru' else '.') }} {{ 'км' if lang == 'ru' else 'km' }}</small></span>
       </span>{% else %}<span class="stat">—</span>{% endif %}</div>
   </div>

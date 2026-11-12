@@ -411,6 +411,7 @@ button.tag{cursor:pointer}
 .watch circle{fill:none;stroke-width:9;stroke-linecap:round}
 .watch .trk{stroke:color-mix(in srgb,var(--c) 22%,#000)}
 .watch .prg{stroke:var(--c)}
+.watch .lap{stroke:color-mix(in srgb,var(--c) 70%,#fff);filter:drop-shadow(0 0 2px rgba(0,0,0,.9))}
 .watch .wv{position:relative;text-align:center;color:#fff;line-height:1}
 .watch .wv b{display:block;font:800 1.05rem/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .watch .wv small{display:block;font:500 .66rem/1 var(--text);color:#9a9aa2;margin-top:.3rem}
