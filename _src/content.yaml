@@ -89,7 +89,7 @@ days:
   n: 6
   tz: -5
   folders: [day6-nov9]
-  title: {ru: "Каток, Grand Central и Центральный парк", en: "Ice rink, Grand Central and Central Park"}
+  title: {ru: "Каток, Центральный парк и Grand Central", en: "Ice rink, Central Park and Grand Central"}
   lede:
     ru: Спокойный день. После вчерашнего он был нужен.
     en: A quiet day. After yesterday, we needed one.
@@ -568,8 +568,8 @@ moments:
     ru: Центральный парк
     en: Central Park
   text:
-    ru: Ещё были в Центральном парке. Ноябрь, жёлтые листья, белки. Белкам до нас не было никакого дела.
-    en: We also went to Central Park. November, yellow leaves, squirrels. The squirrels couldn't have cared less about us.
+    ru: После катка прошлись по Пятой авеню, мимо магазинов, и дошли до Центрального парка. Ноябрь, жёлтые листья, белки. Белкам до нас не было никакого дела.
+    en: After the rink we walked up Fifth Avenue, past the shops, to Central Park. November, yellow leaves, squirrels. The squirrels couldn't have cared less about us.
   check: true
 
   # ---------- Day 7 ----------
@@ -583,8 +583,8 @@ moments:
     ru: Grand Central
     en: Grand Central
   text:
-    ru: После катка все пошли на Grand Central. Это вокзал, куда приходят не только за поездами. Мы, например, пришли просто посмотреть.
-    en: After the rink everyone went to Grand Central. It's a station people visit for more than trains. We, for one, just came to look.
+    ru: Уже в сумерках дошли до Grand Central. Это вокзал, куда приходят не только за поездами. Мы, например, пришли просто посмотреть. А потом всё-таки спустились в метро.
+    en: By dusk we reached Grand Central. It's a station people visit for more than trains. We, for one, just came to look. And then we did go down to the subway after all.
   price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
 - id: memorial-911
   day: "2026-11-10"
