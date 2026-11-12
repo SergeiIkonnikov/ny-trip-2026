@@ -1,0 +1,39 @@
+{% from 'macros.html' import tile, tags, facts, body, time %}
+{# Repponen/AREA17-style moment: number | text | meta, then loose "figures" with small captions. #}
+{% macro fig(m, root, cls, fc, lang) %}
+<figure class="fg {{ cls }}{% if m.h and m.w and m.h > m.w * 1.1 %} port{% endif %}">{{ tile(m, root, '', full=true) }}<figcaption>{{ 'Рис.' if lang == 'ru' else 'Fig.' }} {{ fc.n }}{% if m.local %} · {{ m.local }}{% endif %}</figcaption></figure>
+{% set fc.n = fc.n + 1 %}
+{% endmacro %}
+
+{% macro figmoment(mo, d, root, home, lang, t, num, pat, bleed, fc) %}
+{% set media = mo.media or [] %}
+<article class="moment fm" id="{{ mo.id }}">
+  {% if bleed and media %}
+  <div class="fm-bleed grid">{{ fig(media[0], root, 'b', fc, lang) }}</div>
+  {% set media = media[1:] %}
+  {% endif %}
+  <div class="g fm-head {{ 'alt' if pat % 2 else '' }}">
+    <div class="fm-num">{{ num }}.</div>
+    <div class="fm-text">
+      <h3>{{ mo.title[lang] }}</h3>
+      {{ body(mo, root, lang, t) }}
+    </div>
+    <div class="fm-meta meta">
+      {% if time(mo) %}<span class="m-time">{{ time(mo) }}</span>{% endif %}
+      {{ facts(mo, lang) }}
+      {{ tags(mo.topics, home, lang) }}
+    </div>
+  </div>
+  {% if media %}
+  <div class="g grid fm-figs p{{ pat % 3 }} n{{ [media|length, 4]|min }}">
+    {% for m in media[:4] %}{{ fig(m, root, 'f' ~ loop.index, fc, lang) }}{% endfor %}
+  </div>
+  {% if media|length > 4 %}
+  <div class="g grid fm-stag" data-limit="12">
+    {% for m in media[4:] %}{{ fig(m, root, 'more' if loop.index > 12 else '', fc, lang) }}{% endfor %}
+  </div>
+  {% if media|length > 16 %}<button class="showall fm-all" type="button">+{{ media|length - 16 }}</button>{% endif %}
+  {% endif %}
+  {% endif %}
+</article>
+{% endmacro %}
