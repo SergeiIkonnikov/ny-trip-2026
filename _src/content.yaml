@@ -1024,6 +1024,27 @@ notes:
       Above one table hangs a sign: "Where Harry met Sally... hope you have what she had!" That's the table where the famous scene from the 1989 film was shot.
   sources:
   - https://en.wikipedia.org/wiki/Katz%27s_Delicatessen
+- id: note-pickles
+  topics:
+  - food
+  day: '2026-11-10'
+  moment: katz
+  photo: day7-last/20261110-180742_IMG_4430.jpg
+  title:
+    ru: Два цвета огурцов
+    en: Two shades of pickle
+  text:
+    ru: |
+      Пока ждёшь сэндвич у Каца, на столе появляется тарелка солёных огурцов. Огурцы на ней двух цветов, и это не случайность.
+      Ярко-зелёные — half-sour, «полукислые»: они недолго пролежали в рассоле и ещё хрустят, почти как свежие. Тёмные, оливковые — full-sour, «полностью кислые»: эти ферментировались до конца. Уксуса нет ни в тех, ни в других. Только соль, вода, чеснок, укроп и время. В Нью-Йорке такой огурец называют kosher dill, хотя кошерным в религиозном смысле он быть не обязан: «кошерный» здесь значит «сделанный, как делали еврейские засольщики».
+      Делали их как раз здесь. Кац стоит на углу Хаустон и Ладлоу, а в начале XX века улицы Эссекс и Ладлоу называли «огуречным районом»: бочки с огурцами продавали прямо на тротуаре, лавок было около восьмидесяти. Потом иммиграцию ограничили, тележки запретили, и почти все лавки закрылись. Последняя из той эпохи, Guss' Pickles, жива до сих пор.
+    en: |
+      While you wait for your sandwich at Katz's, a plate of pickles lands on the table. They come in two colours, and that's no accident.
+      The bright green ones are half-sours: they've had only a short stay in the brine and still crunch, almost like fresh cucumbers. The dark olive ones are full-sours, fermented all the way. Neither has any vinegar. Just salt, water, garlic, dill and time. In New York this is called a kosher dill, though it needn't be kosher in the religious sense: here "kosher" means "made the way the Jewish pickle men made it".
+      And they made it right here. Katz's is on the corner of Houston and Ludlow, and in the early 20th century Essex and Ludlow Streets were the "pickle district": barrels sold straight off the pavement, around eighty shops. Then immigration was restricted, pushcarts were banned, and nearly all of them closed. The last one from that era, Guss' Pickles, is still going.
+  sources:
+  - https://en.wikipedia.org/wiki/Pickled_cucumber
+  - https://en.wikipedia.org/wiki/Guss%27_Pickles
 - id: note-ghostbusters
   topics:
   - details
