@@ -35,8 +35,12 @@
 <section id="topics" class="sec g">
   <div class="sec-h"><h2>{{ t.by_topic }}</h2></div>
   <div class="topicgrid">
+  {% set used = namespace(ids=[]) %}
   {% for tp in topics %}
-    <a class="topiccard" href="{{ home }}topic/{{ tp.id }}/"><b>{{ tp[lang] }}</b><span>#{{ tp[lang]|lower }}</span></a>
+    {% set tn = namespace(img=tp.cover) %}
+    {% if not tn.img %}{% for d in days %}{% for mo in d.moments %}{% if not tn.img and tp.id in (mo.topics or []) %}{% for m in mo.media %}{% if not tn.img and m.type == 'photo' and m.thumb not in used.ids %}{% set tn.img = m %}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endfor %}{% endif %}
+    {% if tn.img %}{% set used.ids = used.ids + [tn.img.thumb] %}{% endif %}
+    <a class="topiccard{% if not tn.img %} noimg{% endif %}" href="{{ home }}topic/{{ tp.id }}/">{% if tn.img %}<img loading="lazy" src="{{ root }}media/{{ tn.img.thumb }}" alt="">{% endif %}<b>{{ tp[lang] }}</b></a>
   {% endfor %}
   </div>
 </section>

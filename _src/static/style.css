@@ -252,10 +252,12 @@ main{min-height:70vh}
   .daynum .bul{font-size:2.2em}
 }
 .topicgrid{grid-column:1/13;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--col)}
-.topiccard{display:flex;flex-direction:column;justify-content:space-between;gap:2.2rem;padding:.8rem 0 0;text-decoration:none;min-height:7rem}
-.topiccard b{font:800 clamp(1.5rem,2.6vw,2.3rem)/1 var(--display);letter-spacing:-.03em}
-.topiccard span{color:var(--ink2);font-size:.85rem}
-.topiccard:hover b{color:var(--red)}
+.topiccard{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;background:var(--soft);text-decoration:none}
+.topiccard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.topiccard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.6))}
+.topiccard b{position:absolute;left:1rem;right:1rem;bottom:.9rem;z-index:2;color:#fff;font:800 clamp(1.4rem,2.6vw,2.3rem)/1 var(--display);letter-spacing:-.03em}
+.topiccard.noimg::after{display:none}.topiccard.noimg b{color:var(--ink)}
+.topiccard:hover img{transform:scale(1.04)}
 @media(max-width:700px){.topicgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .ctas{padding-top:5rem}
 .ctas .g{row-gap:var(--col)}

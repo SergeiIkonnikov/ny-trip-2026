@@ -261,6 +261,33 @@ notes = C.get('notes') or []
 for nt in notes:
     if nt.get('photo'):
         refs.add(nt['photo'])
+# ---------- topic covers (home page cards) ----------
+by_path = {}
+for d in days:
+    for m in d['all_media']:
+        for k in ('full', 'thumb'):
+            if m.get(k):
+                by_path[m[k]] = m
+taken = set()
+for tp in topics:
+    cands = []
+    if tp.get('cover'):  # optional override in content.yaml: src prefix or media path
+        cands += [m for m in by_path.values() if m['src'].startswith(str(tp['cover'])) or m.get('full') == tp['cover']]
+    cands += [by_path[nt['photo']] for nt in notes if tp['id'] in (nt.get('topics') or []) and nt.get('photo') in by_path]
+    cands += sorted(topic_media.get(tp['id'], []), key=lambda m: m['t'])
+    cands += [m for d in days for mo in d['moments'] if tp['id'] in (mo.get('topics') or []) for m in mo['media']]
+    cands = [m for m in cands if m.get('type') == 'photo' and m.get('thumb')]
+    pick = next((m for m in cands if m['src'] not in taken), cands[0] if cands else None)
+    if isinstance(tp.get('cover'), dict):
+        pick = tp['cover']
+    tp['cover_media'] = pick
+    if pick:
+        taken.add(pick['src'])
+        refs.update(x for x in (pick.get('thumb'), pick.get('full')) if x)
+for tp in topics:
+    if tp.get('cover_media'):
+        tp['cover'] = tp['cover_media']
+
 for r in refs:
     src = os.path.join(MEDIA, r) if r.startswith('edited/') else os.path.join(MEDIA, 'web', r)
     dst = os.path.join(OUT, 'media', r)
