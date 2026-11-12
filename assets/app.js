@@ -47,7 +47,7 @@ function pinIcon(color, label, cls) {
 function miniMap(places, ids, color) {
   var el = document.getElementById('minimap'); if (!el || !window.L || !places.length) { if (el) el.style.display = 'none'; return; }
   var map = L.map(el, { scrollWheelZoom: false, zoomControl: false });
-  L.tileLayer(TILES, { maxZoom: 19 }).addTo(map);
+  L.tileLayer(TILES, { maxZoom: 19, attribution: ATTR }).addTo(map);
   var pts = [];
   places.forEach(function (p, k) {
     if (!p.lat) return; pts.push([p.lat, p.lon]);
