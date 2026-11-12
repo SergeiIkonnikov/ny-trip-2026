@@ -27,6 +27,8 @@ p{margin:0 0 .9em}
 .meta b{display:block;font-weight:600;color:var(--ink)}
 .tbc{color:var(--ink2);border-bottom:1px dashed currentColor}
 .note{color:var(--ink2)}
+.bul{display:inline-grid;place-items:center;width:1.5em;height:1.5em;border-radius:50%;background:var(--c);color:#fff;font-weight:800;font-family:var(--display);font-style:normal;letter-spacing:-.03em;line-height:1;flex:none;font-variant-numeric:tabular-nums;margin-right:.45em;vertical-align:middle}
+.bul.y{color:#0f0f10}
 .sq{display:inline-block;width:.9em;height:.9em;border-radius:50%;background:var(--c);vertical-align:-.05em;flex:none}
 
 /* ---------- header / footer ---------- */
@@ -234,7 +236,7 @@ main{min-height:70vh}
 .dayrow:last-child a{}
 .dayrow .dn{grid-column:1/3;display:flex;flex-direction:column;gap:.5rem}
 .dayrow .dn b{font:800 2.6rem/.9 var(--display);letter-spacing:-.04em;display:flex;align-items:center;gap:.6rem}
-.dayrow .dn b .sq{width:.5em;height:.5em}
+.dayrow .dn b .bul{font-size:.62em;margin:0}
 .dayrow h3{grid-column:3/8;font-size:clamp(1.6rem,2.8vw,2.6rem);margin-bottom:.5rem}
 .dayrow .dl{grid-column:3/8;grid-row:2;color:var(--ink2);margin:0}
 .dayrow .dimg{grid-column:9/13;grid-row:1/3;aspect-ratio:16/10;overflow:hidden;background:var(--soft)}
@@ -381,3 +383,6 @@ button.tag{cursor:pointer}
   .fm-stag{grid-template-columns:repeat(2,minmax(0,1fr))}
   .fm-stag .fg[class]{margin-top:0}.fm-stag .fg:nth-child(2n){margin-top:2.5rem}
 }
+.daynum .bul{font-size:1.6em;margin:0}
+.tmoment .tm-day .bul{font-size:1.05em;margin:0}
+.cheatday h2 .bul{font-size:.62em;vertical-align:.15em;margin:0 0 0 .1em}

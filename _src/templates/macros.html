@@ -101,7 +101,7 @@
 {% macro tmoment(mo, d, root, home, lang, t) %}
 <article class="tmoment{% if not mo.media %} nomedia{% endif %}" id="{{ mo.id }}" style="--c:{{ d.color }}">
   <div class="tm-meta meta">
-    <a class="tm-day" href="{{ home }}day/{{ d.id }}/#{{ mo.id }}"><i class="sq"></i>{% if d.n %}{{ t.day }} {{ d.n }}{% else %}{{ t.day0 }}{% endif %} · {{ short_date(d.id, lang) }}</a>
+    <a class="tm-day" href="{{ home }}day/{{ d.id }}/#{{ mo.id }}"><i class="bul{% if d.color == '#ffcc00' %} y{% endif %}">{{ d.n or 0 }}</i>{{ short_date(d.id, lang) }}</a>
     {{ facts(mo, lang) }}
     {{ tags(mo.topics, home, lang) }}
   </div>

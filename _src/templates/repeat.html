@@ -16,7 +16,7 @@
   </div>
   {% for d in days %}
   <div class="cheatday" style="--c:{{ d.color }}">
-    <h2><a href="{{ home }}day/{{ d.id }}/"><i class="sq"></i>{% if d.n %}{{ t.day }} {{ d.n }}{% else %}{{ t.day0 }}{% endif %}</a><small>{{ short_date(d.id, lang) }} · {{ d.title[lang] }}</small></h2>
+    <h2><a href="{{ home }}day/{{ d.id }}/">{% if d.n %}{{ t.day }}{% else %}{{ t.day0 }}{% endif %} <i class="bul{% if d.color == '#ffcc00' %} y{% endif %}">{{ d.n or 0 }}</i></a><small>{{ short_date(d.id, lang) }} · {{ d.title[lang] }}</small></h2>
     <div class="cb">
       <table><tbody>
       {% for mo in d.moments if mo.place and ('details' not in (mo.topics or []) or mo.price) %}

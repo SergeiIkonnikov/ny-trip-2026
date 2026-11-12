@@ -8,7 +8,7 @@
 <div style="--c:{{ d.color }}">
 <section class="dayhero g">
   <div class="metarow meta">
-    <div><span class="daynum"><i class="sq"></i>{% if d.n %}{{ t.day }} {{ d.n }}{% else %}{{ t.day0 }}{% endif %}</span></div>
+    <div><span class="daynum">{% if d.n %}{{ t.day }}{% else %}{{ t.day0 }}{% endif %}<i class="bul{% if d.color == '#ffcc00' %} y{% endif %}">{{ d.n or 0 }}</i></span></div>
     <div>{{ fmt_date(d.id, lang) }}<br>2026</div>
     <div>{{ t.spent }}<span class="stat">{% if d.cost %}${{ d.cost }}{% if d.cost_unknown %}+{% endif %}{% elif d.cost_unknown %}<span class="tbc">{{ t.to_check }}</span>{% else %}—{% endif %}</span></div>
     <div>{{ t.steps }}<span class="stat">{% if d.steps %}{{ '{:,}'.format(d.steps).replace(',', ' ') }}{% else %}—{% endif %}</span></div>
