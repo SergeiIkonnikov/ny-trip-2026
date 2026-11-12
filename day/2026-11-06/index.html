@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/style.css?v=7479756b4f">
+<link rel="stylesheet" href="../../assets/style.css?v=6713ab2d51">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></head>
 <body class="">
 <header class="top">
@@ -40,7 +40,10 @@
     <div><span class="daynum">День<i class="bul">3</i></span></div>
     <div>6 ноября, пятница<br>2026</div>
     <div>Потратили<span class="stat">$210+</span></div>
-    <div>Шаги<span class="stat">15 187</span></div>
+    <div>Шаги      <span class="watch" role="img" aria-label="15187 шагов">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><circle class="trk" cx="50" cy="50" r="42"/><circle class="prg" cx="50" cy="50" r="42" stroke-dasharray="200.4 263.9"/></svg>
+        <span class="wv"><b>15 187</b><small>≈11,4 км</small></span>
+      </span></div>
   </div>
   <div class="hero-body">
     <h1>Репетиция, город с высоты и MoMA</h1>
@@ -392,7 +395,7 @@ data-video="../../media/day3-nov6/20261106-185235_IMG_0270.mp4"   data-cap="13:5
   <figure><div class="lb-media"></div><figcaption></figcaption></figure>
   <button class="lb-next" aria-label="next">›</button>
 </div>
-<script src="../../assets/app.js?v=7479756b4f"></script>
+<script src="../../assets/app.js?v=6713ab2d51"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 miniMap([{"lat": 40.757, "lon": -73.983, "name": "Midtown"}, {"lat": 40.7597, "lon": -73.984, "name": "voco Times Square Broadway, Roof Bar"}, {"lat": 40.7484, "lon": -73.9857, "name": "Empire State Building"}, {"lat": 40.7614, "lon": -73.9776, "name": "MoMA"}, {"lat": 40.7614, "lon": -73.9776, "name": "MoMA"}, {"lat": 40.7614, "lon": -73.9776, "name": "MoMA Design Store"}], ["rehearsal-room", "roof-bar", "esb", "moma", "moma-hack", "moma-cap"], "#0a8a4f");
