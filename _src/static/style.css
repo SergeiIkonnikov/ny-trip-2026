@@ -136,7 +136,9 @@ main{min-height:70vh}
 .bleed .box p:last-of-type{margin-bottom:.8rem}
 .bleed .box .facts{border-color:currentColor}
 .bleed .box .meta,.bleed .box .meta b{color:inherit}
-.bleed .box .tag{background:rgba(255,255,255,.22);color:inherit}
+.bleed .box .tag{background:#ffffff;color:#0f0f10}
+.bleed .box.y .tag,.field .tag{background:#0f0f10;color:#ffcc00}
+.bleed .box .tbc,.field .tbc{color:inherit;opacity:.75}
 .bleed .box .tag:hover{background:var(--paper);color:var(--ink)}
 .facts{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;padding-top:.5rem;margin-bottom:.9rem}
 @media(max-width:860px){
@@ -160,9 +162,9 @@ main{min-height:70vh}
 .field .fbody{grid-column:4/11}
 .field h3{font-size:clamp(2rem,3.6vw,3.2rem);margin-bottom:.9rem}
 .field p{font-size:1.1rem;max-width:34em}
-.field .tag{background:rgba(0,0,0,.09);color:var(--on-yellow)}
+
 .field h3{color:inherit}
-.field .tag:hover{background:var(--on-yellow);color:var(--yellow)}
+.field .tag:hover,.bleed .box.y .tag:hover{background:#3a3a3e;color:#ffcc00}
 .field .meta,.field .meta b{color:var(--on-yellow)}
 .field .facts{border-top:0;padding-top:0;margin-top:1rem}
 @media(max-width:860px){.field .lbl{grid-column:1/5;font-size:1.15rem;padding-top:.35rem}.field .fbody{grid-column:5/13}.field h3{font-size:1.8rem}.field p{font-size:1rem}}
