@@ -103,6 +103,8 @@ for d in days:
         if m['used']:
             continue
         for mo in d['moments']:
+            if mo.get('layout') == 'field' and mo.get('photos'):
+                continue  # notes show only their explicit picks
             if 'from' in mo and mo['from'] <= m['local'] < mo['to']:
                 m['used'] = True
                 m['blocked'] = mo['hidden_media']
