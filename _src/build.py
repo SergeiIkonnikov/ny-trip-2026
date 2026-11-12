@@ -7,6 +7,7 @@ import os, sys, json, shutil, datetime as dt, html
 import yaml
 from jinja2 import Environment, FileSystemLoader
 
+SITE_URL = 'https://sergeiikonnikov.github.io/ny-trip-2026/'
 HERE = os.path.dirname(os.path.abspath(__file__))
 MEDIA = os.path.normpath(os.path.join(HERE, '..', 'media'))
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.normpath(os.path.join(HERE, '..', 'site'))
@@ -217,7 +218,8 @@ def write(rel, tpl, lang, **ctx):
         other_root = '../' * depth
     other_path = (other_root + rel).replace('index.html', '') or './'
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    html_out = env.get_template(tpl).render(lang=lang, t=T[lang], root=root, home=root + ('' if lang == 'ru' else 'en/'),
+    page_url = SITE_URL + (prefix + rel).replace('index.html', '')
+    html_out = env.get_template(tpl).render(lang=lang, t=T[lang], root=root, page_url=page_url, site_url=SITE_URL, home=root + ('' if lang == 'ru' else 'en/'),
                                             other_href=other_path, site=C['site'], days=days, topics=topics, **ctx)
     open(path, 'w', encoding='utf-8').write(html_out)
 
