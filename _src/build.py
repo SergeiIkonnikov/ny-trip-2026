@@ -47,8 +47,8 @@ for m in sorted(manifest, key=lambda x: x['t']):
     day_by_id[did]['media'].append(m)
 
 # ---------- curation (media/curation.json from the curation thread) ----------
-# Off by default until Sergey approves; enable with CURATED=1.
-CURATED = os.environ.get('CURATED') == '1'
+# On by default (Sergey approved 2026-11-12); CURATED=0 disables.
+CURATED = os.environ.get('CURATED', '1') == '1'
 details_media = []
 if CURATED and os.path.exists(os.path.join(MEDIA, 'curation.json')):
     cur = json.load(open(os.path.join(MEDIA, 'curation.json'), encoding='utf-8'))['days']
