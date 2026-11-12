@@ -260,8 +260,8 @@ main{min-height:70vh}
 .topiccard:hover img{transform:scale(1.04)}
 @media(max-width:700px){.topicgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .ctas{padding-top:5rem}
-.ctas .g{row-gap:var(--col)}
-.cta{grid-column:span 6;display:flex;flex-direction:column;justify-content:space-between;gap:3rem;padding:1.4rem 1.5rem 1.5rem;text-decoration:none;min-height:16rem;color:var(--on)}
+.ctas .g{row-gap:var(--col);grid-auto-rows:1fr}
+.cta{grid-column:span 6;display:flex;flex-direction:column;justify-content:space-between;gap:3rem;padding:1.4rem 1.5rem 1.5rem;text-decoration:none;min-height:16rem;color:var(--on);border-radius:20px}
 .cta b{font:800 clamp(2.4rem,5vw,4.6rem)/.9 var(--display);letter-spacing:-.045em}
 .cta small{font-size:1rem;max-width:26em}
 .cta.blue{background:var(--blue)}.cta.green{background:var(--green)}
