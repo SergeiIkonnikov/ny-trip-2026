@@ -330,7 +330,7 @@ button.tag{cursor:pointer}
 .bigmap{flex:1;min-height:420px}
 
 /* ---------- lightbox ---------- */
-.lb{position:fixed;inset:0;z-index:100;background:rgba(10,10,12,.96);display:flex;align-items:center;justify-content:center}
+.lb{position:fixed;inset:0;z-index:100;background:#0b0b0d;display:flex;align-items:center;justify-content:center}
 .lb[hidden]{display:none}
 .lb figure{margin:0;max-width:94vw;max-height:92vh;display:flex;flex-direction:column;align-items:center}
 .lb img,.lb video{max-width:94vw;max-height:86vh;object-fit:contain}

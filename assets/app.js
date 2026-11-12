@@ -13,8 +13,10 @@
     box.appendChild(el); cap.textContent = (a.getAttribute('data-cap') || '') + '  ·  ' + (i + 1) + ' / ' + list.length;
   }
   function open(a) {
-    var g = a.closest('.grid'); list = g ? Array.prototype.slice.call(g.querySelectorAll('a.tile')) : [a];
-    i = list.indexOf(a); lb.hidden = false; document.body.style.overflow = 'hidden'; show();
+    // One gallery per page: every photo/video on the page, in page order.
+    var scope = a.closest('main') || a.closest('.grid');
+    list = scope ? Array.prototype.slice.call(scope.querySelectorAll('a.tile')) : [a];
+    i = list.indexOf(a); if (i < 0) { list = [a]; i = 0; } lb.hidden = false; document.body.style.overflow = 'hidden'; show();
   }
   function close() { lb.hidden = true; box.innerHTML = ''; document.body.style.overflow = ''; }
   function step(d) { i = (i + d + list.length) % list.length; show(); }
