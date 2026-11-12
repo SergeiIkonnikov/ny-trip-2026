@@ -10,21 +10,20 @@ site:
     en: "Eight days, the three of us: Natasha, Makar and me. Written for family, but everyone is welcome."
   intro:
     ru: |
-      Мы полетели в Нью-Йорк, потому что Макар играл на конкурсе в Карнеги-холле. Поездка быстро стала гораздо больше этого: Вашингтон, Ниагара, метро, в котором мы долго не могли разобраться, MoMA, каток, мюзикл и ужин, на котором официанты поют.
-      Здесь всё по дням, по темам и на карте. Цены настоящие, ноябрь 2026 года: интересно будет посмотреть на них через пару лет.
+      Мы полетели в Нью-Йорк, потому что Макар играл на конкурсе в Карнеги-холле. Это была причина. Поездка оказалась больше причины: Вашингтон, Ниагара, метро, в котором мы долго не могли разобраться, MoMA, каток, мюзикл и ужин, на котором поют официанты.
+      Читать можно по дням, как рассказ. А можно по темам: там то, чего в рассказе нет. Цены настоящие, ноябрь 2026 года. Через пару лет на них будет интересно посмотреть.
     en: |
-      We flew to New York because Makar was playing at a competition in Carnegie Hall. The trip quickly became much more than that: Washington, Niagara Falls, a subway we took a while to figure out, MoMA, an ice rink, a musical and a dinner where the waiters sing.
-      Everything is here by day, by topic and on a map. Prices are real, as of November 2026: it will be fun to look at them again in a few years.
-
+      We flew to New York because Makar was playing at a competition in Carnegie Hall. That was the reason. The trip turned out bigger than the reason: Washington, Niagara, a subway we took a long time to understand, MoMA, an ice rink, a musical, and a dinner where the waiters sing.
+      You can read it day by day, as a story. Or by topic: that's where the things that didn't fit into the story live. The prices are real, November 2026. In a couple of years they'll be interesting to look at.
 topics:
-  - {id: music, ru: "Музыка", en: "Music", icon: "♪"}
-  - {id: metro, ru: "Метро", en: "Subway", icon: "Ⓜ"}
-  - {id: art, ru: "Искусство", en: "Art", icon: "◐"}
-  - {id: people, ru: "Люди", en: "People", icon: "☺"}
-  - {id: transport, ru: "Транспорт", en: "Getting around", icon: "✈"}
-  - {id: food, ru: "Еда", en: "Food", icon: "◍"}
-  - {id: views, ru: "Виды", en: "Views", icon: "▲"}
-  - {id: details, ru: "Детали", en: "Little things", icon: "✦"}
+- {id: music, ru: "Музыка", en: "Music", icon: "♪"}
+- {id: metro, ru: "Метро", en: "Subway", icon: "Ⓜ"}
+- {id: art, ru: "Искусство", en: "Art", icon: "◐"}
+- {id: people, ru: "Люди", en: "People", icon: "☺"}
+- {id: transport, ru: "Транспорт", en: "Getting around", icon: "✈"}
+- {id: food, ru: "Еда", en: "Food", icon: "◍"}
+- {id: views, ru: "Виды", en: "Views", icon: "▲"}
+- {id: details, ru: "Детали", en: "Little things", icon: "✦"}
 
 hotel:
   name: "voco Times Square Broadway by IHG"
@@ -35,553 +34,1019 @@ hotel:
   price: {usd: null, per: night}
 
 days:
-  - id: "2026-11-03"
-    n: 0
-    tz: 2
-    folders: [day0-cyprus, doha]
-    title: {ru: "Дорога: Кипр и Доха", en: "On the way: Cyprus and Doha"}
-    lede:
-      ru: "Выехали из дома утром, а впереди была восьмичасовая пересадка в Дохе и почти сутки в пути."
-      en: "We left home in the morning, with an eight-hour layover in Doha and almost a full day of travel ahead."
-  - id: "2026-11-04"
-    n: 1
-    tz: -5
-    folders: [day1-arrival]
-    title: {ru: "Прилёт, Уолл-стрит и Статуя Свободы", en: "Arrival, Wall Street and the Statue of Liberty"}
-    lede:
-      ru: "Прилетели рано утром, заселение только в четыре. Так что сразу пошли гулять."
-      en: "We landed early in the morning and check-in was only at four. So we went straight out to explore."
-  - id: "2026-11-05"
-    n: 2
-    tz: -5
-    folders: [day2-nov5, day3-nov6]
-    title: {ru: "Вашингтон за один день", en: "Washington in a day"}
-    lede:
-      ru: "Автобусная экскурсия в столицу и обратно, а вечером ночной Манхэттен с другого берега."
-      en: "A bus tour to the capital and back, and in the evening Manhattan at night from across the river."
-  - id: "2026-11-06"
-    n: 3
-    tz: -5
-    folders: [day3-nov6, day3-rehearsal]
-    title: {ru: "Репетиция, город с высоты и MoMA", en: "Rehearsal, the city from above and MoMA"}
-    lede:
-      ru: "Утром Макар репетировал, днём мы смотрели на город сверху, а вечер провели в музее."
-      en: "Makar rehearsed in the morning, we looked at the city from above in the afternoon and spent the evening at the museum."
-  - id: "2026-11-07"
-    n: 4
-    tz: -5
-    folders: [day4-niagara]
-    title: {ru: "Ниагарский водопад", en: "Niagara Falls"}
-    lede:
-      ru: "Шесть часов на автобусе туда и шесть обратно. Оно того стоило."
-      en: "Six hours on a bus there and six hours back. Worth it."
-  - id: "2026-11-08"
-    n: 5
-    tz: -5
-    folders: [day5-concert]
-    highlight: true
-    title: {ru: "Карнеги-холл", en: "Carnegie Hall"}
-    lede:
-      ru: "Тот самый день, ради которого всё затевалось. Макар занял первое место."
-      en: "The day the whole trip was planned around. Makar took first place."
-  - id: "2026-11-09"
-    n: 6
-    tz: -5
-    folders: [day6-nov9]
-    title: {ru: "Каток, Grand Central и Центральный парк", en: "Ice rink, Grand Central and Central Park"}
-    lede:
-      ru: "Спокойный день с друзьями: каток у Рокфеллер-центра, вокзал и парк."
-      en: "An easy day with friends: the rink at Rockefeller Center, the station and the park."
-  - id: "2026-11-10"
-    n: 7
-    tz: -5
-    folders: [day7-last]
-    title: {ru: "Последний день: мост, Кац и «Аладдин»", en: "Last day: the bridge, Katz's and Aladdin"}
-    lede:
-      ru: "Пытались успеть всё, что ещё не успели. Почти получилось."
-      en: "We tried to fit in everything we hadn't done yet. Almost managed."
-  - id: "2026-11-11"
-    n: 8
-    tz: -5
-    folders: [day8-flight-home]
-    title: {ru: "Домой", en: "Home"}
-    lede:
-      ru: "Сломалось метро, бежали на автобус, а потом снова Доха."
-      en: "The subway broke down, we ran for a bus, and then Doha again."
-
+- id: "2026-11-03"
+  n: 0
+  tz: 2
+  folders: [day0-cyprus, doha]
+  title: {ru: "Дорога: Кипр и Доха", en: "On the way: Cyprus and Doha"}
+  lede:
+    ru: Поездка началась на Кипре, в обычное утро. До Нью-Йорка было почти двое суток и одна пересадка.
+    en: The trip began in Cyprus, on an ordinary morning. New York was almost two days and one layover away.
+- id: "2026-11-04"
+  n: 1
+  tz: -5
+  folders: [day1-arrival]
+  title: {ru: "Прилёт, Уолл-стрит и Статуя Свободы", en: "Arrival, Wall Street and the Statue of Liberty"}
+  lede:
+    ru: Прилетели рано утром. Заселение в четыре. Значит, сразу гулять.
+    en: We landed early in the morning. Check-in at four. So, straight out.
+- id: "2026-11-05"
+  n: 2
+  tz: -5
+  folders: [day2-nov5, day3-nov6]
+  title: {ru: "Вашингтон за один день", en: "Washington in a day"}
+  lede:
+    ru: Один день в столице, один хороший гид и одна женщина, которая была на всех наших фотографиях.
+    en: One day in the capital, one good guide, and one woman who was in all of our photos.
+- id: "2026-11-06"
+  n: 3
+  tz: -5
+  folders: [day3-nov6, day3-rehearsal]
+  title: {ru: "Репетиция, город с высоты и MoMA", en: "Rehearsal, the city from above and MoMA"}
+  lede:
+    ru: Утром пианино, днём город сверху, вечером музей. И кепка.
+    en: Piano in the morning, the city from above in the afternoon, a museum in the evening. And the cap.
+- id: "2026-11-07"
+  n: 4
+  tz: -5
+  folders: [day4-niagara]
+  title: {ru: "Ниагарский водопад", en: "Niagara Falls"}
+  lede:
+    ru: Двенадцать часов в автобусе ради нескольких часов у воды. Оно того стоило.
+    en: Twelve hours on a bus for a few hours by the water. Worth it.
+- id: "2026-11-08"
+  n: 5
+  tz: -5
+  folders: [day5-concert]
+  highlight: true
+  title: {ru: "Карнеги-холл", en: "Carnegie Hall"}
+  lede:
+    ru: День, ради которого всё затевалось.
+    en: The day the whole thing was planned around.
+- id: "2026-11-09"
+  n: 6
+  tz: -5
+  folders: [day6-nov9]
+  title: {ru: "Каток, Grand Central и Центральный парк", en: "Ice rink, Grand Central and Central Park"}
+  lede:
+    ru: Спокойный день. После вчерашнего он был нужен.
+    en: A quiet day. After yesterday, we needed one.
+- id: "2026-11-10"
+  n: 7
+  tz: -5
+  folders: [day7-last]
+  title: {ru: "Последний день: мост, Кац и «Аладдин»", en: "Last day: the bridge, Katz's and Aladdin"}
+  lede:
+    ru: Последний день. Пытались успеть всё, что ещё не успели.
+    en: The last day. We tried to fit in everything we hadn't got to yet.
+- id: "2026-11-11"
+  n: 8
+  tz: -5
+  folders: [day8-flight-home]
+  title: {ru: "Домой", en: "Home"}
+  lede:
+    ru: 'Город попрощался с нами по-своему: сломал метро.'
+    en: 'The city said goodbye in its own way: it broke the subway.'
 moments:
   # ---------- Day 0 ----------
-  - id: cyprus-start
-    day: "2026-11-03"
-    from: "00:00"
-    to: "13:00"
-    topics: [transport]
-    place: {name: "Кипр / Cyprus", lat: 34.869, lon: 33.610}
-    title: {ru: "Старт", en: "Off we go"}
-    text:
-      ru: "Первые кадры поездки: ещё Кипр, ещё тепло. Впереди Доха и Нью-Йорк."
-      en: "The first shots of the trip: still Cyprus, still warm. Doha and New York ahead."
-  - id: doha-docs
-    day: "2026-11-03"
-    from: "13:00"
-    to: "18:30"
-    topics: [transport, people]
-    place: {name: "Hamad International Airport, Doha", lat: 25.263, lon: 51.613}
-    title: {ru: "Восемь часов в Дохе и потерянные документы", en: "Eight hours in Doha and the lost documents"}
-    text:
-      ru: |
-        В Дохе мы потеряли документы. Несколько очень длинных минут, пока не нашли: всё это время они спокойно лежали в красной сумочке Comme des Garçons.
-        Аэропорт огромный, красивый и удобный, внутри между терминалами ходит поезд.
-      en: |
-        In Doha we lost our documents. A few very long minutes until we found them: they had been sitting quietly in the red Comme des Garçons bag the whole time.
-        The airport is huge, beautiful and comfortable, with a train running between the terminals.
-  - id: doha-grass
-    day: "2026-11-03"
-    from: "18:30"
-    to: "23:59"
-    topics: [transport, details]
-    place: {name: "Hamad International Airport, Doha", lat: 25.270, lon: 51.611}
-    title: {ru: "Сон на траве под деревьями", en: "Sleeping on the grass under trees"}
-    text:
-      ru: "Для сна в аэропорту есть специальные места, но мы выбрали зелёную зону. Трава там искусственная, а деревья настоящие. Очень круто."
-      en: "The airport has proper places to sleep, but we chose the indoor garden. The grass is artificial, the trees are real. Very cool."
-    tip:
-      ru: "Пересадка в Хамаде на 8 часов не страшна: ищите зелёную зону с деревьями."
-      en: "An 8-hour layover at Hamad is fine: look for the indoor garden with the trees."
-
-  # ---------- Day 1 ----------
-  - id: jfk
-    day: "2026-11-04"
-    from: "07:00"
-    to: "10:40"
-    topics: [transport]
-    place: {name: "JFK Airport", lat: 40.648, lon: -73.791}
-    title: {ru: "Прилёт и отель", en: "Landing and the hotel"}
-    text:
-      ru: "Прилетели рано утром. Наш отель, voco на 48-й улице, в двух шагах от Таймс-сквер, но заселение только в 16:00. Оставили вещи и пошли гулять."
-      en: "We landed early in the morning. Our hotel, voco on 48th Street, is a couple of minutes from Times Square, but check-in was only at 4 pm. We left our bags and went out."
-  - id: card-tricks
-    day: "2026-11-04"
-    topics: [people, details]
-    place: {name: "voco Times Square Broadway", lat: 40.7597, lon: -73.9840}
-    title: {ru: "Фокусы в лобби", en: "Card tricks in the lobby"}
-    text:
-      ru: "Пока ждали заселения, Макар показывал карточные фокусы всем в лобби. Публика была благодарная."
-      en: "While we waited to check in, Makar did card tricks for everyone in the lobby. A grateful audience."
-  - id: bull
-    day: "2026-11-04"
-    from: "11:30"
-    to: "13:30"
-    topics: [art, views]
-    place: {name: "Wall Street, Charging Bull & Fearless Girl", lat: 40.7056, lon: -74.0134}
-    title: {ru: "Бык и «Бесстрашная девочка»", en: "The Charging Bull and Fearless Girl"}
-    text:
-      ru: "Финансовый район. Бронзовый бык, у которого всегда очередь, и «Бесстрашная девочка» напротив Нью-Йоркской фондовой биржи."
-      en: "The Financial District. The bronze bull with its permanent queue, and Fearless Girl facing the New York Stock Exchange."
-    price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
-  - id: liberty
-    day: "2026-11-04"
-    from: "13:30"
-    to: "16:00"
-    topics: [transport, views]
-    place: {name: "Liberty Island", lat: 40.6892, lon: -74.0445}
-    title: {ru: "Кораблик к Статуе Свободы", en: "The boat to the Statue of Liberty"}
-    text:
-      ru: "Из Бэттери-парка на кораблике до острова Свободы. Статуя вблизи больше, чем кажется на фото."
-      en: "From Battery Park by boat to Liberty Island. Up close, the statue is bigger than it looks in photos."
-    price: {usd: null, per: person}
-    link: "https://www.cityexperiences.com/new-york/city-cruises/statue/"
-    check: true
-  - id: dinner-150
-    day: "2026-11-04"
-    from: "17:00"
-    to: "19:00"
-    topics: [food, metro, people]
-    place: {name: "Lower Manhattan", lat: 40.709, lon: -74.012}
-    title: {ru: "Ужин за $150 и первое метро", en: "A $150 dinner and our first subway ride"}
-    text:
-      ru: |
-        Первое удивление: всё очень дорого, и к цене в меню ещё прибавляются налог и чаевые. Ужин на троих вышел в $150.
-        Макар уснул прямо в кафе, так крепко, что Наташе пришлось немного его нести. Такси до отеля стоило бы около $60, поэтому поехали на метро, со спящим ребёнком. Долго не могли понять, какой поезд нам нужен, но разобрались.
-      en: |
-        First surprise: everything is very expensive, and tax and tip go on top of the menu price. Dinner for three came to $150.
-        Makar fell asleep right in the café, so soundly that Natasha had to carry him for a bit. A taxi to the hotel would have been about $60, so we took the subway, sleeping child and all. It took us a while to work out which train we needed, but we got there.
-    price: {usd: 150, per: family, note: {ru: "ужин на троих с налогом и чаевыми", en: "dinner for three, tax and tip included"}}
+- id: cyprus-start
+  day: "2026-11-03"
+  from: "00:00"
+  to: "13:00"
+  topics: [transport]
+  place: {name: "Кипр / Cyprus", lat: 34.869, lon: 33.610}
+  title:
+    ru: Старт
+    en: Off we go
+  text:
+    ru: Первые кадры поездки сняты на Кипре. Ещё тепло, ещё всё понятно, ещё никто не знает, сколько стоит ужин в Нью-Йорке.
+    en: The first shots of the trip are from Cyprus. Still warm, still simple, and nobody yet knows what dinner costs in New York.
+- id: doha-docs
+  day: "2026-11-03"
+  from: "13:00"
+  to: "18:30"
+  topics: [transport, people]
+  place: {name: "Hamad International Airport, Doha", lat: 25.263, lon: 51.613}
+  title:
+    ru: Пересадка в Дохе и потерянные документы
+    en: The Doha layover and the lost documents
+  text:
+    ru: |
+      В Дохе у нас было восемь часов. Где-то в начале этих восьми часов мы потеряли документы.
+      Следующие несколько минут были самыми длинными за всю поездку. Документы нашлись в красной сумочке Comme des Garçons. Как выяснилось, они лежали там всё это время.
+    en: |
+      We had eight hours in Doha. Somewhere near the start of those eight hours, we lost our documents.
+      The next few minutes were the longest of the whole trip. The documents turned up in the red Comme des Garçons bag. They had been there the entire time.
+- id: doha-grass
+  day: "2026-11-03"
+  from: "18:30"
+  to: "23:59"
+  topics: [transport, details]
+  place: {name: "Hamad International Airport, Doha", lat: 25.270, lon: 51.611}
+  title:
+    ru: Сон на траве
+    en: Sleeping on the grass
+  text:
+    ru: |
+      Для сна в аэропорту есть специальные места. Мы выбрали траву.
+      Трава там искусственная, а деревья настоящие. Лежишь под деревом, в аэропорту, посреди пустыни, где-то между Кипром и Америкой. Очень круто.
+    en: |
+      The airport has proper places to sleep. We chose the grass.
+      The grass is artificial, the trees are real. You lie under a tree, inside an airport, in the middle of a desert, somewhere between Cyprus and America. Very cool.
+  tip:
+    ru: Восемь часов в Хамаде — это не страшно. Ищите зелёную зону с деревьями.
+    en: Eight hours at Hamad is nothing to fear. Look for the indoor garden with the trees.
+- id: jfk
+  day: "2026-11-04"
+  from: "07:00"
+  to: "10:40"
+  topics: [transport]
+  place: {name: "JFK Airport", lat: 40.648, lon: -73.791}
+  title:
+    ru: Прилёт
+    en: Landing
+  text:
+    ru: Прилетели рано утром. Отель у нас был на 48-й улице, в пяти минутах от Таймс-сквер. Заселение начиналось в четыре. Так что знакомство с Нью-Йорком прошло с рюкзаками и без душа.
+    en: We landed early in the morning. Our hotel was on 48th Street, five minutes from Times Square. Check-in started at four. So we met New York with backpacks on and without a shower.
+- id: card-tricks
+  day: "2026-11-04"
+  topics: [people, details]
+  place: {name: "voco Times Square Broadway", lat: 40.7597, lon: -73.9840}
+  title:
+    ru: Фокусы в лобби
+    en: Card tricks in the lobby
+  text:
+    ru: Пока мы разбирались с вещами, Макар показывал в лобби карточные фокусы. Всем, кто не успел отвернуться. Публика была благодарная.
+    en: While we sorted out the bags, Makar did card tricks in the lobby. For anyone who didn't look away in time. A grateful audience.
+- id: bull
+  day: "2026-11-04"
+  from: "11:30"
+  to: "13:30"
+  topics: [art, views]
+  place: {name: "Wall Street, Charging Bull & Fearless Girl", lat: 40.7056, lon: -74.0134}
+  title:
+    ru: Бык и девочка
+    en: The bull and the girl
+  text:
+    ru: Первым делом пошли в Финансовый район. Бронзовый бык стоит у Уолл-стрит, и вокруг него всегда очередь. Напротив биржи стоит «Бесстрашная девочка». Вид у неё такой, будто главная здесь она.
+    en: First we went to the Financial District. The bronze bull stands near Wall Street with a permanent queue around it. Across from the Stock Exchange stands Fearless Girl. She looks like she's the one in charge.
+  price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
+- id: liberty
+  day: "2026-11-04"
+  from: "13:30"
+  to: "16:00"
+  topics: [transport, views]
+  place: {name: "Liberty Island", lat: 40.6892, lon: -74.0445}
+  title:
+    ru: Статуя Свободы
+    en: The Statue of Liberty
+  text:
+    ru: Потом кораблик из Бэттери-парка к острову Свободы. Вблизи статуя больше, чем на фотографиях. Это, впрочем, можно сказать про весь Нью-Йорк.
+    en: Then a boat from Battery Park to Liberty Island. Up close the statue is bigger than in photos. Which, to be fair, is true of all of New York.
+  price: {usd: null, per: person}
+  link: "https://www.cityexperiences.com/new-york/city-cruises/statue/"
+  check: true
+- id: dinner-150
+  day: "2026-11-04"
+  from: "17:00"
+  to: "19:00"
+  topics: [food, metro, people]
+  place: {name: "Lower Manhattan", lat: 40.709, lon: -74.012}
+  title:
+    ru: Ужин за $150 и первое метро
+    en: A $150 dinner and our first subway
+  text:
+    ru: |
+      Вечером поужинали в кафе. Счёт был $150. Это не опечатка. Здесь к цене в меню прибавляют налог, к налогу прибавляют чаевые, а к чаевым прибавляется ощущение, что ты что-то сделал не так.
+      Макар уснул прямо за столом, крепко, по-взрослому. Такси до отеля стоило бы ещё долларов шестьдесят. Мы посмотрели на спящего сына, потом друг на друга и пошли в метро.
+      В метро мы долго не могли понять, какой поезд нам нужен. Наташа несла Макара. Я нёс ответственность. В итоге разобрались.
+    en: |
+      In the evening we had dinner at a café. The bill was $150. That's not a typo. Here they add tax to the menu price, add a tip to the tax, and add to the tip a feeling that you've done something wrong.
+      Makar fell asleep right at the table, deeply, like a grown-up. A taxi to the hotel would have been another sixty dollars or so. We looked at our sleeping son, then at each other, and went down into the subway.
+      In the subway we spent a long time working out which train we needed. Natasha carried Makar. I carried the responsibility. We figured it out in the end.
+  price: {usd: 150, per: family, note: {ru: "ужин на троих с налогом и чаевыми", en: "dinner for three, tax and tip included"}}
 
   # ---------- Day 2 ----------
-  - id: dc-tour
-    day: "2026-11-05"
-    from: "09:00"
-    to: "11:40"
-    topics: [transport, people]
-    place: {name: "Washington, D.C.", lat: 38.8893, lon: -77.0502}
-    title: {ru: "Автобус в Вашингтон и гид Дэвид", en: "The bus to Washington and our guide David"}
-    text:
-      ru: "Экскурсию бронировали через GetYourGuide. Гид Дэвид был офигенный, хоть английский у него и не самый лучший."
-      en: "We booked the tour on GetYourGuide. Our guide David was brilliant, even if his English wasn't perfect."
-    price: {usd: null, per: person}
-    link: "https://www.getyourguide.com/"
-    check: true
-  - id: arlington
-    day: "2026-11-05"
-    from: "11:40"
-    to: "12:30"
-    topics: [people]
-    place: {name: "Arlington National Cemetery", lat: 38.8783, lon: -77.0687}
-    title: {ru: "Арлингтонское кладбище", en: "Arlington National Cemetery"}
-    text:
-      ru: "Главное военное кладбище США, здесь похоронено больше 400 тысяч человек. Тут могила Джона Кеннеди с вечным огнём и Могила Неизвестного солдата, у которой круглосуточно стоит почётный караул."
-      en: "America's main military cemetery, where more than 400,000 people are buried. It holds John F. Kennedy's grave with its eternal flame and the Tomb of the Unknown Soldier, guarded around the clock."
-    check: true
-  - id: korea-lincoln
-    day: "2026-11-05"
-    from: "12:30"
-    to: "13:15"
-    topics: [art]
-    place: {name: "Lincoln Memorial", lat: 38.8893, lon: -77.0502}
-    title: {ru: "Солдаты в дождевиках и Линкольн", en: "Soldiers in ponchos, and Lincoln"}
-    text:
-      ru: |
-        Мемориал ветеранов войны в Корее: 19 стальных солдат в дождевиках будто идут в патруле через кусты.
-        Рядом мемориал Линкольна, похожий на греческий храм: 36 колонн, по числу штатов на момент смерти президента, а внутри сидящий Линкольн высотой почти 6 метров. На этих ступенях Мартин Лютер Кинг произнёс речь «У меня есть мечта».
-      en: |
-        The Korean War Veterans Memorial: 19 steel soldiers in ponchos, as if on patrol through the bushes.
-        Next to it, the Lincoln Memorial, built like a Greek temple: 36 columns, one for each state at the time of Lincoln's death, and inside a seated Lincoln nearly 6 metres tall. Martin Luther King gave his "I Have a Dream" speech on these steps.
-    price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
-  - id: air-space
-    day: "2026-11-05"
-    from: "13:15"
-    to: "14:40"
-    topics: [art, transport]
-    place: {name: "National Air and Space Museum", lat: 38.8882, lon: -77.0199}
-    title: {ru: "Музей авиации и космонавтики", en: "The Air and Space Museum"}
-    text:
-      ru: "Лунный модуль «Аполлона», капсулы первых астронавтов, ракеты, скафандры. Макар за штурвалом в кабине-тренажёре. Вход бесплатный, как во все музеи Смитсоновского института."
-      en: "An Apollo lunar module, the capsules of the first astronauts, rockets, spacesuits. Makar at the controls of a cockpit simulator. Entry is free, as in all Smithsonian museums."
-    price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
-  - id: capitol
-    day: "2026-11-05"
-    from: "14:40"
-    to: "15:10"
-    topics: [people, views]
-    place: {name: "U.S. Capitol", lat: 38.8899, lon: -77.0091}
-    title: {ru: "Капитолий", en: "The Capitol"}
-    text:
-      ru: "Здесь заседает Конгресс. Чугунный купол достраивали прямо во время Гражданской войны. На лужайке Макар с Машей, дочкой наших друзей: она тоже пианистка и тоже приехала на конкурс."
-      en: "Home of Congress. The cast-iron dome was finished during the Civil War. On the lawn: Makar with Masha, our friends' daughter, also a pianist, also here for the competition."
-    privacy: masha
-  - id: white-house
-    day: "2026-11-05"
-    from: "15:10"
-    to: "16:00"
-    topics: [views]
-    place: {name: "The White House", lat: 38.8997, lon: -77.0366}
-    title: {ru: "Белый дом", en: "The White House"}
-    text:
-      ru: "Резиденция президентов с 1800 года. Смотрели с северной стороны, от Лафайет-сквер."
-      en: "Home of US presidents since 1800. We saw it from the north side, from Lafayette Square."
-  - id: lady-in-frame
-    day: "2026-11-05"
-    topics: [details, people]
-    place: {name: "Washington, D.C.", lat: 38.8999, lon: -77.0365}
-    title: {ru: "Женщина, которая была везде", en: "The woman who was everywhere"}
-    text:
-      ru: "Локальный мем дня. Весь день в наши кадры попадала одна и та же женщина: на кладбище в красной кофте, у Белого дома, на тротуаре. Мы её не знаем, но к вечеру она стала почти членом группы."
-      en: "The meme of the day. The same woman kept walking into our shots: at the cemetery in a red top, at the White House, on the pavement. We don't know her, but by the evening she was almost part of the group."
-    photos: ["20261105-194251", "20261105-203452"]
-    privacy: stranger
-  - id: weehawken
-    day: "2026-11-05"
-    from: "20:00"
-    to: "20:55"
-    topics: [views]
-    place: {name: "Weehawken waterfront, NJ", lat: 40.772, lon: -74.016}
-    title: {ru: "Ночной Манхэттен с того берега", en: "Manhattan at night from across the river"}
-    text:
-      ru: "По дороге обратно автобус остановился на набережной в Нью-Джерси. Через Гудзон весь Мидтаун и Эмпайр-стейт-билдинг. Мы оттуда привезли больше всего фото за день."
-      en: "On the way back the bus stopped on the New Jersey waterfront. Across the Hudson: all of Midtown and the Empire State Building. We took more photos here than anywhere else that day."
-  - id: times-sq-1
-    day: "2026-11-05"
-    from: "20:55"
-    to: "23:59"
-    topics: [views]
-    place: {name: "Times Square", lat: 40.758, lon: -73.9855}
-    title: {ru: "Таймс-сквер вечером", en: "Times Square in the evening"}
-    text:
-      ru: "От отеля пять минут пешком, и каждый вечер мы оказывались тут."
-      en: "Five minutes on foot from the hotel, and we ended up here every evening."
-    price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
+- id: dc-tour
+  day: "2026-11-05"
+  from: "09:00"
+  to: "11:40"
+  topics: [transport, people]
+  place: {name: "Washington, D.C.", lat: 38.8893, lon: -77.0502}
+  title:
+    ru: Автобус в Вашингтон и гид Дэвид
+    en: The bus to Washington and our guide David
+  text:
+    ru: 'На второй день мы уехали из Нью-Йорка. Экскурсия в Вашингтон на автобусе, бронировали через GetYourGuide. Гида звали Дэвид. Английский у него был не самый лучший, а экскурсия была отличная. Так бывает: человек знает, о чём говорит, и этого хватает.'
+    en: "On day two we left New York. A bus tour to Washington, booked through GetYourGuide. Our guide was David. His English wasn't the best, and the tour was excellent. It happens: a man knows what he's talking about, and that's enough."
+  price: {usd: null, per: person}
+  link: "https://www.getyourguide.com/"
+  check: true
+- id: arlington
+  day: "2026-11-05"
+  from: "11:40"
+  to: "12:30"
+  topics: [people]
+  place: {name: "Arlington National Cemetery", lat: 38.8783, lon: -77.0687}
+  title:
+    ru: Арлингтонское кладбище
+    en: Arlington National Cemetery
+  text:
+    ru: Были на Арлингтонском кладбище. Ряды одинаковых белых камней уходят до горизонта. Разговаривать там хочется тише.
+    en: We went to Arlington National Cemetery. Rows of identical white stones run all the way to the horizon. You find yourself talking more quietly.
+  check: true
+- id: korea-lincoln
+  day: "2026-11-05"
+  from: "12:30"
+  to: "13:15"
+  topics: [art]
+  place: {name: "Lincoln Memorial", lat: 38.8893, lon: -77.0502}
+  title:
+    ru: Солдаты в дождевиках и Линкольн
+    en: Soldiers in ponchos, and Lincoln
+  text:
+    ru: |
+      Потом мемориал ветеранов войны в Корее. Стальные солдаты в дождевиках идут через кусты, и кажется, что сейчас кто-нибудь обернётся.
+      Рядом Линкольн. Он сидит. Ему, в отличие от нас, торопиться некуда.
+    en: |
+      Then the Korean War Veterans Memorial. Steel soldiers in ponchos walk through the bushes, and it feels like one of them is about to turn around.
+      Next door is Lincoln. He is sitting down. Unlike us, he's in no hurry.
+  price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
+- id: air-space
+  day: "2026-11-05"
+  from: "13:15"
+  to: "14:40"
+  topics: [art, transport]
+  place: {name: "National Air and Space Museum", lat: 38.8882, lon: -77.0199}
+  title:
+    ru: Музей авиации и космонавтики
+    en: The Air and Space Museum
+  text:
+    ru: В Музее авиации и космонавтики Макар сел за штурвал тренажёра. Вход бесплатный, как во все музеи Смитсоновского института. После вчерашнего ужина это казалось подозрительным.
+    en: At the Air and Space Museum, Makar took the controls of a cockpit simulator. Entry is free, as in all the Smithsonian museums. After last night's dinner, that seemed suspicious.
+  price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
+- id: capitol
+  day: "2026-11-05"
+  from: "14:40"
+  to: "15:10"
+  topics: [people, views]
+  place: {name: "U.S. Capitol", lat: 38.8899, lon: -77.0091}
+  title:
+    ru: Капитолий
+    en: The Capitol
+  text:
+    ru: У Капитолия сфотографировали Макара с Машей, дочкой наших друзей. Маша тоже пианистка и тоже приехала на конкурс. Через три дня оба станут лауреатами. На этой фотографии они пока просто дети на газоне.
+    en: Outside the Capitol we took a photo of Makar with Masha, our friends' daughter. Masha is a pianist too, here for the same competition. In three days they'll both be prize-winners. In this photo they're just two kids on a lawn.
+  privacy: masha
+- id: white-house
+  day: "2026-11-05"
+  from: "15:10"
+  to: "16:00"
+  topics: [views]
+  place: {name: "The White House", lat: 38.8997, lon: -77.0366}
+  title:
+    ru: Белый дом
+    en: The White House
+  text:
+    ru: Белый дом смотрели с северной стороны, от Лафайет-сквер, через ограду. Как все.
+    en: We saw the White House from the north side, from Lafayette Square, through the fence. Like everybody.
+- id: lady-in-frame
+  day: "2026-11-05"
+  topics: [details, people]
+  place: {name: "Washington, D.C.", lat: 38.8999, lon: -77.0365}
+  title:
+    ru: Женщина, которая была везде
+    en: The woman who was everywhere
+  text:
+    ru: |
+      Весь день в наши кадры попадала одна и та же женщина. На кладбище, в красной кофте. У Белого дома. На тротуаре.
+      Мы её не знаем. К вечеру она стала почти членом группы. Если вы узнали себя, спасибо: без вас этот день был бы скучнее.
+    en: |
+      All day the same woman kept walking into our shots. At the cemetery, in a red top. At the White House. On the pavement.
+      We don't know her. By the evening she was almost part of the group. If you recognise yourself, thank you: the day would have been duller without you.
+  photos: ["20261105-194251", "20261105-203452"]
+  privacy: stranger
+- id: weehawken
+  day: "2026-11-05"
+  from: "20:00"
+  to: "20:55"
+  topics: [views]
+  place: {name: "Weehawken waterfront, NJ", lat: 40.772, lon: -74.016}
+  title:
+    ru: Ночной Манхэттен с того берега
+    en: Manhattan at night from across the river
+  text:
+    ru: По дороге обратно автобус остановился на набережной в Нью-Джерси. Через Гудзон был виден весь Мидтаун. Отсюда мы привезли больше всего фотографий за день. Город, в котором мы жили уже второй день, впервые показался нам целиком.
+    en: On the way back the bus stopped on the New Jersey waterfront. Across the Hudson lay all of Midtown. We took more photos here than anywhere else that day. The city we'd been living in for two days showed itself to us whole for the first time.
+- id: times-sq-1
+  day: "2026-11-05"
+  from: "20:55"
+  to: "23:59"
+  topics: [views]
+  place: {name: "Times Square", lat: 40.758, lon: -73.9855}
+  title:
+    ru: Таймс-сквер
+    en: Times Square
+  text:
+    ru: Вернулись к ночи. Таймс-сквер в пяти минутах от отеля, и мы оказывались там каждый вечер, даже когда никуда не собирались.
+    en: We got back at night. Times Square is five minutes from the hotel, and we ended up there every evening, even when we weren't going anywhere.
+  price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
 
   # ---------- Day 3 ----------
-  - id: rehearsal-room
-    day: "2026-11-06"
-    from: "08:00"
-    to: "10:00"
-    topics: [music]
-    place: {name: "Midtown", lat: 40.757, lon: -73.983}
-    title: {ru: "Час с пианино", en: "An hour with a piano"}
-    text:
-      ru: "Утром сняли небольшую комнату с пианино, и Макар час репетировал перед конкурсом."
-      en: "In the morning we rented a small room with a piano, and Makar practised for an hour before the competition."
-    price: {usd: null, per: family}
-    check: true
-  - id: roof-bar
-    day: "2026-11-06"
-    from: "10:00"
-    to: "12:00"
-    topics: [views]
-    place: {name: "voco Times Square Broadway, Roof Bar", lat: 40.7597, lon: -73.9840}
-    title: {ru: "Крыша нашего отеля", en: "Our hotel's rooftop"}
-    text:
-      ru: "Поднялись в Roof Bar на крыше отеля. Таймс-сквер сверху выглядит совсем по-другому."
-      en: "We went up to the hotel's Roof Bar. Times Square looks completely different from above."
-  - id: esb
-    day: "2026-11-06"
-    from: "13:00"
-    to: "15:10"
-    topics: [views]
-    place: {name: "Empire State Building", lat: 40.7484, lon: -73.9857}
-    title: {ru: "Эмпайр-стейт-билдинг", en: "The Empire State Building"}
-    text:
-      ru: "102 этажа, построен в 1931 году всего примерно за 13 месяцев. Главная смотровая площадка на 86-м этаже, открытая, со всеми ветрами."
-      en: "102 floors, built in 1931 in about 13 months. The main observation deck is on the 86th floor, open to the air and all the wind."
-    price: {usd: 60, per: adult, note: {ru: "мы платили $60 за взрослого, детский дешевле; на сайте «от $46» в зависимости от времени", en: "we paid $60 per adult, kids less; the website says 'from $46' depending on time slot"}}
-    link: "https://www.esbnyc.com/buy-tickets/86th-floor-observation-deck"
-  - id: moma
-    day: "2026-11-06"
-    from: "15:10"
-    to: "18:00"
-    topics: [art]
-    place: {name: "MoMA", lat: 40.7614, lon: -73.9776}
-    title: {ru: "MoMA", en: "MoMA"}
-    text:
-      ru: "Музей современного искусства: «Звёздная ночь» Ван Гога, «Постоянство памяти» Дали, банки супа Уорхола. Мы были вшестером, вместе с семьёй Маши."
-      en: "The Museum of Modern Art: Van Gogh's Starry Night, Dalí's Persistence of Memory, Warhol's soup cans. There were six of us, together with Masha's family."
-    link: "https://www.moma.org/"
-    check: true
-  - id: moma-hack
-    day: "2026-11-06"
-    topics: [details, art]
-    place: {name: "MoMA", lat: 40.7614, lon: -73.9776}
-    image: edited/moma-pass-front-masked.jpg
-    title: {ru: "Лайфхак от Наташи", en: "Natasha's hack"}
-    text:
-      ru: "Годовое членство MoMA стоит $90 и позволяет провести с собой ещё 5 человек. Обычные билеты на шестерых обошлись бы в $120. Наташа нашла, мы сэкономили $30 и получили карточку на год."
-      en: "A MoMA annual membership costs $90 and lets you bring five guests. Regular tickets for six would have been $120. Natasha found it, we saved $30 and got a card for a year."
-    price: {usd: 90, per: family, note: {ru: "членство на 6 человек вместо $120 за билеты", en: "membership for six instead of $120 in tickets"}}
-    tip:
-      ru: "Если вас 4 и больше взрослых, сравните цену годового членства MoMA с билетами."
-      en: "If you're four or more adults, compare MoMA's annual membership with ticket prices."
-  - id: moma-cap
-    day: "2026-11-06"
-    topics: [details, art]
-    place: {name: "MoMA Design Store", lat: 40.7614, lon: -73.9776}
-    title: {ru: "Сувениры и та самая кепка", en: "Souvenirs and The Cap"}
-    text:
-      ru: "В магазине MoMA купили до фига сувениров. Я купил кепку и проходил в ней до конца поездки: ищите её на всех фото дальше."
-      en: "We bought a ton of souvenirs at the MoMA store. I bought a cap and wore it for the rest of the trip: look for it in every photo from here on."
-
-  # ---------- Day 4 ----------
-  - id: niagara-bus
-    day: "2026-11-07"
-    from: "00:00"
-    to: "07:30"
-    topics: [transport]
-    place: {name: "New York State", lat: 42.952, lon: -78.602}
-    title: {ru: "Шесть часов в автобусе", en: "Six hours on a bus"}
-    text:
-      ru: "Выехали затемно. Шесть часов туда, шесть обратно. Спойлер: оно того стоило."
-      en: "We left before dawn. Six hours there, six back. Spoiler: worth it."
-    price: {usd: null, per: person}
-    check: true
-  - id: maid-of-mist
-    day: "2026-11-07"
-    from: "07:30"
-    to: "10:00"
-    topics: [views, transport]
-    place: {name: "Maid of the Mist", lat: 43.0862, lon: -79.0675}
-    title: {ru: "Maid of the Mist", en: "Maid of the Mist"}
-    text:
-      ru: "Ниагара — это три водопада: Подкова, Американский и маленькая Фата невесты. Кораблик подвозит почти к подножию Подковы. Всем выдают синие дождевики, и они не помогают."
-      en: "Niagara is three falls: the Horseshoe, the American and the small Bridal Veil. The boat takes you almost to the foot of the Horseshoe. Everyone gets a blue poncho, and it doesn't help."
-    link: "https://www.maidofthemist.com/"
-    price: {usd: null, per: person}
-  - id: cave-winds
-    day: "2026-11-07"
-    from: "10:00"
-    to: "13:00"
-    topics: [views]
-    place: {name: "Cave of the Winds", lat: 43.0826, lon: -79.0717}
-    title: {ru: "Cave of the Winds", en: "Cave of the Winds"}
-    text:
-      ru: "С острова Гоат на лифте вниз, а дальше по деревянным мосткам прямо под струи Фаты невесты. Тут дождевики жёлтые, а ещё выдают сандалии."
-      en: "From Goat Island you take a lift down, then walk wooden boardwalks right into the spray of the Bridal Veil. Here the ponchos are yellow, and they give you sandals too."
-    link: "https://www.niagarafallsstatepark.com/attractions-and-tours/cave-of-the-winds"
-    price: {usd: null, per: person}
-    tip:
-      ru: "Без канадской визы с американской стороны можно увидеть всё главное. Лучший фронтальный вид на Подкову, правда, с канадской."
-      en: "Without a Canadian visa you can still see all the main sights from the US side. The best head-on view of the Horseshoe is from Canada, though."
+- id: rehearsal-room
+  day: "2026-11-06"
+  from: "08:00"
+  to: "10:00"
+  topics: [music]
+  place: {name: "Midtown", lat: 40.757, lon: -73.983}
+  title:
+    ru: Час с пианино
+    en: An hour with a piano
+  text:
+    ru: Утром сняли небольшую комнату с пианино. Макар репетировал час. До конкурса оставалось два дня.
+    en: In the morning we rented a small room with a piano. Makar practised for an hour. Two days to go before the competition.
+  price: {usd: null, per: family}
+  check: true
+- id: roof-bar
+  day: "2026-11-06"
+  from: "10:00"
+  to: "12:00"
+  topics: [views]
+  place: {name: "voco Times Square Broadway, Roof Bar", lat: 40.7597, lon: -73.9840}
+  title:
+    ru: Крыша нашего отеля
+    en: Our hotel's rooftop
+  text:
+    ru: Потом поднялись на крышу нашего отеля, в Roof Bar. Сверху Таймс-сквер выглядит спокойнее. Сверху вообще всё выглядит спокойнее.
+    en: Then we went up to our hotel's Roof Bar. From above, Times Square looks calmer. Everything looks calmer from above.
+- id: esb
+  day: "2026-11-06"
+  from: "13:00"
+  to: "15:10"
+  topics: [views]
+  place: {name: "Empire State Building", lat: 40.7484, lon: -73.9857}
+  title:
+    ru: Эмпайр-стейт-билдинг
+    en: The Empire State Building
+  text:
+    ru: Чтобы проверить это ещё раз, поехали на Эмпайр-стейт-билдинг. Смотровая площадка на 86-м этаже открытая, с ветром. Билет стоил $60 за взрослого. Город сверху был тот же, только больше.
+    en: To check that again, we went up the Empire State Building. The 86th-floor deck is open to the wind. Tickets were $60 per adult. The city from above was the same, only bigger.
+  price: {usd: 60, per: adult, note: {ru: "мы платили $60 за взрослого, детский дешевле; на сайте «от $46» в зависимости от времени", en: "we paid $60 per adult, kids less; the website says 'from $46' depending on time slot"}}
+  link: "https://www.esbnyc.com/buy-tickets/86th-floor-observation-deck"
+- id: moma
+  day: "2026-11-06"
+  from: "15:10"
+  to: "18:00"
+  topics: [art]
+  place: {name: "MoMA", lat: 40.7614, lon: -73.9776}
+  title:
+    ru: MoMA
+    en: MoMA
+  text:
+    ru: Вечером MoMA, вшестером, вместе с семьёй Маши. «Звёздная ночь» Ван Гога, часы Дали, банки супа Уорхола. Всё, что видел в учебниках, висит на стене. Рядом стоят люди с телефонами, и мы среди них.
+    en: In the evening, MoMA, six of us, with Masha's family. Van Gogh's Starry Night, Dalí's clocks, Warhol's soup cans. Everything you saw in textbooks is hanging on a wall. People with phones stand in front of it, and we're among them.
+  link: "https://www.moma.org/"
+  check: true
+- id: moma-hack
+  day: "2026-11-06"
+  topics: [details, art]
+  place: {name: "MoMA", lat: 40.7614, lon: -73.9776}
+  image: edited/moma-pass-front-masked.jpg
+  title:
+    ru: Лайфхак от Наташи
+    en: Natasha's hack
+  text:
+    ru: Обычные билеты на шестерых стоили бы $120. Наташа выяснила, что годовое членство стоит $90 и позволяет провести с собой ещё пятерых. Мы сэкономили $30 и получили карточку на год. Пользоваться ей нам негде, но приятно.
+    en: Regular tickets for six would have been $120. Natasha found out that an annual membership costs $90 and lets you bring five guests. We saved $30 and got a card for a year. We have nowhere to use it, but it's nice.
+  price: {usd: 90, per: family, note: {ru: "членство на 6 человек вместо $120 за билеты", en: "membership for six instead of $120 in tickets"}}
+  tip:
+    ru: Если вас четверо взрослых или больше, сравните цену годового членства MoMA с билетами.
+    en: If you're four or more adults, compare MoMA's annual membership with ticket prices.
+- id: moma-cap
+  day: "2026-11-06"
+  topics: [details, art]
+  place: {name: "MoMA Design Store", lat: 40.7614, lon: -73.9776}
+  title:
+    ru: Сувениры и кепка
+    en: Souvenirs and the cap
+  text:
+    ru: В магазине музея купили до фига сувениров. Я купил кепку и проходил в ней до конца поездки. Дальше её можно искать на каждой фотографии.
+    en: At the museum shop we bought a ton of souvenirs. I bought a cap and wore it for the rest of the trip. From here on, look for it in every photo.
+- id: niagara-bus
+  day: "2026-11-07"
+  from: "00:00"
+  to: "07:30"
+  topics: [transport]
+  place: {name: "New York State", lat: 42.952, lon: -78.602}
+  title:
+    ru: Шесть часов в автобусе
+    en: Six hours on a bus
+  text:
+    ru: Ниагара от Нью-Йорка далеко. Шесть часов на автобусе туда и шесть обратно. Выехали затемно.
+    en: Niagara is a long way from New York. Six hours on a bus there and six back. We left in the dark.
+  price: {usd: null, per: person}
+  check: true
+- id: maid-of-mist
+  day: "2026-11-07"
+  from: "07:30"
+  to: "10:00"
+  topics: [views, transport]
+  place: {name: "Maid of the Mist", lat: 43.0862, lon: -79.0675}
+  title:
+    ru: Maid of the Mist
+    en: Maid of the Mist
+  text:
+    ru: 'На канадскую сторону мы не переходили: визы нет. С американской стороны катались на кораблике Maid of the Mist. Всем выдают синие дождевики. Они не помогают, но без них было бы хуже.'
+    en: "We didn't cross to the Canadian side: no visa. From the American side we took the Maid of the Mist boat. Everyone gets a blue poncho. It doesn't help, but it would be worse without it."
+  link: "https://www.maidofthemist.com/"
+  price: {usd: null, per: person}
+- id: cave-winds
+  day: "2026-11-07"
+  from: "10:00"
+  to: "13:00"
+  topics: [views]
+  place: {name: "Cave of the Winds", lat: 43.0826, lon: -79.0717}
+  title:
+    ru: Cave of the Winds
+    en: Cave of the Winds
+  text:
+    ru: |
+      Потом Cave of the Winds: лифт вниз, а дальше деревянные мостки прямо под водопадом. Тут дождевики жёлтые.
+      Ничего особенного в этот день не происходило. Но водопад впечатляет. Двенадцать часов в автобусе ради него не жалко.
+    en: |
+      Then Cave of the Winds: a lift down, then wooden boardwalks right under the falls. Here the ponchos are yellow.
+      Nothing much happened that day. But the falls are impressive. Twelve hours on a bus for them — no regrets.
+  link: "https://www.niagarafallsstatepark.com/attractions-and-tours/cave-of-the-winds"
+  price: {usd: null, per: person}
+  tip:
+    ru: "Без канадской визы с американской стороны можно увидеть всё главное. Лучший фронтальный вид на Подкову, правда, с канадской."
+    en: "Without a Canadian visa you can still see all the main sights from the US side. The best head-on view of the Horseshoe is from Canada, though."
 
   # ---------- Day 5 ----------
-  - id: carnegie-rehearsal
-    day: "2026-11-08"
-    from: "00:00"
-    to: "12:00"
-    topics: [music]
-    place: {name: "Carnegie Hall", lat: 40.7651, lon: -73.9799}
-    title: {ru: "Репетиция в Карнеги-холле", en: "Rehearsal at Carnegie Hall"}
-    text:
-      ru: "С утра репетиция в зале. Тот самый Карнеги-холл."
-      en: "A morning rehearsal in the hall. The Carnegie Hall."
-  - id: carnegie-concert
-    day: "2026-11-08"
-    from: "12:00"
-    to: "16:00"
-    topics: [music, people]
-    place: {name: "Carnegie Hall", lat: 40.7651, lon: -73.9799}
-    title: {ru: "Первое место", en: "First place"}
-    text:
-      ru: "Макар выступил на конкурсе, занял первое место и получил $50 как самый молодой исполнитель. Видео выступления будет здесь."
-      en: "Makar played at the competition, took first place and got $50 as the youngest performer. The performance video will be here."
-    price: {usd: -50, per: child, note: {ru: "единственный раз, когда Нью-Йорк заплатил нам", en: "the only time New York paid us"}}
-    check: true
-  - id: nypl
-    day: "2026-11-08"
-    from: "16:00"
-    to: "18:00"
-    topics: [art]
-    place: {name: "New York Public Library", lat: 40.7532, lon: -73.9822}
-    title: {ru: "Публичная библиотека", en: "The Public Library"}
-    text:
-      ru: "Главное здание Нью-Йоркской публичной библиотеки на 5-й авеню. У входа два каменных льва, их зовут Терпение и Стойкость."
-      en: "The main building of the New York Public Library on Fifth Avenue. Two stone lions guard the entrance; their names are Patience and Fortitude."
-    price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
-  - id: stardust
-    day: "2026-11-08"
-    from: "18:00"
-    to: "23:59"
-    topics: [food, music]
-    place: {name: "Ellen's Stardust Diner", lat: 40.7616, lon: -73.9836}
-    title: {ru: "Ужин, где поют официанты", en: "Dinner with singing waiters"}
-    text:
-      ru: "Ellen's Stardust Diner на Бродвее: официанты — начинающие бродвейские актёры, и они поют прямо между столиками. Отличный способ отметить первое место."
-      en: "Ellen's Stardust Diner on Broadway: the waiters are aspiring Broadway performers who sing right between the tables. A great way to celebrate first place."
-    link: "https://www.ellensstardustdiner.com/"
-    price: {usd: null, per: family}
+- id: carnegie-rehearsal
+  day: "2026-11-08"
+  from: "00:00"
+  to: "12:00"
+  topics: [music]
+  place: {name: "Carnegie Hall", lat: 40.7651, lon: -73.9799}
+  title:
+    ru: Репетиция в Карнеги-холле
+    en: Rehearsal at Carnegie Hall
+  text:
+    ru: Утром репетиция в зале. Мы сидели в Карнеги-холле. Макар сидел за роялем в Карнеги-холле. Это разные вещи.
+    en: A morning rehearsal in the hall. We were sitting in Carnegie Hall. Makar was sitting at the piano in Carnegie Hall. Those are different things.
+- id: carnegie-concert
+  day: "2026-11-08"
+  from: "12:00"
+  to: "16:00"
+  topics: [music, people]
+  place: {name: "Carnegie Hall", lat: 40.7651, lon: -73.9799}
+  title:
+    ru: Первое место
+    en: First place
+  text:
+    ru: |
+      Макар выступил и занял первое место. Ещё ему дали $50 как самому младшему участнику.
+      Это был единственный раз за поездку, когда Нью-Йорк заплатил нам, а не мы ему.
+    en: |
+      Makar played and took first place. They also gave him $50 as the youngest performer.
+      It was the only time on the whole trip that New York paid us, rather than the other way round.
+  price: {usd: -50, per: child, note: {ru: "единственный раз, когда Нью-Йорк заплатил нам", en: "the only time New York paid us"}}
+  check: true
+- id: nypl
+  day: "2026-11-08"
+  from: "16:00"
+  to: "18:00"
+  topics: [art]
+  place: {name: "New York Public Library", lat: 40.7532, lon: -73.9822}
+  title:
+    ru: Публичная библиотека
+    en: The Public Library
+  text:
+    ru: Потом пошли в публичную библиотеку на Пятой авеню. У входа два каменных льва. Их зовут Терпение и Стойкость. В тот день нам пригодилось и то и другое.
+    en: Then we went to the Public Library on Fifth Avenue. Two stone lions guard the entrance. Their names are Patience and Fortitude. That day we'd needed both.
+  price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
+- id: stardust
+  day: "2026-11-08"
+  from: "18:00"
+  to: "23:59"
+  topics: [food, music]
+  place: {name: "Ellen's Stardust Diner", lat: 40.7616, lon: -73.9836}
+  title:
+    ru: Ужин, где поют официанты
+    en: Dinner with singing waiters
+  text:
+    ru: Ужинали в Ellen's Stardust Diner на Бродвее. Официанты там — будущие бродвейские актёры, и они поют прямо между столиками. Кто-то несёт тарелки, кто-то берёт высокую ноту. Мы отмечали первое место, и казалось, что поют немного и для нас.
+    en: We had dinner at Ellen's Stardust Diner on Broadway. The waiters are future Broadway performers, and they sing right between the tables. One carries plates, another hits a high note. We were celebrating first place, and it felt like they were singing a little bit for us.
+  link: "https://www.ellensstardustdiner.com/"
+  price: {usd: null, per: family}
 
   # ---------- Day 6 ----------
-  - id: rink
-    day: "2026-11-09"
-    from: "00:00"
-    to: "13:00"
-    topics: [people]
-    place: {name: "The Rink at Rockefeller Center", lat: 40.7587, lon: -73.9787}
-    title: {ru: "Каток у Рокфеллер-центра", en: "The rink at Rockefeller Center"}
-    text:
-      ru: "Наташа с Макаром катались вместе с друзьями и их дочкой Машей. Маша тоже пианистка, тоже лауреат и тоже играла в Карнеги-холле."
-      en: "Natasha and Makar went skating with our friends and their daughter Masha. Masha is a pianist too, also a prize-winner, and also played Carnegie Hall."
-    price: {usd: null, per: person}
-    privacy: masha
-  - id: grand-central
-    day: "2026-11-09"
-    from: "13:00"
-    to: "16:00"
-    topics: [transport, metro]
-    place: {name: "Grand Central Terminal", lat: 40.7527, lon: -73.9772}
-    title: {ru: "Grand Central", en: "Grand Central"}
-    text:
-      ru: "Самый красивый вокзал города: огромный зал, звёздное небо на потолке и часы над справочной."
-      en: "The city's most beautiful station: the vast hall, the starry ceiling and the clock above the information booth."
-    price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
-  - id: central-park
-    day: "2026-11-09"
-    from: "16:00"
-    to: "23:59"
-    topics: [views]
-    place: {name: "Central Park", lat: 40.7681, lon: -73.9719}
-    title: {ru: "Центральный парк", en: "Central Park"}
-    text:
-      ru: "Ноябрьский Центральный парк, жёлтые листья и белки."
-      en: "Central Park in November: yellow leaves and squirrels."
-    check: true
+- id: rink
+  day: "2026-11-09"
+  from: "00:00"
+  to: "13:00"
+  topics: [people]
+  place: {name: "The Rink at Rockefeller Center", lat: 40.7587, lon: -73.9787}
+  title:
+    ru: Каток у Рокфеллер-центра
+    en: The rink at Rockefeller Center
+  text:
+    ru: Наташа с Макаром пошли на каток у Рокфеллер-центра, вместе с друзьями и Машей. Маша тоже пианистка, тоже лауреат и тоже играла в Карнеги-холле. На льду это не имело никакого значения.
+    en: Natasha and Makar went skating at Rockefeller Center with our friends and Masha. Masha is a pianist too, also a prize-winner, and also played Carnegie Hall. On the ice none of that mattered.
+  price: {usd: null, per: person}
+  privacy: masha
+- id: grand-central
+  day: "2026-11-09"
+  from: "13:00"
+  to: "16:00"
+  topics: [transport, metro]
+  place: {name: "Grand Central Terminal", lat: 40.7527, lon: -73.9772}
+  title:
+    ru: Grand Central
+    en: Grand Central
+  text:
+    ru: После катка все пошли на Grand Central. Это вокзал, куда приходят не только за поездами. Мы, например, пришли просто посмотреть.
+    en: After the rink everyone went to Grand Central. It's a station people visit for more than trains. We, for one, just came to look.
+  price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
+- id: central-park
+  day: "2026-11-09"
+  from: "16:00"
+  to: "23:59"
+  topics: [views]
+  place: {name: "Central Park", lat: 40.7681, lon: -73.9719}
+  title:
+    ru: Центральный парк
+    en: Central Park
+  text:
+    ru: Ещё были в Центральном парке. Ноябрь, жёлтые листья, белки. Белкам до нас не было никакого дела.
+    en: We also went to Central Park. November, yellow leaves, squirrels. The squirrels couldn't have cared less about us.
+  check: true
 
   # ---------- Day 7 ----------
-  - id: memorial-911
-    day: "2026-11-10"
-    from: "00:00"
-    to: "12:00"
-    topics: [people]
-    place: {name: "9/11 Memorial", lat: 40.7115, lon: -74.0134}
-    title: {ru: "Мемориал 9/11", en: "The 9/11 Memorial"}
-    text:
-      ru: "Два огромных квадратных бассейна-водопада ровно на месте башен-близнецов. По бортам имена почти трёх тысяч погибших."
-      en: "Two huge square waterfall pools exactly where the Twin Towers stood. Nearly three thousand names are cut into their edges."
-    price: {usd: 0, note: {ru: "мемориал бесплатный", en: "the memorial is free"}}
-  - id: brooklyn-bridge
-    day: "2026-11-10"
-    from: "12:00"
-    to: "13:30"
-    topics: [views, transport]
-    place: {name: "Brooklyn Bridge", lat: 40.7061, lon: -73.9969}
-    title: {ru: "Бруклинский мост", en: "The Brooklyn Bridge"}
-    text:
-      ru: "Открыт в 1883 году, тогда самый длинный подвесной мост в мире. Пешеходная дорожка идёт над машинами."
-      en: "Opened in 1883, then the longest suspension bridge in the world. The footpath runs above the traffic."
-    price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
-  - id: katz
-    day: "2026-11-10"
-    from: "13:30"
-    to: "15:00"
-    topics: [food, details]
-    place: {name: "Katz's Delicatessen", lat: 40.7223, lon: -73.9874}
-    title: {ru: "Сэндвич у Каца", en: "A sandwich at Katz's"}
-    text:
-      ru: "Деликатесная с 1888 года, огромные сэндвичи с пастрами. Здесь снимали сцену из «Когда Гарри встретил Салли». На входе дают билетик, и терять его нельзя."
-      en: "A deli since 1888, with enormous pastrami sandwiches. The scene from When Harry Met Sally was filmed here. You get a ticket at the door, and you must not lose it."
-    link: "https://katzsdelicatessen.com/"
-    price: {usd: null, per: family}
-  - id: soho-ghostbusters
-    day: "2026-11-10"
-    from: "15:00"
-    to: "18:00"
-    topics: [art, details]
-    place: {name: "Hook & Ladder 8, 14 N Moore St", lat: 40.7197, lon: -74.0066}
-    title: {ru: "Сохо и «Охотники за привидениями»", en: "SoHo and the Ghostbusters firehouse"}
-    text:
-      ru: "Чугунные фасады Сохо с пожарными лестницами. А в Трайбеке настоящая действующая пожарная часть, которую сняли в «Охотниках за привидениями», с логотипом из фильма на фасаде."
-      en: "SoHo's cast-iron facades and fire escapes. And in Tribeca, the real working firehouse from Ghostbusters, with the movie logo on the front."
-    price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
-  - id: aladdin
-    day: "2026-11-10"
-    from: "18:00"
-    to: "23:59"
-    topics: [music, art]
-    place: {name: "New Amsterdam Theatre", lat: 40.7562, lon: -73.9878}
-    title: {ru: "«Аладдин» на Бродвее", en: "Aladdin on Broadway"}
-    text:
-      ru: "Мюзикл Disney идёт на Бродвее с 2014 года в театре New Amsterdam. Лучшее завершение поездки."
-      en: "Disney's musical has been running on Broadway since 2014 at the New Amsterdam Theatre. The best way to end the trip."
-    link: "https://www.aladdinthemusical.com/"
-    price: {usd: null, per: person}
+- id: memorial-911
+  day: "2026-11-10"
+  from: "00:00"
+  to: "12:00"
+  topics: [people]
+  place: {name: "9/11 Memorial", lat: 40.7115, lon: -74.0134}
+  title:
+    ru: Мемориал 9/11
+    en: The 9/11 Memorial
+  text:
+    ru: Последний день начали с мемориала 9/11. Два квадратных бассейна на месте башен. Вода уходит вниз, в квадрат поменьше, и дна не видно. По бортам имена. Здесь все говорят тихо.
+    en: We started the last day at the 9/11 Memorial. Two square pools where the towers stood. The water falls into a smaller square, and you can't see the bottom. Names are cut along the edges. Everyone here speaks quietly.
+  price: {usd: 0, note: {ru: "мемориал бесплатный", en: "the memorial is free"}}
+- id: brooklyn-bridge
+  day: "2026-11-10"
+  from: "12:00"
+  to: "13:30"
+  topics: [views, transport]
+  place: {name: "Brooklyn Bridge", lat: 40.7061, lon: -73.9969}
+  title:
+    ru: Бруклинский мост
+    en: The Brooklyn Bridge
+  text:
+    ru: Потом Бруклинский мост. Пешеходная дорожка идёт над машинами, и Манхэттен оттуда видно почти целиком.
+    en: Then the Brooklyn Bridge. The footpath runs above the cars, and you can see almost all of Manhattan from it.
+  price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
+- id: katz
+  day: "2026-11-10"
+  from: "13:30"
+  to: "15:00"
+  topics: [food, details]
+  place: {name: "Katz's Delicatessen", lat: 40.7223, lon: -73.9874}
+  title:
+    ru: Сэндвич у Каца
+    en: A sandwich at Katz's
+  text:
+    ru: Обедали у Каца. На входе выдают билетик и предупреждают, что терять его нельзя. Предупреждают так серьёзно, что держишь его крепче, чем документы в Дохе. Сэндвич с пастрами размером с небольшую книгу.
+    en: Lunch at Katz's. At the door they hand you a ticket and warn you not to lose it. They say it so seriously that you hold it tighter than we held our documents in Doha. The pastrami sandwich is the size of a small book.
+  link: "https://katzsdelicatessen.com/"
+  price: {usd: null, per: family}
+- id: soho-ghostbusters
+  day: "2026-11-10"
+  from: "15:00"
+  to: "18:00"
+  topics: [art, details]
+  place: {name: "Hook & Ladder 8, 14 N Moore St", lat: 40.7197, lon: -74.0066}
+  title:
+    ru: Сохо и «Охотники за привидениями»
+    en: SoHo and the Ghostbusters firehouse
+  text:
+    ru: 'Дальше Сохо: чугунные фасады, пожарные лестницы, магазины. И пожарная часть из «Охотников за привидениями». Она настоящая, в ней до сих пор работают пожарные. Мы постояли у ворот, как все.'
+    en: "Then SoHo: cast-iron facades, fire escapes, shops. And the firehouse from Ghostbusters. It's real, and firefighters still work there. We stood by the gates, like everybody."
+  price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
+- id: aladdin
+  day: "2026-11-10"
+  from: "18:00"
+  to: "23:59"
+  topics: [music, art]
+  place: {name: "New Amsterdam Theatre", lat: 40.7562, lon: -73.9878}
+  title:
+    ru: «Аладдин» на Бродвее
+    en: Aladdin on Broadway
+  text:
+    ru: Вечером «Аладдин» на Бродвее. Лучшего конца поездки мы бы не придумали.
+    en: In the evening, Aladdin on Broadway. We couldn't have planned a better ending.
+  link: "https://www.aladdinthemusical.com/"
+  price: {usd: null, per: person}
 
   # ---------- Day 8 ----------
-  - id: subway-broke
-    day: "2026-11-11"
-    from: "00:00"
-    to: "12:00"
-    topics: [metro, transport]
-    place: {name: "New York", lat: 40.7597, lon: -73.9840}
-    title: {ru: "Метро сломалось, бежим на автобус", en: "The subway broke down, run for the bus"}
-    text:
-      ru: "Уезжали рано утром, и как раз сломалось метро. Пришлось бежать на автобус. Зато с автобуса удалось снять окраины, а не только открыточный центр."
-      en: "We left early in the morning, just as the subway broke down. We had to run for a bus. On the plus side, we filmed the outskirts from the bus window, not just the postcard centre."
-  - id: flight-home
-    day: "2026-11-11"
-    from: "12:00"
-    to: "23:59"
-    topics: [transport]
-    place: {name: "JFK Airport", lat: 40.6413, lon: -73.7781}
-    title: {ru: "Обратно через Доху", en: "Back via Doha"}
-    text:
-      ru: "Самолёт, снова Доха, и домой."
-      en: "The plane, Doha again, and home."
+- id: subway-broke
+  day: "2026-11-11"
+  from: "00:00"
+  to: "12:00"
+  topics: [metro, transport]
+  place: {name: "New York", lat: 40.7597, lon: -73.9840}
+  title:
+    ru: Метро сломалось, бежим на автобус
+    en: The subway broke, run for the bus
+  text:
+    ru: |
+      Уезжали рано утром. В это утро сломалось метро. Начинали мы с того, что не могли в нём разобраться, а закончили тем, что оно не смогло разобраться с нами.
+      Бежали на автобус. Зато из окна удалось снять окраины, а не только открыточный центр. Это тоже Нью-Йорк, просто на него редко смотрят.
+    en: |
+      We left early in the morning. That morning the subway broke down. We started the trip unable to figure it out, and ended it with the subway unable to figure us out.
+      We ran for a bus. On the plus side, from its window we filmed the outskirts, not just the postcard centre. That's New York too; people just rarely look at it.
+- id: flight-home
+  day: "2026-11-11"
+  from: "12:00"
+  to: "23:59"
+  topics: [transport]
+  place: {name: "JFK Airport", lat: 40.6413, lon: -73.7781}
+  title:
+    ru: Обратно через Доху
+    en: Back via Doha
+  text:
+    ru: Самолёт, снова Доха, и домой.
+    en: The plane, Doha again, and home.
+notes:
+- id: note-hamad
+  topics:
+  - transport
+  - details
+  day: '2026-11-03'
+  moment: doha-grass
+  title:
+    ru: Сад внутри аэропорта
+    en: A garden inside an airport
+  text:
+    ru: |
+      Зелёная зона в аэропорту Хамад называется The Orchard. Это тропический сад площадью около 10 000 квадратных метров под стеклянной крышей, его открыли в ноябре 2023 года.
+      А посреди главного зала сидит семиметровый жёлтый медведь с лампой на голове. Это скульптура швейцарского художника Урса Фишера. Её продали на аукционе Christie's за 6,8 миллиона долларов.
+    en: |
+      The green zone at Hamad airport is called The Orchard: a tropical garden of about 10,000 square metres under a glass roof, opened in November 2023.
+      And in the middle of the main hall sits a seven-metre yellow teddy bear with a lamp on its head. It's by the Swiss artist Urs Fischer. It sold at Christie's for 6.8 million dollars.
+  sources:
+  - https://en.wikipedia.org/wiki/Hamad_International_Airport
+  check: true
+- id: note-maid-of-mist
+  topics:
+  - transport
+  day: '2026-11-07'
+  moment: maid-of-mist
+  title:
+    ru: Кораблик, которому 180 лет
+    en: A boat line 180 years old
+  text:
+    ru: 'Первый Maid of the Mist пошёл по реке в 1846 году. Тогда это был паром: моста через Ниагару ещё не было, и людей с грузом возили с американского берега на канадский. Мост построили, паром стал не нужен, и кораблик переквалифицировался в аттракцион. Так и плавает до сих пор.'
+    en: "The first Maid of the Mist sailed in 1846. Back then it was a ferry: there was no bridge over the Niagara yet, and it carried people and cargo between the American and Canadian banks. Then the bridge was built, the ferry became unnecessary, and the boat retrained as an attraction. It's been at it ever since."
+  sources:
+  - https://en.wikipedia.org/wiki/Maid_of_the_Mist
+- id: note-grand-central
+  topics:
+  - transport
+  - details
+  day: '2026-11-09'
+  moment: grand-central
+  title:
+    ru: Небо задом наперёд
+    en: The sky the wrong way round
+  text:
+    ru: |
+      Потолок главного зала Grand Central расписан созвездиями. Если присмотреться, звёздное небо там нарисовано зеркально, задом наперёд. Ошибку заметили почти сразу после открытия в 1913 году. Объяснение придумали красивое: это небо, каким его видит Бог, то есть сверху.
+      В углу потолка оставлен маленький тёмный прямоугольник. Так выглядел весь потолок до реставрации 1990-х: чёрный от десятилетий табачного дыма.
+    en: |
+      The ceiling of Grand Central's main hall is painted with constellations. Look closely and the sky is mirrored, back to front. The mistake was noticed soon after the station opened in 1913. The explanation offered was a nice one: it's the sky as God sees it, from above.
+      In one corner a small dark rectangle has been left uncleaned. That's what the whole ceiling looked like before the 1990s restoration: black from decades of tobacco smoke.
+  sources:
+  - https://en.wikipedia.org/wiki/Grand_Central_Terminal
+- id: note-subway-express
+  topics:
+  - metro
+  day: '2026-11-04'
+  moment: dinner-150
+  title:
+    ru: Почему мы запутались
+    en: Why we got confused
+  text:
+    ru: |
+      Нью-йоркское метро открылось в 1904 году. В нём 472 станции, больше, чем в любом другом метро мира, и оно работает круглосуточно.
+      Путаница у приезжих почти всегда одна и та же: на многих линиях есть экспрессы и обычные поезда. Они идут по одному маршруту, иногда с одной платформы, но экспресс проезжает мелкие станции без остановки. Сел не в тот и уехал мимо своей станции. С нами в первый вечер было примерно так.
+    en: |
+      The New York subway opened in 1904. It has 472 stations, more than any other metro in the world, and it runs around the clock.
+      Visitors almost always get confused the same way: many lines have express and local trains. They follow the same route, sometimes from the same platform, but the express skips the small stations. Get on the wrong one and you sail past your stop. That's roughly what happened to us on the first evening.
+  sources:
+  - https://en.wikipedia.org/wiki/New_York_City_Subway
+- id: note-omny
+  topics:
+  - metro
+  title:
+    ru: Без жетонов и без карточек
+    en: No tokens, no cards
+  text:
+    ru: 'Знаменитых нью-йоркских жетонов давно нет, и жёлтые карточки MetroCard тоже уходят в прошлое. Сейчас за проезд платят системой OMNY: прикладываешь к турникету банковскую карту или телефон, и всё. Билет покупать не нужно вообще.'
+    en: "The famous New York tokens are long gone, and the yellow MetroCard is on its way out too. Now you pay with OMNY: tap a bank card or a phone on the turnstile and you're through. No ticket to buy at all."
+  sources:
+  - https://en.wikipedia.org/wiki/OMNY
+- id: note-bull
+  topics:
+  - art
+  - details
+  day: '2026-11-04'
+  moment: bull
+  title:
+    ru: Бык, которого никто не заказывал
+    en: The bull nobody ordered
+  text:
+    ru: |
+      Бронзового быка никто не заказывал. Скульптор Артуро Ди Модика отлил его на свои деньги и в декабре 1989 года ночью, без всякого разрешения, привёз и поставил перед Нью-Йоркской фондовой биржей. Подарок городу к Рождеству. Бык весит больше трёх тонн.
+      Полиция его увезла, но горожане возмутились, и быка поставили неподалёку, где он стоит до сих пор.
+      «Бесстрашную девочку» поставили в 2017 году напротив быка, лицом к нему. Через год её перенесли к бирже. Теперь она смотрит на биржу, а бык смотрит в пустоту.
+    en: |
+      Nobody ordered the bronze bull. The sculptor Arturo Di Modica cast it with his own money and, one night in December 1989, without any permission, trucked it in and set it down in front of the New York Stock Exchange. A Christmas present to the city. The bull weighs over three tonnes.
+      The police hauled it away, the public objected, and the bull was put up nearby, where it still stands.
+      Fearless Girl was installed in 2017, facing the bull. A year later she was moved to the Stock Exchange. Now she stares at the Exchange, and the bull stares at nothing.
+  sources:
+  - https://en.wikipedia.org/wiki/Charging_Bull
+  - https://en.wikipedia.org/wiki/Fearless_Girl
+- id: note-korea
+  topics:
+  - art
+  - people
+  day: '2026-11-05'
+  moment: korea-lincoln
+  title:
+    ru: Девятнадцать и тридцать восемь
+    en: Nineteen and thirty-eight
+  text:
+    ru: 'В мемориале ветеранов войны в Корее 19 стальных солдат. Рядом стоит полированная гранитная стена, и в ней они отражаются. Получается 38. Это не случайность: 38-я параллель — линия, по которой Корея была разделена до войны и вдоль которой проходит граница сейчас.'
+    en: "The Korean War Veterans Memorial has 19 steel soldiers. Beside them stands a polished granite wall that reflects them. That makes 38. It's deliberate: the 38th parallel is the line along which Korea was divided before the war, and roughly where the border runs today."
+  sources:
+  - https://en.wikipedia.org/wiki/Korean_War_Veterans_Memorial
+- id: note-moma
+  topics:
+  - art
+  day: '2026-11-06'
+  moment: moma
+  title:
+    ru: Музей, открытый в кризис
+    en: A museum opened in a crash
+  text:
+    ru: 'MoMA открылся 7 ноября 1929 года, через девять дней после биржевого краха, с которого началась Великая депрессия. Мы были там почти ровно в его день рождения: 6 ноября. «Звёздная ночь» Ван Гога в музее с 1941 года.'
+    en: "MoMA opened on 7 November 1929, nine days after the stock market crash that started the Great Depression. We were there almost exactly on its birthday: 6 November. Van Gogh's Starry Night has been in the museum since 1941."
+  sources:
+  - https://en.wikipedia.org/wiki/Museum_of_Modern_Art
+  - https://en.wikipedia.org/wiki/The_Starry_Night
+- id: note-lions
+  topics:
+  - art
+  - people
+  day: '2026-11-08'
+  moment: nypl
+  title:
+    ru: Как львам дали имена
+    en: How the lions got their names
+  text:
+    ru: 'Сначала львов звали в честь основателей библиотеки: Лео Астор и Лео Ленокс, потом лорд Астор и леди Ленокс. Нынешние имена, Терпение и Стойкость, им дал мэр Фиорелло Ла Гуардия в 1930-е, во время Великой депрессии. Он сказал, что именно эти два качества понадобятся ньюйоркцам, чтобы её пережить.'
+    en: "At first the lions were named after the library's founders: Leo Astor and Leo Lenox, later Lord Astor and Lady Lenox. Their current names, Patience and Fortitude, came from Mayor Fiorello La Guardia in the 1930s, during the Great Depression. He thought those were the two qualities New Yorkers needed to get through it."
+  sources:
+  - https://en.wikipedia.org/wiki/Patience_and_Fortitude
+- id: note-esb
+  topics:
+  - views
+  - details
+  day: '2026-11-06'
+  moment: esb
+  title:
+    ru: Самолёт в небоскрёбе
+    en: A plane in the skyscraper
+  text:
+    ru: |
+      Эмпайр-стейт-билдинг построили чуть больше чем за год и открыли в 1931 году.
+      В июле 1945 года в густом тумане в него врезался военный бомбардировщик B-25, около 79-го этажа. Лифтёрша Бетти Лу Оливер упала в лифте с 75-го этажа и выжила. Это до сих пор рекорд: самое долгое падение в лифте, после которого человек остался жив. Меньше чем через двое суток во многих офисах здания снова работали.
+    en: |
+      The Empire State Building went up in just over a year and opened in 1931.
+      In July 1945, in thick fog, a B-25 bomber flew into it around the 79th floor. The elevator operator Betty Lou Oliver fell 75 storeys in her elevator car and survived. It's still the record for the longest survived elevator fall. Less than 48 hours later, many floors were back at work.
+  sources:
+  - https://en.wikipedia.org/wiki/1945_Empire_State_Building_B-25_crash
+- id: note-weehawken
+  topics:
+  - views
+  - people
+  day: '2026-11-05'
+  moment: weehawken
+  title:
+    ru: Где стрелялся Гамильтон
+    en: Where Hamilton was shot
+  text:
+    ru: Набережная в Уихокене, откуда мы смотрели на Манхэттен, известна ещё одним. Здесь, на берегу Гудзона, в 1804 году стрелялись Александр Гамильтон, один из отцов-основателей США, и вице-президент Аарон Бёрр. Гамильтон был смертельно ранен. Его портрет сейчас на десятидолларовой купюре, а про него самого есть бродвейский мюзикл «Гамильтон».
+    en: The Weehawken waterfront, where we looked at Manhattan, is known for something else too. Here, on the bank of the Hudson, in 1804, Alexander Hamilton, one of America's founding fathers, fought a duel with Vice President Aaron Burr. Hamilton was fatally wounded. His face is on the ten-dollar bill now, and there's a Broadway musical about him, Hamilton.
+  sources:
+  - https://en.wikipedia.org/wiki/Burr%E2%80%93Hamilton_duel
+- id: note-niagara-off
+  topics:
+  - views
+  - details
+  day: '2026-11-07'
+  moment: cave-winds
+  title:
+    ru: Водопад, который выключали
+    en: The waterfall they switched off
+  text:
+    ru: 'В 1969 году Американский водопад выключили. Инженеры армии США построили временную дамбу и с июня по ноябрь водопада не было: воду отвели, чтобы изучить скалы и понять, не обрушится ли он. К декабрю вода снова шла. Груду камней у подножия в итоге решили не трогать.'
+    en: 'In 1969 the American Falls were switched off. US Army engineers built a temporary dam and from June to November there were no falls: the water was diverted so they could study the rock and see whether it might collapse. By December the water was flowing again. In the end they decided to leave the pile of rocks at the base alone.'
+  sources:
+  - https://en.wikipedia.org/wiki/American_Falls
+  check: true
+- id: note-times-square
+  topics:
+  - views
+  - details
+  day: '2026-11-05'
+  moment: times-sq-1
+  title:
+    ru: Площадь имени газеты
+    en: A square named after a newspaper
+  text:
+    ru: До 1904 года Таймс-сквер называлась Лонгакр-сквер, и там торговали лошадьми и экипажами. Потом сюда переехала газета The New York Times, и площадь переименовали в её честь. Шар в новогоднюю ночь здесь опускают с 1907 года.
+    en: Until 1904 Times Square was called Longacre Square, a place for the horse and carriage trade. Then The New York Times moved in, and the square was renamed after it. The New Year's Eve ball has dropped here since 1907.
+  sources:
+  - https://en.wikipedia.org/wiki/Times_Square
+- id: note-liberty
+  topics:
+  - views
+  day: '2026-11-04'
+  moment: liberty
+  title:
+    ru: Свобода была рыжей
+    en: Liberty used to be copper-coloured
+  text:
+    ru: Статую Свободы подарила Франция, её открыли в 1886 году. Внутри стальной каркас, который рассчитал Гюстав Эйфель, тот самый. Снаружи тонкая медь. Сначала статуя была цвета новой монетки, а зелёной стала примерно за двадцать лет, когда медь покрылась патиной.
+    en: The Statue of Liberty was a gift from France, unveiled in 1886. Inside is a steel frame engineered by Gustave Eiffel, that Eiffel. Outside is thin copper. At first the statue was the colour of a new penny; it turned green over about twenty years as the copper took on a patina.
+  sources:
+  - https://en.wikipedia.org/wiki/Statue_of_Liberty
+- id: note-roebling
+  topics:
+  - people
+  day: '2026-11-10'
+  moment: brooklyn-bridge
+  title:
+    ru: Женщина, которая достроила мост
+    en: The woman who finished the bridge
+  text:
+    ru: |
+      Бруклинский мост спроектировал Джон Роблинг, но он погиб ещё до начала стройки. Дело продолжил его сын Вашингтон, а потом и он слёг: кессонная болезнь после работы под водой. С тех пор он следил за стройкой в подзорную трубу из окна спальни.
+      Все распоряжения на стройку передавала его жена Эмили Роблинг. Она выучила математику, сопромат и строительство мостов и одиннадцать лет фактически руководила проектом. Когда мост открыли в 1883 году, она первой проехала по нему, держа на руках петуха, символ победы.
+    en: |
+      The Brooklyn Bridge was designed by John Roebling, who died before construction even began. His son Washington took over, and then he too was struck down by caisson disease from working under the river. From then on he watched the construction through a telescope from his bedroom.
+      Every instruction to the site went through his wife, Emily Roebling. She taught herself the maths, the strength of materials and bridge engineering, and for eleven years effectively ran the project. When the bridge opened in 1883 she was the first to ride across it, holding a rooster, a symbol of victory.
+  sources:
+  - https://en.wikipedia.org/wiki/Emily_Warren_Roebling
+  check: true
+- id: note-annie-taylor
+  topics:
+  - people
+  - details
+  day: '2026-11-07'
+  title:
+    ru: Учительница в бочке
+    en: The teacher in the barrel
+  text:
+    ru: Первым человеком, который спустился с Ниагарского водопада в бочке и выжил, была учительница Энни Тейлор. Это было в 1901 году, в её 63-й день рождения. Она надеялась прославиться и разбогатеть. Прославилась, но не разбогатела. Выйдя из бочки, сказала, что никому не советует такое повторять.
+    en: The first person to go over Niagara Falls in a barrel and survive was a schoolteacher, Annie Edson Taylor. It was 1901, on her 63rd birthday. She hoped for fame and fortune. She got the fame, not the fortune. Climbing out of the barrel, she said nobody should ever try it again.
+  sources:
+  - https://en.wikipedia.org/wiki/Annie_Edson_Taylor
+- id: note-arlington-guard
+  topics:
+  - people
+  day: '2026-11-05'
+  moment: arlington
+  title:
+    ru: Караул, который не уходит
+    en: The guard that never leaves
+  text:
+    ru: 'У Могилы Неизвестного солдата на Арлингтонском кладбище почётный караул стоит без перерыва с 1937 года: днём и ночью, в жару, снег и ураганы. Часовой делает ровно 21 шаг вдоль могилы, разворачивается, стоит 21 секунду и идёт обратно. 21 — как число выстрелов высшего воинского салюта.'
+    en: 'At the Tomb of the Unknown Soldier at Arlington, an honour guard has stood without a break since 1937: day and night, through heat, snow and hurricanes. The sentinel takes exactly 21 steps along the tomb, turns, waits 21 seconds and walks back. 21, like the 21-gun salute, the highest military honour.'
+  sources:
+  - https://en.wikipedia.org/wiki/Tomb_of_the_Unknown_Soldier_(Arlington)
+- id: note-carnegie
+  topics:
+  - music
+  day: '2026-11-08'
+  moment: carnegie-concert
+  title:
+    ru: Как попасть в Карнеги-холл
+    en: How do you get to Carnegie Hall
+  text:
+    ru: |
+      Карнеги-холл открылся в 1891 году. На открытии дирижировал Пётр Ильич Чайковский: ради этого он приплыл в Америку.
+      У американцев есть старый анекдот. Прохожий спрашивает музыканта на улице: «Как попасть в Карнеги-холл?» Тот отвечает: «Репетировать, репетировать и репетировать». Час с пианино два дня назад был ровно про это.
+    en: |
+      Carnegie Hall opened in 1891. Tchaikovsky conducted at the opening: he crossed the Atlantic for it.
+      There's an old American joke. A man stops a musician on the street: "How do you get to Carnegie Hall?" The musician says: "Practice, practice, practice." The hour with a piano two days earlier was exactly about that.
+  sources:
+  - https://en.wikipedia.org/wiki/Carnegie_Hall
+- id: note-new-amsterdam
+  topics:
+  - music
+  - art
+  day: '2026-11-10'
+  moment: aladdin
+  title:
+    ru: Театр, который спас Дисней
+    en: The theatre Disney saved
+  text:
+    ru: Театр New Amsterdam, где идёт «Аладдин», открылся в 1903 году. В 1910-е и 20-е здесь шли знаменитые ревю «Безумства Зигфельда». Потом театр стал кинотеатром, пришёл в упадок и долго стоял закрытым. В 1990-е его отреставрировал Disney, и с тех пор он снова театр.
+    en: The New Amsterdam Theatre, home of Aladdin, opened in 1903. In the 1910s and 20s it hosted the famous Ziegfeld Follies. Later it became a cinema, fell into decay and stood closed for years. In the 1990s Disney restored it, and it's been a theatre again ever since.
+  sources:
+  - https://en.wikipedia.org/wiki/New_Amsterdam_Theatre
+- id: note-tax-tip
+  topics:
+  - food
+  day: '2026-11-04'
+  moment: dinner-150
+  title:
+    ru: Откуда берутся лишние доллары
+    en: Where the extra dollars come from
+  text:
+    ru: Цены в нью-йоркском меню указаны без налога. К счёту прибавляют налог с продаж 8,875%, а потом принято оставить чаевые, обычно 18–20% (до налога). В итоге блюда на $100 по меню превращаются примерно в $130. Наш ужин на $150 — это, грубо говоря, меню на $115.
+    en: New York menu prices don't include tax. The bill adds 8.875% sales tax, and then you're expected to tip, usually 18–20% of the pre-tax amount. So $100 of food on the menu becomes about $130. Our $150 dinner was, roughly, a $115 menu.
+  sources:
+  - https://en.wikipedia.org/wiki/Sales_taxes_in_the_United_States
+- id: note-katz
+  topics:
+  - food
+  - details
+  day: '2026-11-10'
+  moment: katz
+  title:
+    ru: Табличка над столиком
+    en: The sign above the table
+  text:
+    ru: |
+      Кац работает с 1888 года. Во время Второй мировой войны у них был слоган «Пошли салями своему мальчику в армию», и колбасу действительно отправляли солдатам на фронт.
+      Над одним из столиков висит табличка: «Здесь Гарри встретил Салли... Надеемся, вам принесут то же, что и ей». За этим столиком снимали знаменитую сцену из фильма 1989 года.
+    en: |
+      Katz's has been open since 1888. During the Second World War their slogan was "Send a salami to your boy in the army," and they really did ship salami to soldiers overseas.
+      Above one table hangs a sign: "Where Harry met Sally... hope you have what she had!" That's the table where the famous scene from the 1989 film was shot.
+  sources:
+  - https://en.wikipedia.org/wiki/Katz%27s_Delicatessen
+- id: note-ghostbusters
+  topics:
+  - details
+  - art
+  day: '2026-11-10'
+  moment: soho-ghostbusters
+  title:
+    ru: Пожарная часть из «Охотников за привидениями»
+    en: The Ghostbusters firehouse
+  text:
+    ru: |
+      Это не декорация. Здание на 14 North Moore Street в Трайбеке построено в 1903 году, и с тех пор в нём работает настоящая пожарная часть, Hook & Ladder 8. В фильме 1984 года сняли только фасад. Внутренние сцены снимали в Лос-Анджелесе, в старой пожарной части.
+      В 2011 году часть хотели закрыть ради экономии городского бюджета. Ньюйоркцы её отстояли. Вывеску с привидением, которая теперь висит над воротами, сделали и подарили пожарным фанаты фильма из Буффало.
+    en: |
+      It isn't a set. The building at 14 North Moore Street in Tribeca went up in 1903 and has housed a working fire company, Hook & Ladder 8, ever since. The 1984 film used only the outside. The interior scenes were shot in Los Angeles, in an old fire station there.
+      In 2011 the city planned to close the company to save money. New Yorkers fought for it and won. The ghost sign that now hangs over the doors was made and donated by fans of the film from Buffalo.
+  sources:
+  - https://en.wikipedia.org/wiki/Firehouse,_Hook_%26_Ladder_Company_8
+- id: note-hydrants
+  topics:
+  - details
+  title:
+    ru: Пожарные гидранты
+    en: Fire hydrants
+  text:
+    ru: |
+      В Нью-Йорке около ста тысяч пожарных гидрантов. Летом их открывают вместо фонтанов, и по крайней мере с конца XIX века. Город с этим долго боролся штрафами, а потом сдался и придумал компромисс: в любой пожарной части можно попросить специальную насадку-разбрызгиватель. Вода льётся, дети счастливы, давления в сети хватает на пожары.
+      Изобретателем гидранта считают Фредерика Граффа из Филадельфии, 1801 год. Но доказать это нельзя: в 1836 году сгорело Патентное ведомство США вместе с большей частью архива. Патент на пожарный гидрант, возможно, сгорел при пожаре.
+    en: |
+      New York has about a hundred thousand fire hydrants. In summer people open them instead of fountains, and have done so since at least the late 19th century. For years the city fought this with fines, then gave in and found a compromise: any firehouse will give you a special spray cap. The water flows, kids are happy, and there's still enough pressure left for fires.
+      The hydrant is usually credited to Frederick Graff of Philadelphia, in 1801. But nobody can prove it: in 1836 the US Patent Office burned down along with most of its records. The fire hydrant patent may have been lost in a fire.
+  sources:
+  - https://www.atlasobscura.com/articles/new-yorkers-have-been-illicitly-cracking-open-fire-hydrants-for-centuries
+  - https://en.wikipedia.org/wiki/Frederick_Graff
+- id: note-elephants
+  topics:
+  - details
+  day: '2026-11-10'
+  moment: brooklyn-bridge
+  title:
+    ru: Двадцать один слон
+    en: Twenty-one elephants
+  text:
+    ru: Когда Бруклинский мост открыли, многие не верили, что он выдержит. Через год, в 1884-м, цирк Финеаса Барнума провёл по мосту 21 слона во главе со знаменитым Джамбо. Мост выдержал. Цирк получил рекламу, город получил спокойствие.
+    en: When the Brooklyn Bridge opened, plenty of people doubted it would hold. A year later, in 1884, P. T. Barnum's circus marched 21 elephants across it, led by the famous Jumbo. The bridge held. The circus got publicity, the city got peace of mind.
+  sources:
+  - https://en.wikipedia.org/wiki/Brooklyn_Bridge

@@ -158,3 +158,9 @@ main{min-height:70vh}
 .lb figcaption{color:#bbb;font-size:.85rem;margin-top:.4rem}
 .lb button{position:absolute;background:none;border:0;color:#fff;font-size:2.6rem;cursor:pointer;padding:1rem;opacity:.8}
 .lb-x{top:0;right:.5rem}.lb-prev{left:0}.lb-next{right:0}
+
+.notes{margin-bottom:3rem}
+.note-card{background:var(--card);border-radius:12px;padding:1.5rem;box-shadow:var(--shadow);margin-bottom:1.4rem}
+.note-card h2{font-size:1.5rem}
+.note-ref a{font-weight:600;text-decoration:none;color:var(--ink2)}
+.note-src{font-size:.82rem;color:var(--ink2)}

@@ -8,6 +8,21 @@
   <div class="chips big">{% for o in topics %}<a class="chip{% if o.id == tp.id %} on{% endif %}" href="{{ home }}topic/{{ o.id }}/">{{ o.icon }} {{ o[lang] }}</a>{% endfor %}</div>
 </section>
 <div class="narrow">
+{% if notes %}
+<section class="notes">
+{% for nt in notes %}
+  <article class="note-card" id="note-{{ nt.id }}">
+    {% if nt.photo %}<a class="card-img" href="{{ root }}media/{{ nt.photo }}" data-full="{{ root }}media/{{ nt.photo }}"><img loading="lazy" src="{{ root }}media/{{ nt.photo }}" alt=""></a>{% endif %}
+    <h2>{{ nt.title[lang] }}</h2>
+    {{ nt.text[lang]|paras }}
+    {% if nt.moment or nt.day %}{% set nd = day_by_id[nt.day] if nt.day else none %}
+    <p class="note-ref">{% if nd %}<a href="{{ home }}day/{{ nd.id }}/{% if nt.moment %}#{{ nt.moment }}{% endif %}">→ {% if nd.n %}{{ t.day }} {{ nd.n }}{% else %}{{ t.day0 }}{% endif %} · {{ short_date(nd.id, lang) }}</a>{% endif %}</p>
+    {% endif %}
+    {% if nt.sources %}<p class="note-src">{% for u in nt.sources %}<a href="{{ u }}" target="_blank" rel="noopener">{{ u.split('/')[2].replace('www.','') }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>{% endif %}
+  </article>
+{% endfor %}
+</section>
+{% endif %}
 {% for d, mo in items %}{{ moment(mo, d, root, home, lang, t, show_day=true) }}{% endfor %}
 </div>
 {% endblock %}
