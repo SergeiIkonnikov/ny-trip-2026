@@ -120,6 +120,9 @@ for d in days:
     if CURATED:
         for mo in d['moments']:
             mo['media'].sort(key=lambda m: (m.get('order', 10_000), m['t']))
+    for m in d['all_media']:
+        if m.get('nocap'):
+            m['local'] = ''  # e.g. Health step mockups: no time caption
     d['extra'] = [m for m in d['media'] if not m['used']]
     photos = [m for m in d['media'] if m['type'] == 'photo' and m['w'] >= m['h'] and not m.get('blocked')]
     cov = d.get('cover')
