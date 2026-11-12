@@ -115,7 +115,7 @@ moments:
   day: "2026-11-03"
   from: "00:00"
   to: "13:00"
-  topics: [transport]
+  topics: []
   place: {name: "Кипр / Cyprus", lat: 34.869, lon: 33.610}
   title:
     ru: Старт
@@ -127,7 +127,7 @@ moments:
   day: "2026-11-03"
   from: "13:00"
   to: "18:30"
-  topics: [transport, people]
+  topics: []
   place: {name: "Hamad International Airport, Doha", lat: 25.263, lon: 51.613}
   title:
     ru: Пересадка в Дохе и потерянные документы
@@ -143,7 +143,7 @@ moments:
   day: "2026-11-03"
   from: "18:30"
   to: "23:59"
-  topics: [transport, details]
+  topics: [details]
   place: {name: "Hamad International Airport, Doha", lat: 25.270, lon: 51.611}
   title:
     ru: Сон на траве
@@ -162,7 +162,7 @@ moments:
   day: "2026-11-04"
   from: "07:00"
   to: "10:40"
-  topics: [transport]
+  topics: []
   place: {name: "JFK Airport", lat: 40.648, lon: -73.791}
   title:
     ru: Прилёт
@@ -172,7 +172,7 @@ moments:
     en: We landed early in the morning. Our hotel was on 48th Street, five minutes from Times Square. Check-in started at four. So we met New York with backpacks on and without a shower.
 - id: card-tricks
   day: "2026-11-04"
-  topics: [people, details]
+  topics: [people]
   place: {name: "voco Times Square Broadway", lat: 40.7597, lon: -73.9840}
   title:
     ru: Фокусы в лобби
@@ -197,7 +197,7 @@ moments:
   day: "2026-11-04"
   from: "13:30"
   to: "16:00"
-  topics: [transport, views]
+  topics: [views]
   place: {name: "Liberty Island", lat: 40.6892, lon: -74.0445}
   title:
     ru: Статуя Свободы
@@ -212,7 +212,7 @@ moments:
   day: "2026-11-04"
   from: "17:00"
   to: "19:00"
-  topics: [food, metro, people]
+  topics: [food, metro]
   place: {name: "Lower Manhattan", lat: 40.709, lon: -74.012}
   title:
     ru: Ужин за $150 и первое метро
@@ -233,7 +233,7 @@ moments:
   day: "2026-11-05"
   from: "09:00"
   to: "11:40"
-  topics: [transport, people]
+  topics: []
   place: {name: "Washington, D.C.", lat: 38.8893, lon: -77.0502}
   title:
     ru: Автобус в Вашингтон и гид Дэвид
@@ -248,7 +248,7 @@ moments:
   day: "2026-11-05"
   from: "11:40"
   to: "12:30"
-  topics: [people]
+  topics: []
   place: {name: "Arlington National Cemetery", lat: 38.8783, lon: -77.0687}
   title:
     ru: Арлингтонское кладбище
@@ -278,7 +278,7 @@ moments:
   day: "2026-11-05"
   from: "13:15"
   to: "14:40"
-  topics: [art, transport]
+  topics: [art]
   place: {name: "National Air and Space Museum", lat: 38.8882, lon: -77.0199}
   title:
     ru: Музей авиации и космонавтики
@@ -291,7 +291,7 @@ moments:
   day: "2026-11-05"
   from: "14:40"
   to: "15:10"
-  topics: [people, views]
+  topics: [views]
   place: {name: "U.S. Capitol", lat: 38.8899, lon: -77.0091}
   title:
     ru: Капитолий
@@ -438,7 +438,7 @@ moments:
   day: "2026-11-07"
   from: "00:00"
   to: "07:30"
-  topics: [transport]
+  topics: []
   place: {name: "New York State", lat: 42.952, lon: -78.602}
   title:
     ru: Шесть часов в автобусе
@@ -452,7 +452,7 @@ moments:
   day: "2026-11-07"
   from: "07:30"
   to: "10:00"
-  topics: [views, transport]
+  topics: [views]
   place: {name: "Maid of the Mist", lat: 43.0862, lon: -79.0675}
   title:
     ru: Maid of the Mist
@@ -501,7 +501,7 @@ moments:
   day: "2026-11-08"
   from: "12:00"
   to: "16:00"
-  topics: [music, people]
+  topics: [music]
   place: {name: "Carnegie Hall", lat: 40.7651, lon: -73.9799}
   title:
     ru: Первое место
@@ -532,7 +532,7 @@ moments:
   day: "2026-11-08"
   from: "18:00"
   to: "23:59"
-  topics: [food, music]
+  topics: [music]
   place: {name: "Ellen's Stardust Diner", lat: 40.7616, lon: -73.9836}
   title:
     ru: Ужин, где поют официанты
@@ -548,7 +548,7 @@ moments:
   day: "2026-11-09"
   from: "00:00"
   to: "14:00"
-  topics: [people]
+  topics: []
   place: {name: "The Rink at Rockefeller Center", lat: 40.7587, lon: -73.9787}
   title:
     ru: Каток у Рокфеллер-центра
@@ -577,7 +577,7 @@ moments:
   day: "2026-11-09"
   from: "17:40"
   to: "23:59"
-  topics: [transport, metro]
+  topics: []
   place: {name: "Grand Central Terminal", lat: 40.7527, lon: -73.9772}
   title:
     ru: Grand Central
@@ -590,7 +590,7 @@ moments:
   day: "2026-11-10"
   from: "00:00"
   to: "12:00"
-  topics: [people]
+  topics: []
   place: {name: "9/11 Memorial", lat: 40.7115, lon: -74.0134}
   title:
     ru: Мемориал 9/11
@@ -603,7 +603,7 @@ moments:
   day: "2026-11-10"
   from: "12:00"
   to: "13:30"
-  topics: [views, transport]
+  topics: [views]
   place: {name: "Brooklyn Bridge", lat: 40.7061, lon: -73.9969}
   title:
     ru: Бруклинский мост
@@ -616,7 +616,7 @@ moments:
   day: "2026-11-10"
   from: "13:30"
   to: "15:00"
-  topics: [food, details]
+  topics: [food]
   place: {name: "Katz's Delicatessen", lat: 40.7223, lon: -73.9874}
   title:
     ru: Сэндвич у Каца
@@ -630,7 +630,7 @@ moments:
   day: "2026-11-10"
   from: "15:00"
   to: "18:00"
-  topics: [art, details]
+  topics: [art]
   place: {name: "Hook & Ladder 8, 14 N Moore St", lat: 40.7197, lon: -74.0066}
   title:
     ru: Сохо и «Охотники за привидениями»
@@ -659,7 +659,7 @@ moments:
   day: "2026-11-11"
   from: "00:00"
   to: "12:00"
-  topics: [metro, transport]
+  topics: [metro]
   place: {name: "New York", lat: 40.7597, lon: -73.9840}
   title:
     ru: Метро сломалось, бежим на автобус
@@ -675,7 +675,7 @@ moments:
   day: "2026-11-11"
   from: "12:00"
   to: "23:59"
-  topics: [transport]
+  topics: []
   place: {name: "JFK Airport", lat: 40.6413, lon: -73.7781}
   title:
     ru: Обратно через Доху
@@ -703,6 +703,7 @@ notes:
   sources:
   - https://en.wikipedia.org/wiki/Hamad_International_Airport
   check: true
+  photo: doha/20261103-140126_IMG_9664.jpg
 - id: note-maid-of-mist
   topics:
   - transport
@@ -751,6 +752,7 @@ notes:
       Visitors almost always get confused the same way: many lines have express and local trains. They follow the same route, sometimes from the same platform, but the express skips the small stations. Get on the wrong one and you sail past your stop. That's roughly what happened to us on the first evening.
   sources:
   - https://en.wikipedia.org/wiki/New_York_City_Subway
+  photo: day7-last/20261110-143732_IMG_0954.jpg
 - id: note-omny
   topics:
   - metro
@@ -762,6 +764,7 @@ notes:
     en: "The famous New York tokens are long gone, and the yellow MetroCard is on its way out too. Now you pay with OMNY: tap a bank card or a phone on the turnstile and you're through. No ticket to buy at all."
   sources:
   - https://en.wikipedia.org/wiki/OMNY
+  photo: day1-arrival/20261104-231658_IMG_9908.jpg
 - id: note-bull
   topics:
   - art
@@ -786,7 +789,6 @@ notes:
 - id: note-korea
   topics:
   - art
-  - people
   day: '2026-11-05'
   moment: korea-lincoln
   title:
@@ -814,7 +816,6 @@ notes:
 - id: note-lions
   topics:
   - art
-  - people
   day: '2026-11-08'
   moment: nypl
   title:
@@ -846,7 +847,6 @@ notes:
 - id: note-weehawken
   topics:
   - views
-  - people
   day: '2026-11-05'
   moment: weehawken
   title:
@@ -901,7 +901,8 @@ notes:
   - https://en.wikipedia.org/wiki/Statue_of_Liberty
 - id: note-roebling
   topics:
-  - people
+  - views
+  - details
   day: '2026-11-10'
   moment: brooklyn-bridge
   title:
@@ -919,7 +920,6 @@ notes:
   check: true
 - id: note-annie-taylor
   topics:
-  - people
   - details
   day: '2026-11-07'
   title:
@@ -932,7 +932,7 @@ notes:
   - https://en.wikipedia.org/wiki/Annie_Edson_Taylor
 - id: note-arlington-guard
   topics:
-  - people
+  - details
   day: '2026-11-05'
   moment: arlington
   title:
@@ -1027,18 +1027,21 @@ notes:
   topics:
   - details
   title:
-    ru: Пожарные гидранты
-    en: Fire hydrants
+    ru: Гидранты и сиамские близнецы
+    en: Hydrants and Siamese twins
   text:
     ru: |
       В Нью-Йорке около ста тысяч пожарных гидрантов. Летом их открывают вместо фонтанов, и по крайней мере с конца XIX века. Город с этим долго боролся штрафами, а потом сдался и придумал компромисс: в любой пожарной части можно попросить специальную насадку-разбрызгиватель. Вода льётся, дети счастливы, давления в сети хватает на пожары.
       Изобретателем гидранта считают Фредерика Граффа из Филадельфии, 1801 год. Но доказать это нельзя: в 1836 году сгорело Патентное ведомство США вместе с большей частью архива. Патент на пожарный гидрант, возможно, сгорел при пожаре.
+      А эта латунная штука с двумя жёлтыми заглушками на стене офисного здания — не гидрант, а наоборот. Через неё пожарные закачивают воду внутрь дома, в трубы и спринклеры. Из-за двух входов такое устройство называют «сиамским» соединением.
     en: |
       New York has about a hundred thousand fire hydrants. In summer people open them instead of fountains, and have done so since at least the late 19th century. For years the city fought this with fines, then gave in and found a compromise: any firehouse will give you a special spray cap. The water flows, kids are happy, and there's still enough pressure left for fires.
       The hydrant is usually credited to Frederick Graff of Philadelphia, in 1801. But nobody can prove it: in 1836 the US Patent Office burned down along with most of its records. The fire hydrant patent may have been lost in a fire.
+      And this brass thing with two yellow caps on an office building's wall isn't a hydrant but its opposite. Firefighters pump water through it into the building's pipes and sprinklers. Because of its two inlets, it's called a Siamese connection.
   sources:
   - https://www.atlasobscura.com/articles/new-yorkers-have-been-illicitly-cracking-open-fire-hydrants-for-centuries
   - https://en.wikipedia.org/wiki/Frederick_Graff
+  photo: day5-concert/20261109-003455_IMG_0794.jpg
 - id: note-elephants
   topics:
   - details
@@ -1052,3 +1055,233 @@ notes:
     en: When the Brooklyn Bridge opened, plenty of people doubted it would hold. A year later, in 1884, P. T. Barnum's circus marched 21 elephants across it, led by the famous Jumbo. The bridge held. The circus got publicity, the city got peace of mind.
   sources:
   - https://en.wikipedia.org/wiki/Brooklyn_Bridge
+- id: obs-soho
+  topics:
+  - people
+  day: '2026-11-10'
+  photo: day7-last/20261110-200508_IMG_1102.jpg
+  title:
+    ru: Сохо одевается
+    en: SoHo gets dressed
+  text:
+    ru: |
+      В Сохо все одеты так, будто через пять минут у них съёмка. Возможно, так и есть.
+      Название района — это сокращение от South of Houston Street, «к югу от Хаустон-стрит». Его придумал градостроитель Честер Рапкин в 1962 году. Тогда здесь были пустеющие фабрики в чугунных домах. Потом в огромные дешёвые лофты въехали художники, в 1971 году им официально разрешили там жить, а следом за художниками пришли галереи и бутики. Теперь художникам здесь не по карману.
+    en: |
+      In SoHo everyone is dressed as if they have a photo shoot in five minutes. Maybe they do.
+      The name is short for South of Houston Street. The urban planner Chester Rapkin coined it in 1962. Back then it was emptying factories in cast-iron buildings. Then artists moved into the huge cheap lofts, in 1971 they were officially allowed to live there, and galleries and boutiques followed the artists. Now the artists can't afford it.
+  sources:
+  - https://en.wikipedia.org/wiki/SoHo,_Manhattan
+- id: obs-soldiers
+  topics:
+  - people
+  day: '2026-11-10'
+  photo: day7-last/20261110-152836_IMG_0968.jpg
+  title:
+    ru: Патруль
+    en: Patrol
+  text:
+    ru: Рядом со Всемирным торговым центром навстречу шли двое в камуфляже, бронежилетах и с рациями. Шли спокойно, никого не останавливали. Нам это было непривычно. Для Нью-Йорка, судя по прохожим, обычный вторник.
+    en: Near the World Trade Center two people in camouflage, body armour and radios walked past us. Calmly, stopping no one. It felt unusual to us. For New York, judging by everyone else on the street, it was just a Tuesday.
+- id: obs-skater
+  topics:
+  - people
+  day: '2026-11-10'
+  photo: day7-last/20261110-194119_IMG_1097.jpg
+  title:
+    ru: Скейтер на Кристи-стрит
+    en: A skater on Chrystie Street
+  text:
+    ru: Парень на скейте пересекает перекрёсток прямо посреди машин, как будто это его личный тротуар. Улица, на которой он это делает, названа в честь полковника Джона Кристи, ветерана войны 1812 года.
+    en: A guy on a skateboard crosses the intersection right between the cars, as if it were his own private pavement. The street he's doing it on is named after Colonel John Chrystie, a veteran of the War of 1812.
+  sources:
+  - https://en.wikipedia.org/wiki/Chrystie_Street
+- id: obs-times-sq-seller
+  topics:
+  - people
+  day: '2026-11-05'
+  photo: day3-nov6/20261106-021955_IMG_0164.jpg
+  title:
+    ru: Человек в красном
+    en: The man in red
+  text:
+    ru: |
+      На Таймс-сквер у каждого своя работа. У этого человека в красной куртке — продавать билеты на двухэтажный экскурсионный автобус. Он очень старался.
+      Город когда-то устал от того, что на площади к туристам пристают ростовые куклы и продавцы, и в 2016 году расчертил её на зоны. В одних нельзя стоять на месте, в других можно работать с публикой.
+    en: |
+      On Times Square everyone has a job. This man in the red jacket was selling tickets for the double-decker sightseeing bus. He was trying very hard.
+      At some point the city got tired of costumed characters and sellers working the tourists, and in 2016 it divided the square into zones. In some you can't stand still; in others you're allowed to work the crowd.
+  sources:
+  - https://en.wikipedia.org/wiki/Times_Square
+- id: obs-park-shoots
+  topics:
+  - people
+  day: '2026-11-09'
+  photo: day6-nov9/20261109-212646_IMG_0912.jpg
+  title:
+    ru: Свадьба на фоне скалы
+    en: A wedding by the rock
+  text:
+    ru: |
+      В Центральном парке в ноябре фотографируются все: молодожёны, модели, чьи-то портфолио. За один час мы видели свадьбу и профессиональную съёмку со вспышкой и зонтом.
+      Серые скалы, на фоне которых все снимаются, не декорация. Это выходы той самой каменной породы, на которой стоит весь Манхэттен. Парк проектировали вокруг них.
+    en: |
+      In November everyone in Central Park is having their picture taken: newlyweds, models, someone's portfolio. In one hour we saw a wedding and a professional shoot with a flash and umbrella.
+      The grey rocks everyone poses against aren't scenery. They're outcrops of the bedrock all of Manhattan stands on. The park was designed around them.
+  sources:
+  - https://en.wikipedia.org/wiki/Central_Park
+- id: obs-moma-phones
+  topics:
+  - people
+  - art
+  day: '2026-11-06'
+  photo: day3-nov6/20261106-220527_IMG_0408.jpg
+  title:
+    ru: Перед искусством
+    en: In front of the art
+  text:
+    ru: В MoMA на скамейке перед стеной с искусством сидели несколько женщин и смотрели в телефоны. Мы сфотографировали их на телефон.
+    en: At MoMA a few women sat on a bench in front of a wall of art, looking at their phones. We took a picture of them with a phone.
+- id: obs-halal-cart
+  topics:
+  - food
+  day: '2026-11-04'
+  photo: day1-arrival/20261104-150839_IMG_9741.jpg
+  title:
+    ru: Тележки с халялем
+    en: The halal carts
+  text:
+    ru: Тележки с едой стоят в Нью-Йорке почти на каждом углу, и на половине из них написано «халяль». Самая знаменитая, The Halal Guys, начиналась в 1990 году как обычная тележка с хот-догами на углу 53-й улицы и Шестой авеню. Через два года хозяева решили, что хот-догом не наешься, и перешли на курицу с рисом. Её быстро полюбили таксисты, а потом и весь город.
+    en: Food carts stand on almost every New York corner, and half of them say "halal". The most famous, The Halal Guys, began in 1990 as an ordinary hot dog cart at 53rd Street and Sixth Avenue. Two years later the owners decided a hot dog wasn't a proper meal and switched to chicken and rice. Taxi drivers loved it first, and then the whole city.
+  sources:
+  - https://en.wikipedia.org/wiki/The_Halal_Guys
+- id: obs-sergay
+  topics:
+  - food
+  - details
+  day: '2026-11-08'
+  photo: day5-concert/20261108-143930_IMG_0632.jpg
+  title:
+    ru: Sergay
+    en: Sergay
+  text:
+    ru: 'Утро дня концерта. Капучино, восемь унций. На чеке моё имя, как его услышали: Sergay. Я не стал спорить. В Нью-Йорке у каждого должно быть второе имя.'
+    en: "The morning of the concert. A cappuccino, eight ounces. On the receipt, my name as they heard it: Sergay. I didn't argue. In New York everyone should have a second name."
+- id: obs-deposit
+  topics:
+  - food
+  - details
+  day: '2026-11-08'
+  photo: day5-concert/20261109-002524_IMG_0793.jpg
+  title:
+    ru: Plus Deposit
+    en: Plus Deposit
+  text:
+    ru: 'Кока-кола в стеклянной бутылке, $2,29. Под ценой мелко: «плюс залог». В штате Нью-Йорк с 1982 года за каждую бутылку и банку берут пять центов залога, и их возвращают, если сдать тару. Отсюда люди с огромными мешками банок у супермаркетов.'
+    en: 'Coca-Cola in a glass bottle, $2.29. Under the price, in small print: "plus deposit". Since 1982 New York State has charged a five-cent deposit on every bottle and can, refunded when you return the container. Hence the people outside supermarkets with enormous bags of cans.'
+  sources:
+  - https://en.wikipedia.org/wiki/Container_deposit_legislation_in_the_United_States
+- id: obs-joes
+  topics:
+  - food
+  day: '2026-11-10'
+  photo: day7-last/20261110-153243_IMG_0970.jpg
+  title:
+    ru: Пиццерия Человека-паука
+    en: Spider-Man's pizzeria
+  text:
+    ru: "Joe's Pizza открыл в 1975 году Пино Поццуоли, приехавший из Неаполя. Мировую известность пиццерии принёс фильм «Человек-паук 2»: Питер Паркер работает у Джо разносчиком и в итоге оттуда вылетает за опоздания. Мы проходили мимо одной из её пиццерий в Финансовом районе."
+    en: "Joe's Pizza was opened in 1975 by Pino Pozzuoli, who came from Naples. Spider-Man 2 made it world-famous: Peter Parker works there as a delivery boy and gets fired for being late. We walked past one of its branches in the Financial District."
+  sources:
+  - https://en.wikipedia.org/wiki/Joe%27s_Pizza
+- id: obs-pizza-principle
+  topics:
+  - food
+  - metro
+  day: '2026-11-10'
+  photo: day7-last/20261111-030553_IMG_1150.jpg
+  title:
+    ru: Закон пиццы
+    en: The pizza principle
+  text:
+    ru: 'Поздно вечером взяли пиццу в номер. У ньюйоркцев есть «закон пиццы»: с начала 1960-х годов кусок пиццы стоил столько же, сколько поездка на метро. В 1980 году это заметил и описал житель города Эрик Брам, и закон десятилетиями работал с удивительной точностью. Недавно, впрочем, сломался: кусок пиццы теперь дешевле.'
+    en: 'Late in the evening we got pizza to the room. New Yorkers have a "pizza principle": since the early 1960s a slice cost the same as a subway ride. A New Yorker named Eric Bram noticed and described it in 1980, and it held with uncanny precision for decades. Recently, though, it broke: the slice is now the cheaper one.'
+  sources:
+  - https://en.wikipedia.org/wiki/Pizza_principle
+  check: true
+- id: obs-serendipity
+  topics:
+  - food
+  day: '2026-11-09'
+  photo: day6-nov9/20261109-201521_IMG_0882.jpg
+  title:
+    ru: Десерт за $25 000
+    en: A $25,000 dessert
+  text:
+    ru: Serendipity 3 работает с 1954 года и знаменит замороженным горячим шоколадом, который ели в фильме «Как в кино» с Мишель Пфайффер и Джорджем Клуни. В меню есть и десерт за 25 тысяч долларов. Мы его не заказывали.
+    en: Serendipity 3 has been open since 1954 and is famous for its Frrrozen Hot Chocolate, from the film One Fine Day with Michelle Pfeiffer and George Clooney. The menu also has a $25,000 dessert. We didn't order it.
+  sources:
+  - https://en.wikipedia.org/wiki/Serendipity_3
+- id: obs-yellow-cab
+  topics:
+  - transport
+  day: '2026-11-06'
+  photo: day3-nov6/20261106-195135_IMG_0340.jpg
+  title:
+    ru: Почему такси жёлтые
+    en: Why the cabs are yellow
+  text:
+    ru: Жёлтые такси — лицо Нью-Йорка, но жёлтыми их сделали не ради красоты. В 1967 году город обязал все официальные такси с лицензией-медальоном красить в жёлтый, чтобы пассажиры легко отличали их от нелегальных извозчиков.
+    en: Yellow cabs are the face of New York, but they weren't painted yellow for looks. In 1967 the city required all licensed medallion taxis to be yellow, so passengers could easily tell them from unlicensed drivers.
+  sources:
+  - https://en.wikipedia.org/wiki/Taxicabs_of_New_York_City
+- id: obs-subway-art
+  topics:
+  - metro
+  - art
+  day: '2026-11-09'
+  photo: day6-nov9/20261109-233038_IMG_0949.jpg
+  title:
+    ru: Музей в переходе
+    en: A museum in the passageway
+  text:
+    ru: 'Нью-йоркское метро снаружи выглядит сурово, но в переходах вдруг попадаются мозаики, как эти перья. Это не случайность: с 1985 года у транспортного управления есть программа Arts & Design. Она заказала работы больше чем тремстам художникам, и искусство теперь есть больше чем на 260 станциях.'
+    en: "The New York subway looks harsh, but in the passageways you suddenly come across mosaics like these feathers. It's no accident: since 1985 the transit authority has run an Arts & Design programme. It has commissioned more than 300 artists, and there's art at more than 260 stations."
+  sources:
+  - https://en.wikipedia.org/wiki/MTA_Arts_%26_Design
+- id: obs-made-in-india
+  topics:
+  - details
+  day: '2026-11-10'
+  photo: day7-last/20261110-172712_IMG_1080.jpg
+  title:
+    ru: Сделано в Индии
+    en: Made in India
+  text:
+    ru: 'Ливнёвка на брусчатке в Дамбо. Сверху выбита рыбка и надпись «Не сбрасывайте мусор, стоки идут в водоёмы». Сбоку и снизу: «Сделано в Индии». Американская чугунная решётка из Индии лежит на бруклинской брусчатке. Глобализация в одном кадре.'
+    en: 'A storm drain on the cobblestones in DUMBO. On top, a fish and the words "Dump no waste! Drains to waterways". On the side and bottom: "Made in India". An American cast-iron grate from India, lying on Brooklyn cobblestones. Globalisation in one shot.'
+- id: obs-iwo-jima
+  topics:
+  - details
+  day: '2026-11-05'
+  photo: day3-nov6/20261105-165854_IMG_9958.jpg
+  title:
+    ru: Мгновение, ставшее бессмертным
+    en: A split second made immortal
+  text:
+    ru: 'Табличка у мемориала морской пехоты в Вашингтоне. Сам мемориал повторяет знаменитую фотографию Джо Розенталя: шестеро морпехов поднимают флаг на острове Иводзима в феврале 1945 года. Мало кто знает, что флаг в тот день поднимали дважды, и на снимке второй раз: первый флаг решили заменить на более крупный. За эту фотографию Розенталь получил Пулитцеровскую премию.'
+    en: "A sign at the Marine Corps War Memorial in Washington. The memorial reproduces Joe Rosenthal's famous photo: six Marines raising the flag on Iwo Jima in February 1945. Few people know the flag went up twice that day, and the photo shows the second time: the first flag was swapped for a bigger one. Rosenthal won the Pulitzer Prize for it."
+  sources:
+  - https://en.wikipedia.org/wiki/Raising_the_Flag_on_Iwo_Jima
+  check: true
+- id: obs-xmas-trees
+  topics:
+  - details
+  day: '2026-11-10'
+  photo: day7-last/20261110-194412_IMG_1098.jpg
+  title:
+    ru: Ёлки 10 ноября
+    en: Christmas trees on 10 November
+  text:
+    ru: До Дня благодарения ещё две недели, до Рождества полтора месяца, а на тротуаре уже стоят ящики с ёлками. Нью-Йорк начинает праздновать заранее.
+    en: Thanksgiving is still two weeks away, Christmas six weeks, and there are already crates of Christmas trees on the pavement. New York starts celebrating early.
