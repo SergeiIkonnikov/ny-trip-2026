@@ -94,7 +94,7 @@ function bigMap(points, hotel) {
       draw();
     };
   });
-  draw(); region('nyc');
+  draw(); region('all');  // whole route by default (Sergey, 2026-11-13)
 }
 
 // Home cover slideshow: first frame is in the HTML, the rest load after the page and crossfade.

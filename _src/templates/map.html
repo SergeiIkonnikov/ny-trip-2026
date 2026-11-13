@@ -6,7 +6,7 @@
 <section class="mapbar">
   <div class="g">
     <div class="regions">
-      <button data-r="nyc" class="on">{{ t.nyc }}</button><button data-r="dc">{{ t.dc }}</button><button data-r="niagara">{{ t.niagara }}</button><button data-r="all">{{ t.all_route }}</button>
+      <button data-r="nyc">{{ t.nyc }}</button><button data-r="dc">{{ t.dc }}</button><button data-r="niagara">{{ t.niagara }}</button><button data-r="all" class="on">{{ t.all_route }}</button>
     </div>
     <div class="filters">
       <div class="tags" id="fdays">{% for d in days %}<button class="tag on" data-day="{{ d.id }}" style="--c:{{ d.color }}"><i></i>{{ d.n }}</button>{% endfor %}</div>
