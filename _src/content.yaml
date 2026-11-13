@@ -107,6 +107,7 @@ days:
 - id: "2026-11-09"
   steps: 12721
   cover: "20261109-180921"  # Sergey 2026-11-13: rink photo, his crop
+  hero: "20261109-220456"  # day page top photo stays Central Park (Bethesda Terrace); cover is for the home card
   spent: 219  # card spending (Sergey + Natasha), notes/spending.md
   n: 6
   tz: -5

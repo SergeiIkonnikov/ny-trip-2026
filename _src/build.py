@@ -142,6 +142,8 @@ for d in days:
     cov = d.get('cover')
     d['cover_media'] = next((m for m in d['all_media'] if cov and m['type'] == 'photo' and m['src'].startswith(cov)), None) or \
         (photos[len(photos) // 3] if photos else (d['media'][0] if d['media'] else None))
+    hero = d.get('hero')  # day-page hero can differ from the home-card cover (Sergey, Nov 9)
+    d['hero_media'] = next((m for m in d['all_media'] if hero and m['type'] == 'photo' and m['src'].startswith(hero)), None) or d['cover_media']
 
 MULT = {'family': 1, 'person': 3, 'adult': 2, 'child': 1, 'night': 1}
 
