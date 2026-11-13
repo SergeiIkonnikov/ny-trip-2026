@@ -333,8 +333,8 @@ for lang in ('ru', 'en'):
         write(f"day/{d['id']}/index.html", 'day.html', lang, d=d,
               prev=days[i - 1] if i else None, next=days[i + 1] if i + 1 < len(days) else None)
     for tp in topics:
-        # step mockups (nocap) belong to the day page only, not to topic pages
-        items = [(d, dict(mo, media=[m for m in mo['media'] if not m.get('nocap')])) for d in days for mo in d['moments'] if tp['id'] in mo.get('topics', [])]
+        # step mockups (manifest day 'steps') belong to the day page only, not to topic pages
+        items = [(d, dict(mo, media=[m for m in mo['media'] if m.get('day') != 'steps'])) for d in days for mo in d['moments'] if tp['id'] in mo.get('topics', [])]
         tp['count'] = len(items)
         write(f"topic/{tp['id']}/index.html", 'topic.html', lang, tp=tp, items=items,
               notes=[nt for nt in notes if tp['id'] in (nt.get('topics') or [])],
