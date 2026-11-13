@@ -80,6 +80,8 @@ if CURATED and os.path.exists(os.path.join(MEDIA, 'curation.json')):
                 continue
             if c.get('loop') and status in ('loop', 'topic', 'details'):
                 m['loop'], m['loop_poster'] = c['loop'], c.get('poster')
+                if c.get('full') is False:  # don't publish the full clip (e.g. Natasha's fall): lightbox plays the loop
+                    m['video'] = c['loop']
             tids = list(c.get('topics') or [])
             if status == 'details' and 'details' not in tids:
                 tids.append('details')
