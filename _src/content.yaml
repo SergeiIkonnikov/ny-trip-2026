@@ -153,15 +153,17 @@ moments:
   topics: []
   place: {name: "Hamad International Airport, Doha", lat: 25.263, lon: 51.613}
   title:
-    ru: Пересадка в Дохе и потерянные документы
-    en: The Doha layover and the lost documents
+    ru: Пересадка в Дохе и забытая сумочка
+    en: The Doha layover and the forgotten bag
   text:
     ru: |
-      В Дохе у нас было восемь часов. Где-то в начале этих восьми часов мы потеряли документы.
-      Следующие несколько минут были самыми длинными за всю поездку. Документы нашлись в красной сумочке Comme des Garçons. Как выяснилось, они лежали там всё это время.
+      В Дохе у нас было восемь часов. Первым делом мы присели в одной из бесчисленных зон ожидания и сходили освежиться. Потом встали и пошли дальше. Красная сумочка Comme des Garçons со всеми документами осталась лежать на креслах.
+      Пропажу мы обнаружили примерно через полчаса. Следующие полчаса бегали по аэропорту с вытаращенными глазами.
+      Сумочка нас дождалась. Инфаркт, слава богу, тоже согласился подождать ещё какое-то время, и мы продолжили слоняться по аэропорту. С документами это делать значительно приятнее.
     en: |
-      We had eight hours in Doha. Somewhere near the start of those eight hours, we lost our documents.
-      The next few minutes were the longest of the whole trip. The documents turned up in the red Comme des Garçons bag. They had been there the entire time.
+      We had eight hours in Doha. First we sat down in one of the countless waiting areas and went to freshen up. Then we got up and moved on. The red Comme des Garçons bag with all our documents stayed behind on the seats.
+      We noticed it was gone about half an hour later. We spent the next half hour running around the airport, wide-eyed.
+      The bag had waited for us. The heart attack, thank God, also agreed to wait a while longer, and we went back to wandering the airport. It's much more pleasant with your documents.
 - id: doha-grass
   day: "2026-11-03"
   from: "18:30"
