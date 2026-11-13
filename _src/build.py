@@ -280,6 +280,8 @@ for nt in notes:  # historical photos (Wikimedia Commons) keyed by note id
 for nt in notes:
     if nt.get('photo'):
         refs.add(nt['photo'])
+    for ph in nt.get('photos_more') or []:  # extra small photos under the main one
+        refs.add(ph)
 # ---------- topic covers (home page cards) ----------
 by_path = {}
 for d in days:

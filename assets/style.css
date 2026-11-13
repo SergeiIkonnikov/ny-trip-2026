@@ -409,3 +409,6 @@ button.tag{cursor:pointer}
 /* note photo with a weak source (e.g. note-bull): half width so the blur doesn't show */
 .note-row .nph.small .tile{width:50%;aspect-ratio:auto}
 .note-row .nph.small .tile img{height:auto}
+/* extra note photos (photos_more): small row under the main photo */
+.note-row .nph .nmore{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:.5rem}
+.note-row .nph .nmore .tile{aspect-ratio:4/5}
