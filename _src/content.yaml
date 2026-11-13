@@ -469,7 +469,7 @@ moments:
     ru: В магазине музея купили до фига сувениров. Я купил кепку и проходил в ней до конца поездки. Дальше её можно искать на каждой фотографии.
     en: At the museum shop we bought a ton of souvenirs. I bought a cap and wore it for the rest of the trip. From here on, look for it in every photo.
   layout: field
-  photos: ["20261110-203059"]
+  photos: ["20261106-223934", "20261106-223939", "20261110-203059"]
 - id: niagara-bus
   day: "2026-11-07"
   from: "00:00"
@@ -1283,7 +1283,7 @@ notes:
   topics:
   - food
   day: '2026-11-10'
-  photo: day7-last/20261110-153243_IMG_0970.jpg
+  photo: day7-last/20261111-024029_IMG_1300.jpg
   title:
     ru: Пиццерия Человека-паука
     en: Spider-Man's pizzeria
