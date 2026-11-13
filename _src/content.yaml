@@ -40,6 +40,8 @@ hotel:
 days:
 - id: "2026-11-03"
   steps: 17008
+  cover: "20261103-163410"  # Natasha and Makar at Doha airport (Sergey's crop)
+  cover_pos: "50% 60%"
   n: 0
   tz: 2
   folders: [day0-cyprus, doha]
