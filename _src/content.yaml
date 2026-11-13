@@ -106,6 +106,7 @@ days:
     en: The day the whole thing was planned around.
 - id: "2026-11-09"
   steps: 12721
+  cover: "20261109-180921"  # Sergey 2026-11-13: rink photo, his crop
   spent: 219  # card spending (Sergey + Natasha), notes/spending.md
   n: 6
   tz: -5
