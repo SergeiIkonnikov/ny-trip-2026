@@ -333,6 +333,10 @@ for tp in topics:
     if tp.get('cover_media'):
         tp['cover'] = tp['cover_media']
 
+for d in days:  # day covers / heroes may be photos that are cut from the day grid
+    for cm in (d.get('cover_media'), d.get('hero_media')):
+        if cm:
+            refs.update(x for x in (cm.get('thumb'), cm.get('full')) if x)
 refs |= {HI[r][0] for r in list(refs) if r in HI}  # hi-res copy next to every published full
 for r in refs:
     src = os.path.join(MEDIA, r) if r.startswith('edited/') else os.path.join(MEDIA, 'web', r)
