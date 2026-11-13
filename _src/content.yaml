@@ -808,6 +808,7 @@ notes:
   - art
   - details
   day: '2026-11-04'
+  photo: notes/bull.jpg
   moment: bull
   title:
     ru: Бык, которого никто не заказывал
@@ -900,6 +901,7 @@ notes:
   - views
   - details
   day: '2026-11-07'
+  photo: day4-niagara/20261107-155111_IMG_0562.jpg
   moment: cave-winds
   title:
     ru: Водопад, который выключали
@@ -915,6 +917,7 @@ notes:
   - views
   - details
   day: '2026-11-05'
+  photo: day2-nov5/20261106-022021_IMG_0165.jpg
   moment: times-sq-1
   title:
     ru: Площадь имени газеты
@@ -942,6 +945,7 @@ notes:
   - views
   - details
   day: '2026-11-10'
+  photo: day7-last/20261110-161538_IMG_1022.jpg
   moment: brooklyn-bridge
   title:
     ru: Женщина, которая достроила мост
@@ -1069,6 +1073,7 @@ notes:
   - details
   - art
   day: '2026-11-10'
+  photo: day7-last/20261110-203000_IMG_1119.jpg
   moment: soho-ghostbusters
   title:
     ru: Пожарная часть из «Охотников за привидениями»
@@ -1119,6 +1124,7 @@ notes:
   - views
   - details
   day: '2026-11-10'
+  photo: notes/kate-leopold-bridge.jpg
   moment: brooklyn-bridge
   title:
     ru: Портал на Бруклинском мосту
