@@ -221,7 +221,7 @@ def price_text(p, lang):
 env = Environment(loader=FileSystemLoader(os.path.join(HERE, 'templates')), autoescape=True,
                   trim_blocks=True, lstrip_blocks=True)
 import hashlib
-ASSET_V = hashlib.sha1(b''.join(open(os.path.join(HERE, 'static', f), 'rb').read() for f in ('style.css', 'app.js') if os.path.isfile(os.path.join(HERE, 'static', f)))).hexdigest()[:10]
+ASSET_V = hashlib.sha1(b''.join(open(os.path.join(HERE, 'static', f), 'rb').read() for f in ['style.css', 'app.js'] + sorted(x for x in os.listdir(os.path.join(HERE, 'static')) if x.startswith('cover-')) if os.path.isfile(os.path.join(HERE, 'static', f)))).hexdigest()[:10]
 # Prices are hidden on the English site for now (Sergey, 2026-11-13). Add 'en' to show them again.
 PRICE_LANGS = {'ru'}
 env.globals.update(prices_on=lambda lang: lang in PRICE_LANGS)
