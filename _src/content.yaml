@@ -74,7 +74,6 @@ days:
 - id: "2026-11-06"
   steps: 12003
   cover: "20261106-190830"  # Sergey 2026-11-13: Chrysler from Summit (home card)
-  hero: "20261106-190327"  # day page top photo unchanged
   spent: 826  # card spending (Sergey + Natasha), notes/spending.md
   n: 3
   tz: -5
