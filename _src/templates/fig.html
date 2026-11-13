@@ -1,7 +1,7 @@
 {% from 'macros.html' import tile, tags, facts, body, time %}
 {# Repponen/AREA17-style moment: number | text | meta, then loose "figures" with small captions. #}
 {% macro fig(m, root, cls, fc, lang) %}
-<figure class="fg {{ cls }}{% if m.h and m.w and m.h > m.w * 1.1 %} port{% endif %}">{{ tile(m, root, '', full=true) }}{% if m.local %}<figcaption>{{ m.local }}</figcaption>{% endif %}</figure>
+<figure class="fg {{ cls }}{% if m.h and m.w and m.h > m.w * 1.1 %} port{% endif %}">{% if m.thanks and m.thanks[lang] %}{{ thx_html(m.thanks[lang]) }}{% endif %}{{ tile(m, root, '', full=true) }}{% if m.local %}<figcaption>{{ m.local }}</figcaption>{% endif %}</figure>
 {% set fc.n = fc.n + 1 %}
 {% endmacro %}
 

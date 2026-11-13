@@ -232,9 +232,16 @@ env.globals.update(prices_on=lambda lang: lang in PRICE_LANGS)
 env.globals.update(asset_v=ASSET_V, fmt_date=fmt_date, short_date=short_date, price_text=price_text,
                    topic_by_id=topic_by_id, day_by_id=day_by_id)
 
-def paras(s):
+def thx_html(text):
     from markupsafe import Markup
-    return Markup(''.join(f'<p>{html.escape(x.strip())}</p>' for x in (s or '').split('\n') if x.strip()))
+    return Markup(f'<span class="thx">{html.escape(text)} <i>\u2764</i></span>') if text else ''
+
+def paras(s, thx=None):
+    # thx: {paragraph number (1-based): footnote text} -> span.thx right before that <p>
+    from markupsafe import Markup
+    ps = [x.strip() for x in (s or '').split('\n') if x.strip()]
+    return Markup(''.join((thx_html((thx or {}).get(i)) or '') + f'<p>{html.escape(x)}</p>' for i, x in enumerate(ps, 1)))
+env.globals['thx_html'] = thx_html
 env.filters['paras'] = paras
 
 def write(rel, tpl, lang, **ctx):
@@ -308,6 +315,20 @@ for d in days:
         for k in ('full', 'thumb'):
             if m.get(k):
                 by_path[m[k]] = m
+THANKS = C.get('thanks') or []
+for th in THANKS:
+    if th.get('media'):
+        for d in days:
+            for m in d['all_media']:
+                if m['src'].startswith(th['media']):
+                    m['thanks'] = th['text']
+    elif th.get('note'):
+        for nt in notes:
+            if nt['id'] == th['note']:
+                if th.get('photo'):
+                    nt['thanks_photo'] = th['text']
+                if th.get('para'):
+                    nt.setdefault('thanks_para', {}).update({l: {th['para']: v} for l, v in th['text'].items()})
 for nt in notes:  # a note whose photo is a loop item's thumb/full plays the loop
     lm = by_path.get(nt.get('photo'))
     if lm and lm.get('loop'):

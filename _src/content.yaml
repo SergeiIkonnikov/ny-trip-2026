@@ -736,6 +736,13 @@ moments:
   text:
     ru: Самолёт, снова Доха, и домой.
     en: The plane, Doha again, and home.
+# Handwritten footnotes ("Thanks, Damion ❤"), EN only for now (Sergey, 2026-11-13).
+# media: src prefix -> shown before that photo; note + photo: before the note photo; note + para: before paragraph N (1-based).
+thanks:
+- {media: "20261110-183224_IMG_4434", text: {en: "Thanks, Damion"}}
+- {note: obs-joes, para: 2, text: {en: "Thanks, Damion"}}
+- {note: obs-skater, photo: true, text: {en: "Thanks, Damion"}}
+
 notes:
 - id: note-hamad
   topics:
