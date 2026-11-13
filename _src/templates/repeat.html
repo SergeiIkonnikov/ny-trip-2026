@@ -2,7 +2,7 @@
 {% block title %}{{ t.cheat_title }} · {{ site.title[lang] }}{% endblock %}
 {% block main %}
 <section class="pagehead g">
-  <div class="kick meta"><b>{{ t.known if t.known is defined else t.total }}</b>≈ ${{ total }}{% if lang == 'ru' %}, без отеля и перелётов{% else %}, excluding hotel and flights{% endif %}</div>
+  {% if prices_on(lang) %}<div class="kick meta"><b>{{ t.known if t.known is defined else t.total }}</b>≈ ${{ total }}{% if lang == 'ru' %}, без отеля и перелётов{% else %}, excluding hotel and flights{% endif %}</div>{% endif %}
   <h1>{{ t.cheat_title }}</h1>
   <p class="lede">{{ t.cheat_lede }}</p>
 </section>
@@ -11,8 +11,8 @@
     <h2>{{ t.hotel }}</h2>
     <div class="hb">
       <p><b>{{ hotel.name }}</b><br>{{ hotel.address }}</p>
-      <p>{{ price_text(hotel.price, lang)|safe }} · <a href="{{ hotel.link }}" target="_blank" rel="noopener">ihg.com ↗</a></p>
-      {% if flight %}<p>{{ flight.price.note[lang] }}</p>{% endif %}
+      <p>{% if prices_on(lang) %}{{ price_text(hotel.price, lang)|safe }} · {% endif %}<a href="{{ hotel.link }}" target="_blank" rel="noopener">ihg.com ↗</a></p>
+      {% if flight and prices_on(lang) %}<p>{{ flight.price.note[lang] }}</p>{% endif %}
     </div>
   </div>
   {% for d in days %}
@@ -23,12 +23,12 @@
       {% for mo in d.moments if mo.place and ('details' not in (mo.topics or []) or mo.price) %}
         <tr>
           <td class="c-what"><a href="{{ home }}day/{{ d.id }}/#{{ mo.id }}">{{ mo.title[lang] }}</a><br><small>{{ mo.place.name }}</small></td>
-          <td class="c-price">{{ price_text(mo.price, lang)|safe if mo.price else '' }}</td>
+          <td class="c-price">{{ price_text(mo.price, lang)|safe if mo.price and prices_on(lang) else '' }}</td>
           <td class="c-link">{% if mo.link %}<a href="{{ mo.link }}" target="_blank" rel="noopener" aria-label="{{ t.link }}">↗</a>{% endif %}</td>
         </tr>
       {% endfor %}
       </tbody></table>
-      {% if d.cost %}<p class="daytotal">{{ t.spent }}: ≈ ${{ d.cost }}{% if d.cost_unknown %} + <span class="tbc">{{ t.to_check }}</span>{% endif %}</p>{% endif %}
+      {% if d.cost and prices_on(lang) %}<p class="daytotal">{{ t.spent }}: ≈ ${{ d.cost }}{% if d.cost_unknown %} + <span class="tbc">{{ t.to_check }}</span>{% endif %}</p>{% endif %}
     </div>
   </div>
   {% endfor %}

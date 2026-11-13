@@ -26,7 +26,7 @@
         <i class="bul{% if d.color == '#ffcc00' %} y{% endif %}">{{ d.n or 0 }}</i>
         <div class="dt">
           <h3>{{ d.title[lang] }}</h3>
-          <p class="dd meta">{{ fmt_date(d.id, lang) }}{% if d.cost %} · ${{ d.cost }}{% if d.cost_unknown %}+{% endif %}{% endif %}</p>
+          <p class="dd meta">{{ fmt_date(d.id, lang) }}{% if d.cost and prices_on(lang) %} · ${{ d.cost }}{% if d.cost_unknown %}+{% endif %}{% endif %}</p>
           <p class="dl">{{ d.lede[lang] }}</p>
         </div>
         <div class="dimg">{% if d.cover_media %}<img loading="lazy" src="{{ root }}media/{{ d.cover_media.thumb }}" alt=""{% if d.cover_pos %} style="object-position:{{ d.cover_pos }}"{% endif %}>{% endif %}</div>

@@ -210,6 +210,9 @@ env = Environment(loader=FileSystemLoader(os.path.join(HERE, 'templates')), auto
                   trim_blocks=True, lstrip_blocks=True)
 import hashlib
 ASSET_V = hashlib.sha1(b''.join(open(os.path.join(HERE, 'static', f), 'rb').read() for f in ('style.css', 'app.js') if os.path.isfile(os.path.join(HERE, 'static', f)))).hexdigest()[:10]
+# Prices are hidden on the English site for now (Sergey, 2026-11-13). Add 'en' to show them again.
+PRICE_LANGS = {'ru'}
+env.globals.update(prices_on=lambda lang: lang in PRICE_LANGS)
 env.globals.update(asset_v=ASSET_V, fmt_date=fmt_date, short_date=short_date, price_text=price_text,
                    topic_by_id=topic_by_id, day_by_id=day_by_id)
 
