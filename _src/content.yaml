@@ -625,7 +625,7 @@ moments:
 - id: memorial-911
   day: "2026-11-10"
   from: "00:00"
-  to: "12:00"
+  to: "10:55"
   topics: []
   place: {name: "9/11 Memorial", lat: 40.7115, lon: -74.0134}
   title:
@@ -637,8 +637,8 @@ moments:
   price: {usd: 0, note: {ru: "мемориал бесплатный", en: "the memorial is free"}}
 - id: brooklyn-bridge
   day: "2026-11-10"
-  from: "12:00"
-  to: "13:30"
+  from: "10:55"
+  to: "12:45"
   topics: [views]
   place: {name: "Brooklyn Bridge", lat: 40.7061, lon: -73.9969}
   title:
@@ -650,8 +650,8 @@ moments:
   price: {usd: 0, note: {ru: "бесплатно", en: "free"}}
 - id: katz
   day: "2026-11-10"
-  from: "13:30"
-  to: "15:00"
+  from: "12:45"
+  to: "14:00"
   topics: [food]
   place: {name: "Katz's Delicatessen", lat: 40.7223, lon: -73.9874}
   title:
@@ -664,7 +664,7 @@ moments:
   price: {usd: 105, per: family, note: {ru: "на троих, $105.36", en: "for three, $105.36"}}
 - id: soho-ghostbusters
   day: "2026-11-10"
-  from: "15:00"
+  from: "14:00"
   to: "18:00"
   topics: [art]
   place: {name: "Hook & Ladder 8, 14 N Moore St", lat: 40.7197, lon: -74.0066}
@@ -678,7 +678,7 @@ moments:
 - id: aladdin
   day: "2026-11-10"
   from: "18:00"
-  to: "23:59"
+  to: "21:38"
   topics: [music, art]
   place: {name: "New Amsterdam Theatre", lat: 40.7562, lon: -73.9878}
   title:
@@ -689,6 +689,19 @@ moments:
     en: In the evening, Aladdin on Broadway. We couldn't have planned a better ending.
   link: "https://www.aladdinthemusical.com/"
   price: {usd: null, per: person}
+- id: joes-pizza
+  day: "2026-11-10"
+  from: "21:38"
+  to: "23:59"
+  topics: [food]
+  place: {name: "Joe's Pizza, Broadway & 40th St", lat: 40.7549, lon: -73.9866}
+  title:
+    ru: Пицца Джо
+    en: Joe's Pizza
+  text:
+    ru: После «Аладдина» зашли в пиццерию Джо на Бродвее у 40-й улицы. Последний ужин в Нью-Йорке был по куску пиццы.
+    en: After Aladdin we went into Joe's Pizza on Broadway at 40th Street. Our last dinner in New York was a slice of pizza each.
+  link: "https://www.joespizzanyc.com/"
 
   # ---------- Day 8 ----------
 - id: subway-broke
