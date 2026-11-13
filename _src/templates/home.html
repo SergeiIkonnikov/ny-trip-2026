@@ -30,7 +30,7 @@
           <p class="dd meta">{{ fmt_date(d.id, lang) }}{% if d.cost and prices_on(lang) %} · ${{ d.cost }}{% if d.cost_unknown %}+{% endif %}{% endif %}</p>
           <p class="dl">{{ d.lede[lang] }}</p>
         </div>
-        <div class="dimg">{% if d.cover_media %}<img loading="lazy" src="{{ root }}media/{{ d.cover_media.thumb }}" alt=""{% if d.cover_pos %} style="object-position:{{ d.cover_pos }}"{% endif %}>{% endif %}</div>
+        <div class="dimg">{% if d.cover_media %}<img loading="lazy" src="{{ root }}media/{{ d.cover_media.thumb }}"{{ srcset(d.cover_media, root, '(max-width: 860px) 100vw, 33vw') }} alt=""{% if d.cover_pos %} style="object-position:{{ d.cover_pos }}"{% endif %}>{% endif %}</div>
       </a>
     </li>
   {% endfor %}
@@ -45,7 +45,7 @@
     {% set tn = namespace(img=tp.cover) %}
     {% if not tn.img %}{% for d in days %}{% for mo in d.moments %}{% if not tn.img and tp.id in (mo.topics or []) %}{% for m in mo.media %}{% if not tn.img and m.type == 'photo' and m.thumb not in used.ids %}{% set tn.img = m %}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endfor %}{% endif %}
     {% if tn.img %}{% set used.ids = used.ids + [tn.img.thumb] %}{% endif %}
-    <a class="topiccard{% if not tn.img %} noimg{% endif %}" href="{{ home }}topic/{{ tp.id }}/">{% if tn.img %}<img loading="lazy" src="{{ root }}media/{{ tn.img.thumb }}" alt="">{% endif %}<b>{{ tp[lang] }}</b></a>
+    <a class="topiccard{% if not tn.img %} noimg{% endif %}" href="{{ home }}topic/{{ tp.id }}/">{% if tn.img %}<img loading="lazy" src="{{ root }}media/{{ tn.img.thumb }}"{{ srcset(tn.img, root, '(max-width: 860px) 50vw, 25vw') }} alt="">{% endif %}<b>{{ tp[lang] }}</b></a>
   {% endfor %}
   </div>
 </section>
