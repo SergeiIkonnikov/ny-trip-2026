@@ -1295,8 +1295,12 @@ notes:
     ru: Пиццерия Человека-паука
     en: Spider-Man's pizzeria
   text:
-    ru: "Joe's Pizza открыл в 1975 году Пино Поццуоли, приехавший из Неаполя. Мировую известность пиццерии принёс фильм «Человек-паук 2»: Питер Паркер работает у Джо разносчиком и в итоге оттуда вылетает за опоздания. В последний вечер мы зашли в пиццерию Джо на Бродвее у 40-й улицы, рядом с Таймс-сквер. Человек-паук на вывеске на месте."
-    en: "Joe's Pizza was opened in 1975 by Pino Pozzuoli, who came from Naples. Spider-Man 2 made it world-famous: Peter Parker works there as a delivery boy and gets fired for being late. On our last evening we went into Joe's on Broadway at 40th Street, by Times Square. Spider-Man is right there on the sign."
+    ru: |
+      Joe's Pizza открыл в 1975 году Пино Поццуоли, приехавший из Неаполя. Мировую известность пиццерии принёс фильм «Человек-паук 2»: Питер Паркер работает у Джо разносчиком и в итоге оттуда вылетает за опоздания. В последний вечер мы зашли в пиццерию Джо на Бродвее у 40-й улицы, рядом с Таймс-сквер. Человек-паук на вывеске на месте.
+      И это, пожалуй, самое нью-йоркское, что можно сделать с едой: взять большой тонкий кусок, сложить его вдоль пополам, чтобы не капал и не ломался, и есть на ходу, не сбавляя шага. Тарелка не нужна, стол не нужен. Нужна салфетка и куда-то идти.
+    en: |
+      Joe's Pizza was opened in 1975 by Pino Pozzuoli, who came from Naples. Spider-Man 2 made it world-famous: Peter Parker works there as a delivery boy and gets fired for being late. On our last evening we went into Joe's on Broadway at 40th Street, by Times Square. Spider-Man is right there on the sign.
+      And this is maybe the most New York thing you can do with food: take a big thin slice, fold it lengthwise so it doesn't drip or flop, and eat it on the move without slowing down. No plate, no table. Just a napkin and somewhere to be.
   sources:
   - https://en.wikipedia.org/wiki/Joe%27s_Pizza
 - id: obs-pizza-principle
@@ -1412,7 +1416,9 @@ notes:
   - details
   day: '2026-11-06'
   photo: day3-nov6/20261106-195052_IMG_0338.jpg
-  photos_more: [day3-nov6/20261106-195053_IMG_0339.jpg, day3-nov6/20261106-195002_IMG_0336.jpg]
+  photos_more:
+  - day3-nov6/20261106-195053_IMG_0339.jpg
+  - day3-nov6/20261106-195002_IMG_0336.jpg
   title:
     ru: Трубы, из которых идёт пар
     en: The pipes that breathe steam
