@@ -240,7 +240,7 @@ def paras(s, thx=None):
     # thx: {paragraph number (1-based): footnote text} -> span.thx right before that <p>
     from markupsafe import Markup
     ps = [x.strip() for x in (s or '').split('\n') if x.strip()]
-    return Markup(''.join((thx_html((thx or {}).get(i)) or '') + f'<p>{html.escape(x)}</p>' for i, x in enumerate(ps, 1)))
+    return Markup(''.join(str(thx_html((thx or {}).get(i)) or '') + f'<p>{html.escape(x)}</p>' for i, x in enumerate(ps, 1)))
 env.globals['thx_html'] = thx_html
 env.filters['paras'] = paras
 
