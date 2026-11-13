@@ -685,8 +685,8 @@ moments:
     ru: «Аладдин» на Бродвее
     en: Aladdin on Broadway
   text:
-    ru: Вечером «Аладдин» на Бродвее. Лучшего конца поездки мы бы не придумали.
-    en: In the evening, Aladdin on Broadway. We couldn't have planned a better ending.
+    ru: Вечером «Аладдин» на Бродвее. Хороший конец поездки. Но ещё не конец вечера.
+    en: In the evening, Aladdin on Broadway. A good ending to the trip. But not quite the end of the evening.
   link: "https://www.aladdinthemusical.com/"
   price: {usd: null, per: person}
 - id: joes-pizza
@@ -696,11 +696,11 @@ moments:
   topics: [food]
   place: {name: "Joe's Pizza, Broadway & 40th St", lat: 40.7549, lon: -73.9866}
   title:
-    ru: Пицца Джо
-    en: Joe's Pizza
+    ru: Последний кусок
+    en: The last slice
   text:
-    ru: После «Аладдина» зашли в пиццерию Джо на Бродвее у 40-й улицы. Последний ужин в Нью-Йорке был по куску пиццы.
-    en: After Aladdin we went into Joe's Pizza on Broadway at 40th Street. Our last dinner in New York was a slice of pizza each.
+    ru: После мюзикла, в половине десятого, зашли к Джо на Бродвее. У печи пиццайоло, на стене фотографии знаменитостей, на вывеске Человек-паук. Пиццу взяли с собой и доели в номере. Последний ужин в Нью-Йорке был из картонной коробки, и, по-моему, это правильно.
+    en: After the musical, at half past nine, we dropped into Joe's on Broadway. A pizzaiolo at the oven, celebrity photos on the wall, Spider-Man on the sign. We took the pizza back to the room and finished it there. Our last dinner in New York came out of a cardboard box, and I think that's exactly right.
   link: "https://www.joespizzanyc.com/"
 
   # ---------- Day 8 ----------
