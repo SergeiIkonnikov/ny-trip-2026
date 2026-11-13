@@ -1,12 +1,15 @@
+{# srcset for a photo: thumb / full / hi-res (retina desktop). #}
+{% macro srcset(m, root, sizes='(max-width: 860px) 100vw, 50vw') %}{% if m.tw and m.w %} srcset="{{ root }}media/{{ m.thumb }} {{ m.tw }}w, {{ root }}media/{{ m.full }} {{ m.w }}w{% if m.hi %}, {{ root }}media/{{ m.hi }} {{ m.hw }}w{% endif %}" sizes="{{ sizes }}"{% endif %}{% endmacro %}
+
 {# One photo/video tile. The lightbox reads a.tile (data-full / data-video). #}
 {% macro tile(m, root, cls='', full=false) %}
 <a class="tile{% if m.type == 'video' %} vid{% endif %}{% if cls %} {{ cls }}{% endif %}"
    href="{{ root }}media/{{ m.full or m.video or m.thumb }}"
-   data-full="{{ root }}media/{{ m.full or m.thumb }}"
+   data-full="{{ root }}media/{{ m.hi or m.full or m.thumb }}"
    {% if m.video %}data-video="{{ root }}media/{{ m.video }}"{% endif %}
    data-cap="{{ m.local }}">
   {% if m.loop %}<video class="loop" src="{{ root }}media/{{ m.loop }}" poster="{{ root }}media/{{ m.loop_poster or m.thumb }}" autoplay muted loop playsinline preload="metadata"></video>
-  {% else %}<img loading="lazy" src="{{ root }}media/{{ (m.full if full and m.full else m.thumb) }}" alt="">{% endif %}
+  {% else %}<img loading="lazy" src="{{ root }}media/{{ (m.full if full and m.full else m.thumb) }}"{{ srcset(m, root) }} alt="">{% endif %}
   {% if m.type == 'video' and not m.loop %}<span class="play">▶{% if m.dur %} {{ '%d:%02d' % (m.dur // 60, m.dur % 60) }}{% endif %}</span>{% endif %}
 </a>
 {% endmacro %}

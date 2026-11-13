@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% block bodyclass %}home{% endblock %}
+{% from 'macros.html' import srcset %}
 {% block main %}
 <section class="homecover">
   {% set cov = site.cover or '20261110-233553' %}{% set ns = namespace(c=none) %}
   {% for d in days %}{% for m in d.media %}{% if not ns.c and m.src.startswith(cov) %}{% set ns.c = m %}{% endif %}{% endfor %}{% endfor %}
-  {% if ns.c %}<img class="on" src="{{ root }}media/{{ ns.c.full or ns.c.thumb }}" alt="{{ 'Таймс-сквер ночью' if lang == 'ru' else 'Times Square at night' }}">{% endif %}
+  {% if ns.c %}<img class="on" src="{{ root }}media/{{ ns.c.full or ns.c.thumb }}"{{ srcset(ns.c, root, '100vw') }} alt="{{ 'Таймс-сквер ночью' if lang == 'ru' else 'Times Square at night' }}">{% endif %}
   {# Slideshow: extra cover frames picked by Sergey (static/cover/), loaded after the page #}
   {% for f in ['20261106-022025.jpg', '20261106-022313.jpg', '20261106-153728.jpg', '20261106-153738.jpg', '20261106-174600.jpg', '20261106-174758.jpg', '20261106-214024.jpg', '20261106-214617.jpg', '20261108-222654.jpg', '20261109-001858.jpg', '20261109-184352.jpg', '20261110-163818.jpg', '20261110-202845.jpg'] %}<img data-src="{{ root }}assets/cover-{{ f }}?v={{ asset_v }}" alt="">{% endfor %}
   <div class="hc-text"><div class="g">

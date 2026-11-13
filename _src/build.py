@@ -14,6 +14,18 @@ OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.normpath(os.path.join(HERE, 
 
 C = yaml.safe_load(open(os.path.join(HERE, 'content.yaml'), encoding='utf-8'))
 manifest = json.load(open(os.path.join(MEDIA, 'web', 'manifest.json'), encoding='utf-8'))
+# hi-res copies (tools/make_hi.py, tools/make_vhd.py): 2400px photos for srcset, 1080p videos
+def _load(name):
+    p = os.path.join(MEDIA, 'web', name)
+    return json.load(open(p, encoding='utf-8')) if os.path.exists(p) else {}
+HI, VHD = _load('hi.json'), _load('vhd.json')
+for _m in manifest:
+    if _m.get('full') in HI:
+        _m['hi'], _m['hw'], _m['hh'] = HI[_m['full']]
+    if _m.get('video') in VHD:
+        _m['video'] = VHD[_m['video']]
+    if _m.get('w') and _m.get('h') and _m.get('thumb') and _m.get('full'):
+        _m['tw'] = round(_m['w'] * 520 / max(_m['w'], _m['h']))  # make_web thumbs: 520px long side
 
 # Privacy switches: flip to True once consent is confirmed.
 CONSENT = {'masha': True, 'stranger': True}  # Masha's parents agreed 2026-11-12
@@ -317,6 +329,7 @@ for tp in topics:
     if tp.get('cover_media'):
         tp['cover'] = tp['cover_media']
 
+refs |= {HI[r][0] for r in list(refs) if r in HI}  # hi-res copy next to every published full
 for r in refs:
     src = os.path.join(MEDIA, r) if r.startswith('edited/') else os.path.join(MEDIA, 'web', r)
     dst = os.path.join(OUT, 'media', r)
