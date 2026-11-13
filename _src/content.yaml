@@ -71,6 +71,7 @@ days:
     en: One day in the capital, one good guide, and one woman who was in all of our photos.
 - id: "2026-11-06"
   steps: 12003
+  cover: "20261106-190327"  # pinned so new photos do not change the auto cover
   spent: 826  # card spending (Sergey + Natasha), notes/spending.md
   n: 3
   tz: -5
@@ -233,6 +234,7 @@ moments:
   link: "https://www.cityexperiences.com/new-york/city-cruises/statue/"
   check: true
 - id: dinner-150
+  photos: ["20261104-213747_IMG_1242"]  # Natasha's photos
   day: "2026-11-04"
   from: "17:00"
   to: "19:00"
@@ -269,6 +271,7 @@ moments:
   link: "https://www.getyourguide.com/"
   check: true
 - id: arlington
+  photos: ["20261105-160712_IMG_1243", "20261105-161018_IMG_2740", "20261105-161103_IMG_1246"]  # Natasha's photos
   day: "2026-11-05"
   from: "11:40"
   to: "12:30"
@@ -382,6 +385,7 @@ moments:
 
   # ---------- Day 3 ----------
 - id: rehearsal-room
+  photos: ["20261106-152233_IMG_3021"]  # Natasha's photos
   day: "2026-11-06"
   from: "08:00"
   to: "10:00"
