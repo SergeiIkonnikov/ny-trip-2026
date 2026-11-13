@@ -809,6 +809,7 @@ notes:
   - details
   day: '2026-11-04'
   photo: notes/bull.jpg
+  photo_small: true  # blurry source, show at half width (Sergey)
   moment: bull
   title:
     ru: Бык, которого никто не заказывал

@@ -405,3 +405,7 @@ button.tag{cursor:pointer}
 .hist .credit a{color:inherit}
 @media(max-width:860px){.nph .hist{max-width:78%}}
 
+
+/* note photo with a weak source (e.g. note-bull): half width so the blur doesn't show */
+.note-row .nph.small .tile{width:50%;aspect-ratio:auto}
+.note-row .nph.small .tile img{height:auto}

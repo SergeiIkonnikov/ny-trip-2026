@@ -19,7 +19,7 @@
       {% if nt.day %}{% set nd = day_by_id[nt.day] %}<p class="note-ref"><a href="{{ home }}day/{{ nd.id }}/{% if nt.moment %}#{{ nt.moment }}{% endif %}">→ {% if nd.n %}{{ t.day }} {{ nd.n }}{% else %}{{ t.day0 }}{% endif %} · {{ short_date(nd.id, lang) }}</a></p>{% endif %}
       {% if nt.sources %}<p class="note-src">{% for u in nt.sources %}<a href="{{ u }}" target="_blank" rel="noopener">{{ u.split('/')[2].replace('www.','') }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>{% endif %}
     </div>
-    {% if nt.photo %}<div class="nph"><a class="tile" href="{{ root }}media/{{ nt.photo }}" data-full="{{ root }}media/{{ nt.photo }}">{% if nt.loop %}<video class="loop" src="{{ root }}media/{{ nt.loop }}" poster="{{ root }}media/{{ nt.loop_poster or nt.photo }}" autoplay muted loop playsinline preload="metadata"></video>{% else %}<img loading="lazy" src="{{ root }}media/{{ nt.photo }}" alt="">{% endif %}</a>{% if nt.hist %}{{ hist_fig(nt.hist) }}{% endif %}</div>
+    {% if nt.photo %}<div class="nph{% if nt.photo_small %} small{% endif %}"><a class="tile" href="{{ root }}media/{{ nt.photo }}" data-full="{{ root }}media/{{ nt.photo }}">{% if nt.loop %}<video class="loop" src="{{ root }}media/{{ nt.loop }}" poster="{{ root }}media/{{ nt.loop_poster or nt.photo }}" autoplay muted loop playsinline preload="metadata"></video>{% else %}<img loading="lazy" src="{{ root }}media/{{ nt.photo }}" alt="">{% endif %}</a>{% if nt.hist %}{{ hist_fig(nt.hist) }}{% endif %}</div>
     {% elif nt.hist %}<div class="nph">{{ hist_fig(nt.hist) }}</div>{% endif %}
   </article>
 {% endfor %}
